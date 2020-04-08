@@ -1,0 +1,70 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to :6969
+on ln. 41, +1.98
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +2.99
+	of handle_http_requests(...)
+	| [192.168.0.8:36374] received 'GET /profi'
+on ln. 41, +3.27
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +4.27
+	of handle_http_requests(...)
+	| [192.168.0.8:36376] received 'GET /favic'
+on ln. 41, +22.92
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +23.92
+	of handle_http_requests(...)
+	| [192.168.0.8:36378] received 'POST /prof'
+on ln. 41, +23.93
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +24.93
+	of handle_http_requests(...)
+	| [192.168.0.8:36380] received 'GET /profi'
+on ln. 41, +25.23
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +26.23
+	of handle_http_requests(...)
+	| [192.168.0.8:36382] received 'GET /favic'
+on ln. 41, +169.69
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +170.69
+	of handle_http_requests(...)
+	| [192.168.0.8:36442] received 'GET / HTTP'
+on ln. 41, +170.77
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +171.77
+	of handle_http_requests(...)
+	| [192.168.0.8:36444] received 'GET /get_r'
+on ln. 41, +171.95
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +172.95
+	of handle_http_requests(...)
+	| [192.168.0.8:36446] received 'GET /favic'
+on ln. 41, +174.34
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +175.34
+	of handle_http_requests(...)
+	| [192.168.0.8:36448] received 'GET /get_r'
+on ln. 41, +176.83
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +177.83
+	of handle_http_requests(...)
+	| [192.168.0.8:36450] received 'GET /get_r'
+on ln. 50, +178.2
+	of handle_connections(...)
+	| user-interrupt caught
+	| fatal error, exiting ...
+on ln. 59, +178.22
+	of __del__(...)
+	| garbage collecting SocketServer instance

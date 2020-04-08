@@ -1,13 +1,24 @@
 <html>
   <head>
     <title>Index</title>
+    <meta http-Equiv="Cache-Control" Content="no-cache" />
+    <meta http-Equiv="Pragma" Content="no-cache" />
+    <meta http-Equiv="Expires" Content="0" />
   </head>
   <body>
     <h1>Index</h1>
     <p>{if_logged_in_head}</p>
     <hr>
-    <p>Welcome to the website!<br>The time is {time}</p>
     <br>
     {if_logged_in_body}
+    {error}
+    <form action="/make_reply" method="post">
+      <input type="text" name="reply" id="reply">
+      <input type="submit" value="Reply">
+    </form>
+    <iframe width="50%" height="25%" id="chat" src="/get_replies"></iframe>
+    <script>
+      {timer}
+    </script>
   </body>
 </html>

@@ -1,0 +1,28 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to :6969
+on ln. 41, +4.93
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +5.93
+	of handle_http_requests(...)
+	| [192.168.0.8:44592] received 'GET /profi'
+on ln. 41, +34.04
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +35.04
+	of handle_http_requests(...)
+	| [192.168.0.8:44602] received 'GET /profi'
+on ln. 41, +76.74
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +77.74
+	of handle_http_requests(...)
+	| [192.168.0.8:44612] received 'GET /profi'
+on ln. 50, +87.49
+	of handle_connections(...)
+	| user-interrupt caught
+	| fatal error, exiting ...
+on ln. 59, +87.5
+	of __del__(...)
+	| garbage collecting SocketServer instance

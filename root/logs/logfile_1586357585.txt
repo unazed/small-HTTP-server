@@ -1,0 +1,34 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to :6969
+on ln. 41, +2.79
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +3.79
+	of handle_http_requests(...)
+	| [192.168.0.8:49320] received 'GET / HTTP'
+on ln. 41, +3.86
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +4.86
+	of handle_http_requests(...)
+	| [192.168.0.8:49322] received 'GET /index'
+on ln. 41, +4.91
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +5.91
+	of handle_http_requests(...)
+	| [192.168.0.8:49326] received 'GET /get_r'
+on ln. 41, +6.14
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +7.14
+	of handle_http_requests(...)
+	| [192.168.0.8:49328] received 'GET /favic'
+on ln. 50, +91.09
+	of handle_connections(...)
+	| user-interrupt caught
+	| fatal error, exiting ...
+on ln. 59, +91.11
+	of __del__(...)
+	| garbage collecting SocketServer instance

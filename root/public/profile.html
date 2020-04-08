@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title> {username} </title>
+  </head>
+  <body>
+    <h1> profile of {username} <a href="/" style="font-size:12px">index</a></h1>
+    {inbox}
+    <hr>
+    <b>{error}</b>
+    <form action="/profile" method="post">
+      <label>Recipient:</label><br>
+      <input type="text" id="recipient" name="recipient"><br><br>
+      <label>Message:</label><br>
+      <input type="text" id="msg" name="msg"><br><br>
+      <input type="submit" value="Send">
+    </form>
+  </body>
+</html>

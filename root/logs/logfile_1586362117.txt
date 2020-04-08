@@ -1,0 +1,6259 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to :6969
+on ln. 41, +1.29
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 41, +1.81
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +2.29
+	of handle_http_requests(...)
+	| [86.6.165.117:45800] received 'GET /get_r'
+on ln. 178, +2.81
+	of handle_http_requests(...)
+	| [192.168.0.8:57816] received 'GET /get_r'
+on ln. 41, +3.24
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +4.25
+	of handle_http_requests(...)
+	| [192.168.0.8:57818] received 'GET / HTTP'
+on ln. 41, +4.29
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 41, +4.32
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +5.3
+	of handle_http_requests(...)
+	| [86.6.165.117:45802] received 'GET /get_r'
+on ln. 178, +5.33
+	of handle_http_requests(...)
+	| [192.168.0.8:57820] received 'GET /get_r'
+on ln. 41, +5.49
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +6.28
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +6.49
+	of handle_http_requests(...)
+	| [192.168.0.8:57822] received 'GET /favic'
+on ln. 178, +7.29
+	of handle_http_requests(...)
+	| [86.6.165.117:45804] received 'GET /get_r'
+on ln. 41, +7.89
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +8.89
+	of handle_http_requests(...)
+	| [192.168.0.8:57824] received 'GET /get_r'
+on ln. 41, +9.26
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +10.27
+	of handle_http_requests(...)
+	| [86.6.165.117:45806] received 'GET /get_r'
+on ln. 41, +10.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +11.26
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +11.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57826] received 'GET /get_r'
+on ln. 178, +12.27
+	of handle_http_requests(...)
+	| [86.6.165.117:45808] received 'GET /get_r'
+on ln. 41, +12.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +13.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57828] received 'GET /get_r'
+on ln. 41, +14.26
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +15.27
+	of handle_http_requests(...)
+	| [86.6.165.117:45810] received 'GET /get_r'
+on ln. 41, +15.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +16.26
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +16.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57830] received 'GET /get_r'
+on ln. 178, +17.27
+	of handle_http_requests(...)
+	| [86.6.165.117:45814] received 'GET /get_r'
+on ln. 41, +17.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +18.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57832] received 'GET /get_r'
+on ln. 41, +19.27
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +20.28
+	of handle_http_requests(...)
+	| [86.6.165.117:45816] received 'GET /get_r'
+on ln. 41, +20.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +21.28
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +21.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57834] received 'GET /get_r'
+on ln. 178, +22.28
+	of handle_http_requests(...)
+	| [86.6.165.117:45818] received 'GET /get_r'
+on ln. 41, +22.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +23.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57836] received 'GET /get_r'
+on ln. 41, +24.27
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +25.27
+	of handle_http_requests(...)
+	| [86.6.165.117:45820] received 'GET /get_r'
+on ln. 41, +25.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +26.27
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +26.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57846] received 'GET /get_r'
+on ln. 178, +27.28
+	of handle_http_requests(...)
+	| [86.6.165.117:45822] received 'GET /get_r'
+on ln. 41, +27.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +28.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57848] received 'GET /get_r'
+on ln. 41, +29.27
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +30.27
+	of handle_http_requests(...)
+	| [86.6.165.117:45824] received 'GET /get_r'
+on ln. 41, +30.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +31.29
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +31.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57850] received 'GET /get_r'
+on ln. 178, +32.29
+	of handle_http_requests(...)
+	| [86.6.165.117:45826] received 'GET /get_r'
+on ln. 41, +32.91
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +33.91
+	of handle_http_requests(...)
+	| [192.168.0.8:57852] received 'GET /get_r'
+on ln. 41, +34.28
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +35.28
+	of handle_http_requests(...)
+	| [86.6.165.117:45828] received 'GET /get_r'
+on ln. 41, +35.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +36.25
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +36.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57854] received 'GET /get_r'
+on ln. 178, +37.26
+	of handle_http_requests(...)
+	| [86.6.165.117:45830] received 'GET /get_r'
+on ln. 41, +37.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +38.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57856] received 'GET /get_r'
+on ln. 41, +39.26
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +40.26
+	of handle_http_requests(...)
+	| [86.6.165.117:45832] received 'GET /get_r'
+on ln. 41, +40.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +41.27
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +41.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57858] received 'GET /get_r'
+on ln. 178, +42.28
+	of handle_http_requests(...)
+	| [86.6.165.117:45840] received 'GET /get_r'
+on ln. 41, +42.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +43.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57860] received 'GET /get_r'
+on ln. 41, +44.29
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +45.29
+	of handle_http_requests(...)
+	| [86.6.165.117:45858] received 'GET /get_r'
+on ln. 41, +45.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +46.26
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +46.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57862] received 'GET /get_r'
+on ln. 178, +47.26
+	of handle_http_requests(...)
+	| [86.6.165.117:45864] received 'GET /get_r'
+on ln. 41, +47.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +48.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57864] received 'GET /get_r'
+on ln. 41, +49.28
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +50.29
+	of handle_http_requests(...)
+	| [86.6.165.117:45866] received 'GET /get_r'
+on ln. 41, +50.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +51.26
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +51.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57866] received 'GET /get_r'
+on ln. 178, +52.28
+	of handle_http_requests(...)
+	| [86.6.165.117:45868] received 'GET /get_r'
+on ln. 41, +52.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +53.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57868] received 'GET /get_r'
+on ln. 41, +54.27
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +55.28
+	of handle_http_requests(...)
+	| [86.6.165.117:45872] received 'GET /get_r'
+on ln. 41, +55.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +56.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57874] received 'GET /get_r'
+on ln. 41, +57.49
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 41, +57.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +58.49
+	of handle_http_requests(...)
+	| [86.6.165.117:45874] received 'GET /get_r'
+on ln. 178, +58.89
+	of handle_http_requests(...)
+	| [192.168.0.8:57876] received 'GET /get_r'
+on ln. 41, +59.28
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +60.28
+	of handle_http_requests(...)
+	| [86.6.165.117:45876] received 'GET /get_r'
+on ln. 41, +60.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +61.28
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +61.39
+	of handle_http_requests(...)
+	| [192.168.0.8:57878] received 'GET /get_r'
+on ln. 178, +62.28
+	of handle_http_requests(...)
+	| [86.6.165.117:45878] received 'GET /get_r'
+on ln. 41, +62.89
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +63.9
+	of handle_http_requests(...)
+	| [192.168.0.8:57880] received 'GET /get_r'
+on ln. 41, +64.27
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +65.28
+	of handle_http_requests(...)
+	| [86.6.165.117:45882] received 'GET /get_r'
+on ln. 41, +65.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +66.26
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +66.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57882] received 'GET /get_r'
+on ln. 178, +67.26
+	of handle_http_requests(...)
+	| [86.6.165.117:45884] received 'GET /get_r'
+on ln. 41, +67.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +68.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57884] received 'GET /get_r'
+on ln. 41, +69.25
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +70.26
+	of handle_http_requests(...)
+	| [86.6.165.117:45886] received 'GET /get_r'
+on ln. 41, +70.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +71.28
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +71.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57886] received 'GET /get_r'
+on ln. 178, +72.28
+	of handle_http_requests(...)
+	| [86.6.165.117:45890] received 'GET /get_r'
+on ln. 41, +72.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +73.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57888] received 'GET /get_r'
+on ln. 41, +75.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +76.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57890] received 'GET /get_r'
+on ln. 41, +77.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +78.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57892] received 'GET /get_r'
+on ln. 41, +80.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +81.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57894] received 'GET /get_r'
+on ln. 41, +82.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +83.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57896] received 'GET /get_r'
+on ln. 41, +85.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +86.39
+	of handle_http_requests(...)
+	| [192.168.0.8:57904] received 'GET /get_r'
+on ln. 41, +87.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +88.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57908] received 'GET /get_r'
+on ln. 41, +90.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +91.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57910] received 'GET /get_r'
+on ln. 41, +92.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +93.89
+	of handle_http_requests(...)
+	| [192.168.0.8:57912] received 'GET /get_r'
+on ln. 41, +95.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +96.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57914] received 'GET /get_r'
+on ln. 41, +97.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +98.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57916] received 'GET /get_r'
+on ln. 41, +100.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +101.39
+	of handle_http_requests(...)
+	| [192.168.0.8:57918] received 'GET /get_r'
+on ln. 41, +102.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +103.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57920] received 'GET /get_r'
+on ln. 41, +105.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +106.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57922] received 'GET /get_r'
+on ln. 41, +107.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +108.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57924] received 'GET /get_r'
+on ln. 41, +110.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +111.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57926] received 'GET /get_r'
+on ln. 41, +112.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +113.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57928] received 'GET /get_r'
+on ln. 41, +115.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +116.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57932] received 'GET /get_r'
+on ln. 41, +117.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +118.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57936] received 'GET /get_r'
+on ln. 41, +120.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +121.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57938] received 'GET /get_r'
+on ln. 41, +122.89
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +123.89
+	of handle_http_requests(...)
+	| [192.168.0.8:57940] received 'GET /get_r'
+on ln. 41, +124.08
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +124.42
+	of handle_http_requests(...)
+	| [86.6.165.117:45932] received 'GET /get_r'
+on ln. 41, +124.46
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 41, +125.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +125.46
+	of handle_http_requests(...)
+	| [86.6.165.117:45934] received 'GET /get_r'
+on ln. 41, +126.26
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +126.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57942] received 'GET /get_r'
+on ln. 178, +127.26
+	of handle_http_requests(...)
+	| [86.6.165.117:45936] received 'GET /get_r'
+on ln. 41, +127.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +128.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57944] received 'GET /get_r'
+on ln. 41, +129.29
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +130.29
+	of handle_http_requests(...)
+	| [86.6.165.117:45940] received 'GET /get_r'
+on ln. 41, +130.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +131.27
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +131.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57946] received 'GET /get_r'
+on ln. 178, +132.27
+	of handle_http_requests(...)
+	| [86.6.165.117:45942] received 'GET /get_r'
+on ln. 41, +132.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +133.89
+	of handle_http_requests(...)
+	| [192.168.0.8:57948] received 'GET /get_r'
+on ln. 41, +134.3
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +135.3
+	of handle_http_requests(...)
+	| [86.6.165.117:45948] received 'GET /get_r'
+on ln. 41, +135.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +136.27
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +136.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57960] received 'GET /get_r'
+on ln. 178, +137.28
+	of handle_http_requests(...)
+	| [86.6.165.117:45950] received 'GET /get_r'
+on ln. 41, +137.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +138.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57962] received 'GET /get_r'
+on ln. 41, +140.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +141.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57968] received 'GET /get_r'
+on ln. 41, +142.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +143.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57970] received 'GET /get_r'
+on ln. 41, +145.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +146.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57980] received 'GET /get_r'
+on ln. 41, +147.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +148.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57984] received 'GET /get_r'
+on ln. 41, +150.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +151.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57986] received 'GET /get_r'
+on ln. 41, +152.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +153.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57988] received 'GET /get_r'
+on ln. 41, +155.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +156.39
+	of handle_http_requests(...)
+	| [192.168.0.8:57990] received 'GET /get_r'
+on ln. 41, +157.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +158.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57992] received 'GET /get_r'
+on ln. 41, +160.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +161.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57994] received 'GET /get_r'
+on ln. 41, +162.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +163.88
+	of handle_http_requests(...)
+	| [192.168.0.8:57996] received 'GET /get_r'
+on ln. 41, +165.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +166.38
+	of handle_http_requests(...)
+	| [192.168.0.8:57998] received 'GET /get_r'
+on ln. 41, +167.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +168.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58000] received 'GET /get_r'
+on ln. 41, +170.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +171.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58002] received 'GET /get_r'
+on ln. 41, +172.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +173.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58004] received 'GET /get_r'
+on ln. 41, +175.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +176.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58006] received 'GET /get_r'
+on ln. 41, +177.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +178.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58012] received 'GET /get_r'
+on ln. 41, +180.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +181.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58016] received 'GET /get_r'
+on ln. 41, +182.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +183.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58018] received 'GET /get_r'
+on ln. 41, +185.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +186.39
+	of handle_http_requests(...)
+	| [192.168.0.8:58020] received 'GET /get_r'
+on ln. 41, +187.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +188.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58022] received 'GET /get_r'
+on ln. 41, +190.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +191.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58024] received 'GET /get_r'
+on ln. 41, +192.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +193.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58026] received 'GET /get_r'
+on ln. 41, +195.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +196.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58028] received 'GET /get_r'
+on ln. 41, +197.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +198.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58030] received 'GET /get_r'
+on ln. 41, +200.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +201.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58032] received 'GET /get_r'
+on ln. 41, +202.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +203.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58034] received 'GET /get_r'
+on ln. 41, +205.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +206.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58040] received 'GET /get_r'
+on ln. 41, +207.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +208.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58044] received 'GET /get_r'
+on ln. 41, +210.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +211.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58048] received 'GET /get_r'
+on ln. 41, +212.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +213.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58050] received 'GET /get_r'
+on ln. 41, +215.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +216.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58052] received 'GET /get_r'
+on ln. 41, +217.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +218.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58054] received 'GET /get_r'
+on ln. 41, +220.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +221.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58056] received 'GET /get_r'
+on ln. 41, +222.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +223.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58058] received 'GET /get_r'
+on ln. 41, +225.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +226.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58060] received 'GET /get_r'
+on ln. 41, +227.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +228.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58062] received 'GET /get_r'
+on ln. 41, +230.41
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +231.41
+	of handle_http_requests(...)
+	| [192.168.0.8:58064] received 'GET /get_r'
+on ln. 41, +232.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +233.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58066] received 'GET /get_r'
+on ln. 41, +235.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +236.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58068] received 'GET /get_r'
+on ln. 41, +237.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +238.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58072] received 'GET /get_r'
+on ln. 41, +240.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +241.39
+	of handle_http_requests(...)
+	| [192.168.0.8:58078] received 'GET /get_r'
+on ln. 41, +242.9
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +243.9
+	of handle_http_requests(...)
+	| [192.168.0.8:58082] received 'GET /get_r'
+on ln. 41, +245.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +246.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58084] received 'GET /get_r'
+on ln. 41, +247.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +248.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58086] received 'GET /get_r'
+on ln. 41, +250.39
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +251.4
+	of handle_http_requests(...)
+	| [192.168.0.8:58088] received 'GET /get_r'
+on ln. 41, +252.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +253.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58090] received 'GET /get_r'
+on ln. 41, +255.39
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +256.39
+	of handle_http_requests(...)
+	| [192.168.0.8:58092] received 'GET /get_r'
+on ln. 41, +257.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +258.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58094] received 'GET /get_r'
+on ln. 41, +260.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +261.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58096] received 'GET /get_r'
+on ln. 41, +262.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +263.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58098] received 'GET /get_r'
+on ln. 41, +265.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +266.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58104] received 'GET /get_r'
+on ln. 41, +267.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +268.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58108] received 'GET /get_r'
+on ln. 41, +270.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +271.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58110] received 'GET /get_r'
+on ln. 41, +272.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +273.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58114] received 'GET /get_r'
+on ln. 41, +275.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +276.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58116] received 'GET /get_r'
+on ln. 41, +277.89
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +278.9
+	of handle_http_requests(...)
+	| [192.168.0.8:58118] received 'GET /get_r'
+on ln. 41, +280.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +281.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58120] received 'GET /get_r'
+on ln. 41, +282.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +283.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58122] received 'GET /get_r'
+on ln. 41, +285.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +286.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58124] received 'GET /get_r'
+on ln. 41, +287.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +288.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58126] received 'GET /get_r'
+on ln. 41, +290.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +291.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58128] received 'GET /get_r'
+on ln. 41, +292.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +293.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58130] received 'GET /get_r'
+on ln. 41, +295.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +296.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58132] received 'GET /get_r'
+on ln. 41, +297.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +298.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58136] received 'GET /get_r'
+on ln. 41, +300.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +301.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58138] received 'GET /get_r'
+on ln. 41, +302.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +303.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58140] received 'GET /get_r'
+on ln. 41, +305.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +306.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58144] received 'GET /get_r'
+on ln. 41, +307.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +308.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58146] received 'GET /get_r'
+on ln. 41, +310.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +311.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58148] received 'GET /get_r'
+on ln. 41, +312.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +313.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58150] received 'GET /get_r'
+on ln. 41, +315.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +316.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58152] received 'GET /get_r'
+on ln. 41, +317.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +318.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58154] received 'GET /get_r'
+on ln. 41, +320.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +321.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58156] received 'GET /get_r'
+on ln. 41, +322.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +323.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58158] received 'GET /get_r'
+on ln. 41, +325.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +326.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58164] received 'GET /get_r'
+on ln. 41, +327.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +328.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58168] received 'GET /get_r'
+on ln. 41, +330.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +331.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58170] received 'GET /get_r'
+on ln. 41, +332.89
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +333.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58172] received 'GET /get_r'
+on ln. 41, +335.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +336.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58176] received 'GET /get_r'
+on ln. 41, +337.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +338.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58178] received 'GET /get_r'
+on ln. 41, +340.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +341.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58180] received 'GET /get_r'
+on ln. 41, +342.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +343.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58182] received 'GET /get_r'
+on ln. 41, +345.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +346.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58184] received 'GET /get_r'
+on ln. 41, +347.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +348.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58186] received 'GET /get_r'
+on ln. 41, +350.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +351.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58188] received 'GET /get_r'
+on ln. 41, +352.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +353.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58204] received 'GET /get_r'
+on ln. 41, +355.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +356.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58206] received 'GET /get_r'
+on ln. 41, +357.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +358.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58208] received 'GET /get_r'
+on ln. 41, +360.41
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +361.42
+	of handle_http_requests(...)
+	| [192.168.0.8:58212] received 'GET /get_r'
+on ln. 41, +362.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +363.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58214] received 'GET /get_r'
+on ln. 41, +365.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +366.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58218] received 'GET /get_r'
+on ln. 41, +367.89
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +368.9
+	of handle_http_requests(...)
+	| [192.168.0.8:58222] received 'GET /get_r'
+on ln. 41, +370.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +371.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58224] received 'GET /get_r'
+on ln. 41, +372.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +373.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58226] received 'GET /get_r'
+on ln. 41, +375.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +376.39
+	of handle_http_requests(...)
+	| [192.168.0.8:58228] received 'GET /get_r'
+on ln. 41, +377.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +378.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58230] received 'GET /get_r'
+on ln. 41, +380.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +381.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58232] received 'GET /get_r'
+on ln. 41, +382.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +383.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58234] received 'GET /get_r'
+on ln. 41, +385.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +386.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58240] received 'GET /get_r'
+on ln. 41, +387.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +388.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58242] received 'GET /get_r'
+on ln. 41, +390.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +391.39
+	of handle_http_requests(...)
+	| [192.168.0.8:58246] received 'GET /get_r'
+on ln. 41, +392.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +393.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58248] received 'GET /get_r'
+on ln. 41, +395.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +396.39
+	of handle_http_requests(...)
+	| [192.168.0.8:58250] received 'GET /get_r'
+on ln. 41, +397.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +398.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58254] received 'GET /get_r'
+on ln. 41, +400.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +401.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58256] received 'GET /get_r'
+on ln. 41, +402.89
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +403.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58258] received 'GET /get_r'
+on ln. 41, +405.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +406.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58260] received 'GET /get_r'
+on ln. 41, +407.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +408.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58262] received 'GET /get_r'
+on ln. 41, +410.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +411.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58264] received 'GET /get_r'
+on ln. 41, +412.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +413.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58266] received 'GET /get_r'
+on ln. 41, +415.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +416.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58268] received 'GET /get_r'
+on ln. 41, +417.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +418.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58270] received 'GET /get_r'
+on ln. 41, +420.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +421.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58274] received 'GET /get_r'
+on ln. 41, +422.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +423.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58276] received 'GET /get_r'
+on ln. 41, +425.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +426.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58278] received 'GET /get_r'
+on ln. 41, +427.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +428.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58282] received 'GET /get_r'
+on ln. 41, +430.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +431.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58284] received 'GET /get_r'
+on ln. 41, +432.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +433.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58288] received 'GET /get_r'
+on ln. 41, +435.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +436.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58290] received 'GET /get_r'
+on ln. 41, +437.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +438.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58292] received 'GET /get_r'
+on ln. 41, +440.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +441.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58294] received 'GET /get_r'
+on ln. 41, +442.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +443.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58296] received 'GET /get_r'
+on ln. 41, +445.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +446.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58302] received 'GET /get_r'
+on ln. 41, +447.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +448.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58304] received 'GET /get_r'
+on ln. 41, +450.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +451.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58308] received 'GET /get_r'
+on ln. 41, +452.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +453.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58310] received 'GET /get_r'
+on ln. 41, +455.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +456.39
+	of handle_http_requests(...)
+	| [192.168.0.8:58312] received 'GET /get_r'
+on ln. 41, +457.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +458.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58314] received 'GET /get_r'
+on ln. 41, +460.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +461.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58318] received 'GET /get_r'
+on ln. 41, +462.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +463.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58320] received 'GET /get_r'
+on ln. 41, +465.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +466.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58322] received 'GET /get_r'
+on ln. 41, +467.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +468.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58324] received 'GET /get_r'
+on ln. 41, +470.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +471.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58326] received 'GET /get_r'
+on ln. 41, +472.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +473.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58328] received 'GET /get_r'
+on ln. 41, +475.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +476.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58330] received 'GET /get_r'
+on ln. 41, +477.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +478.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58332] received 'GET /get_r'
+on ln. 41, +480.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +481.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58336] received 'GET /get_r'
+on ln. 41, +482.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +483.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58338] received 'GET /get_r'
+on ln. 41, +485.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +486.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58340] received 'GET /get_r'
+on ln. 41, +487.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +488.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58342] received 'GET /get_r'
+on ln. 41, +490.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +491.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58344] received 'GET /get_r'
+on ln. 41, +492.89
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +493.9
+	of handle_http_requests(...)
+	| [192.168.0.8:58346] received 'GET /get_r'
+on ln. 41, +495.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +496.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58350] received 'GET /get_r'
+on ln. 41, +497.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +498.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58352] received 'GET /get_r'
+on ln. 41, +500.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +501.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58354] received 'GET /get_r'
+on ln. 41, +502.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +503.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58356] received 'GET /get_r'
+on ln. 41, +505.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +506.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58362] received 'GET /get_r'
+on ln. 41, +507.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +508.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58364] received 'GET /get_r'
+on ln. 41, +510.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +511.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58366] received 'GET /get_r'
+on ln. 41, +512.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +513.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58370] received 'GET /get_r'
+on ln. 41, +515.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +516.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58372] received 'GET /get_r'
+on ln. 41, +517.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +518.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58374] received 'GET /get_r'
+on ln. 41, +520.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +521.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58376] received 'GET /get_r'
+on ln. 41, +522.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +523.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58378] received 'GET /get_r'
+on ln. 41, +525.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +526.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58380] received 'GET /get_r'
+on ln. 41, +527.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +528.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58384] received 'GET /get_r'
+on ln. 41, +530.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +531.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58386] received 'GET /get_r'
+on ln. 41, +532.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +533.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58388] received 'GET /get_r'
+on ln. 41, +535.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +536.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58390] received 'GET /get_r'
+on ln. 41, +537.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +538.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58392] received 'GET /get_r'
+on ln. 41, +540.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +541.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58394] received 'GET /get_r'
+on ln. 41, +542.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +543.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58400] received 'GET /get_r'
+on ln. 41, +545.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +546.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58402] received 'GET /get_r'
+on ln. 41, +547.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +548.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58404] received 'GET /get_r'
+on ln. 41, +550.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +551.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58406] received 'GET /get_r'
+on ln. 41, +552.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +553.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58408] received 'GET /get_r'
+on ln. 41, +555.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +556.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58410] received 'GET /get_r'
+on ln. 41, +557.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +558.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58414] received 'GET /get_r'
+on ln. 41, +560.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +561.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58416] received 'GET /get_r'
+on ln. 41, +562.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +563.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58418] received 'GET /get_r'
+on ln. 41, +565.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +566.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58424] received 'GET /get_r'
+on ln. 41, +567.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +568.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58426] received 'GET /get_r'
+on ln. 41, +570.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +571.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58428] received 'GET /get_r'
+on ln. 41, +572.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +573.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58432] received 'GET /get_r'
+on ln. 41, +575.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +576.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58434] received 'GET /get_r'
+on ln. 41, +577.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +578.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58436] received 'GET /get_r'
+on ln. 41, +580.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +581.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58438] received 'GET /get_r'
+on ln. 41, +582.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +583.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58440] received 'GET /get_r'
+on ln. 41, +585.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +586.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58442] received 'GET /get_r'
+on ln. 41, +587.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +588.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58446] received 'GET /get_r'
+on ln. 41, +590.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +591.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58448] received 'GET /get_r'
+on ln. 41, +592.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +593.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58458] received 'GET /get_r'
+on ln. 41, +595.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +596.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58460] received 'GET /get_r'
+on ln. 41, +597.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +598.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58462] received 'GET /get_r'
+on ln. 41, +600.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +601.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58464] received 'GET /get_r'
+on ln. 41, +602.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +603.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58468] received 'GET /get_r'
+on ln. 41, +605.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +606.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58472] received 'GET /get_r'
+on ln. 41, +607.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +608.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58474] received 'GET /get_r'
+on ln. 41, +610.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +611.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58476] received 'GET /get_r'
+on ln. 41, +612.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +613.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58478] received 'GET /get_r'
+on ln. 41, +615.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +616.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58480] received 'GET /get_r'
+on ln. 41, +617.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +618.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58482] received 'GET /get_r'
+on ln. 41, +620.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +621.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58486] received 'GET /get_r'
+on ln. 41, +622.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +623.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58488] received 'GET /get_r'
+on ln. 41, +625.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +626.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58494] received 'GET /get_r'
+on ln. 41, +627.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +628.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58496] received 'GET /get_r'
+on ln. 41, +630.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +631.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58498] received 'GET /get_r'
+on ln. 41, +632.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +633.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58502] received 'GET /get_r'
+on ln. 41, +635.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +636.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58504] received 'GET /get_r'
+on ln. 41, +637.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +638.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58506] received 'GET /get_r'
+on ln. 41, +640.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +641.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58508] received 'GET /get_r'
+on ln. 41, +642.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +643.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58510] received 'GET /get_r'
+on ln. 41, +645.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +646.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58512] received 'GET /get_r'
+on ln. 41, +647.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +648.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58514] received 'GET /get_r'
+on ln. 41, +650.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +651.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58516] received 'GET /get_r'
+on ln. 41, +652.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +653.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58520] received 'GET /get_r'
+on ln. 41, +655.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +656.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58522] received 'GET /get_r'
+on ln. 41, +657.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +658.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58524] received 'GET /get_r'
+on ln. 41, +660.4
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +661.4
+	of handle_http_requests(...)
+	| [192.168.0.8:58526] received 'GET /get_r'
+on ln. 41, +662.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +663.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58528] received 'GET /get_r'
+on ln. 41, +665.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +666.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58532] received 'GET /get_r'
+on ln. 41, +667.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +668.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58534] received 'GET /get_r'
+on ln. 41, +670.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +671.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58536] received 'GET /get_r'
+on ln. 41, +672.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +673.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58538] received 'GET /get_r'
+on ln. 41, +675.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +676.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58540] received 'GET /get_r'
+on ln. 41, +677.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +678.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58542] received 'GET /get_r'
+on ln. 41, +680.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +681.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58544] received 'GET /get_r'
+on ln. 41, +682.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +683.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58548] received 'GET /get_r'
+on ln. 41, +685.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +686.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58554] received 'GET /get_r'
+on ln. 41, +687.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +688.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58556] received 'GET /get_r'
+on ln. 41, +690.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +691.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58558] received 'GET /get_r'
+on ln. 41, +692.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +693.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58560] received 'GET /get_r'
+on ln. 41, +695.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +696.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58564] received 'GET /get_r'
+on ln. 41, +697.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +698.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58566] received 'GET /get_r'
+on ln. 41, +700.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +701.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58568] received 'GET /get_r'
+on ln. 41, +702.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +703.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58570] received 'GET /get_r'
+on ln. 41, +705.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +706.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58572] received 'GET /get_r'
+on ln. 41, +707.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +708.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58574] received 'GET /get_r'
+on ln. 41, +710.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +711.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58576] received 'GET /get_r'
+on ln. 41, +712.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +713.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58580] received 'GET /get_r'
+on ln. 41, +715.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +716.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58582] received 'GET /get_r'
+on ln. 41, +717.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +718.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58584] received 'GET /get_r'
+on ln. 41, +720.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +721.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58586] received 'GET /get_r'
+on ln. 41, +722.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +723.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58588] received 'GET /get_r'
+on ln. 41, +725.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +726.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58592] received 'GET /get_r'
+on ln. 41, +727.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +728.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58594] received 'GET /get_r'
+on ln. 41, +730.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +731.09
+	of handle_connections(...)
+	| received connection from 86.6.165.117
+on ln. 178, +731.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58596] received 'GET /get_r'
+on ln. 178, +732.78
+	of handle_http_requests(...)
+	| [86.6.165.117:46204] received 'GET /get_r'
+on ln. 41, +732.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +733.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58598] received 'GET /get_r'
+on ln. 41, +735.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +736.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58600] received 'GET /get_r'
+on ln. 41, +737.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +738.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58602] received 'GET /get_r'
+on ln. 41, +740.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +741.39
+	of handle_http_requests(...)
+	| [192.168.0.8:58604] received 'GET /get_r'
+on ln. 41, +742.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +743.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58606] received 'GET /get_r'
+on ln. 41, +745.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +746.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58614] received 'GET /get_r'
+on ln. 41, +747.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +748.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58616] received 'GET /get_r'
+on ln. 41, +750.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +751.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58618] received 'GET /get_r'
+on ln. 41, +752.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +753.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58620] received 'GET /get_r'
+on ln. 41, +755.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +756.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58624] received 'GET /get_r'
+on ln. 41, +757.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +758.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58626] received 'GET /get_r'
+on ln. 41, +760.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +761.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58628] received 'GET /get_r'
+on ln. 41, +762.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +763.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58630] received 'GET /get_r'
+on ln. 41, +765.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +766.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58632] received 'GET /get_r'
+on ln. 41, +767.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +768.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58634] received 'GET /get_r'
+on ln. 41, +770.39
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +771.39
+	of handle_http_requests(...)
+	| [192.168.0.8:58636] received 'GET /get_r'
+on ln. 41, +772.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +773.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58638] received 'GET /get_r'
+on ln. 41, +775.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +776.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58642] received 'GET /get_r'
+on ln. 41, +777.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +778.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58644] received 'GET /get_r'
+on ln. 41, +780.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +781.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58646] received 'GET /get_r'
+on ln. 41, +782.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +783.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58648] received 'GET /get_r'
+on ln. 41, +785.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +786.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58652] received 'GET /get_r'
+on ln. 41, +787.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +788.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58654] received 'GET /get_r'
+on ln. 41, +790.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +791.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58656] received 'GET /get_r'
+on ln. 41, +792.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +793.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58658] received 'GET /get_r'
+on ln. 41, +795.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +796.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58660] received 'GET /get_r'
+on ln. 41, +797.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +798.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58662] received 'GET /get_r'
+on ln. 41, +800.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +801.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58664] received 'GET /get_r'
+on ln. 41, +802.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +803.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58666] received 'GET /get_r'
+on ln. 41, +805.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +806.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58672] received 'GET /get_r'
+on ln. 41, +807.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +808.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58676] received 'GET /get_r'
+on ln. 41, +810.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +811.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58678] received 'GET /get_r'
+on ln. 41, +812.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +813.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58680] received 'GET /get_r'
+on ln. 41, +815.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +816.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58682] received 'GET /get_r'
+on ln. 41, +817.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +818.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58686] received 'GET /get_r'
+on ln. 41, +820.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +821.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58688] received 'GET /get_r'
+on ln. 41, +822.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +823.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58690] received 'GET /get_r'
+on ln. 41, +825.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +826.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58692] received 'GET /get_r'
+on ln. 41, +827.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +828.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58694] received 'GET /get_r'
+on ln. 41, +830.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +831.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58696] received 'GET /get_r'
+on ln. 41, +832.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +833.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58698] received 'GET /get_r'
+on ln. 41, +835.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +836.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58700] received 'GET /get_r'
+on ln. 41, +837.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +838.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58702] received 'GET /get_r'
+on ln. 41, +840.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +841.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58706] received 'GET /get_r'
+on ln. 41, +842.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +843.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58712] received 'GET /get_r'
+on ln. 41, +845.39
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +846.39
+	of handle_http_requests(...)
+	| [192.168.0.8:58714] received 'GET /get_r'
+on ln. 41, +847.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +848.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58718] received 'GET /get_r'
+on ln. 41, +850.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +851.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58720] received 'GET /get_r'
+on ln. 41, +852.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +853.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58722] received 'GET /get_r'
+on ln. 41, +855.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +856.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58724] received 'GET /get_r'
+on ln. 41, +857.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +858.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58726] received 'GET /get_r'
+on ln. 41, +860.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +861.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58728] received 'GET /get_r'
+on ln. 41, +862.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +863.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58730] received 'GET /get_r'
+on ln. 41, +865.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +866.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58736] received 'GET /get_r'
+on ln. 41, +867.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +868.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58738] received 'GET /get_r'
+on ln. 41, +870.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +871.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58742] received 'GET /get_r'
+on ln. 41, +872.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +873.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58744] received 'GET /get_r'
+on ln. 41, +875.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +876.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58746] received 'GET /get_r'
+on ln. 41, +877.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +878.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58754] received 'GET /get_r'
+on ln. 41, +880.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +881.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58756] received 'GET /get_r'
+on ln. 41, +882.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +883.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58758] received 'GET /get_r'
+on ln. 41, +885.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +886.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58760] received 'GET /get_r'
+on ln. 41, +887.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +888.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58762] received 'GET /get_r'
+on ln. 41, +890.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +891.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58764] received 'GET /get_r'
+on ln. 41, +892.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +893.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58766] received 'GET /get_r'
+on ln. 41, +895.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +896.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58768] received 'GET /get_r'
+on ln. 41, +897.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +898.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58770] received 'GET /get_r'
+on ln. 41, +900.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +901.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58772] received 'GET /get_r'
+on ln. 41, +902.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +903.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58776] received 'GET /get_r'
+on ln. 41, +905.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +906.39
+	of handle_http_requests(...)
+	| [192.168.0.8:58778] received 'GET /get_r'
+on ln. 41, +907.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +908.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58782] received 'GET /get_r'
+on ln. 41, +910.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +911.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58784] received 'GET /get_r'
+on ln. 41, +912.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +913.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58786] received 'GET /get_r'
+on ln. 41, +915.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +916.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58788] received 'GET /get_r'
+on ln. 41, +917.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +918.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58790] received 'GET /get_r'
+on ln. 41, +920.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +921.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58792] received 'GET /get_r'
+on ln. 41, +922.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +923.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58794] received 'GET /get_r'
+on ln. 41, +925.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +926.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58800] received 'GET /get_r'
+on ln. 41, +927.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +928.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58802] received 'GET /get_r'
+on ln. 41, +930.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +931.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58804] received 'GET /get_r'
+on ln. 41, +932.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +933.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58808] received 'GET /get_r'
+on ln. 41, +935.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +936.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58810] received 'GET /get_r'
+on ln. 41, +937.9
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +938.9
+	of handle_http_requests(...)
+	| [192.168.0.8:58814] received 'GET /get_r'
+on ln. 41, +940.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +941.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58816] received 'GET /get_r'
+on ln. 41, +942.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +943.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58818] received 'GET /get_r'
+on ln. 41, +945.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +946.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58820] received 'GET /get_r'
+on ln. 41, +947.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +948.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58822] received 'GET /get_r'
+on ln. 41, +950.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +951.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58824] received 'GET /get_r'
+on ln. 41, +952.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +953.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58826] received 'GET /get_r'
+on ln. 41, +955.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +956.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58828] received 'GET /get_r'
+on ln. 41, +957.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +958.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58830] received 'GET /get_r'
+on ln. 41, +960.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +961.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58832] received 'GET /get_r'
+on ln. 41, +962.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +963.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58836] received 'GET /get_r'
+on ln. 41, +965.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +966.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58838] received 'GET /get_r'
+on ln. 41, +967.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +968.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58842] received 'GET /get_r'
+on ln. 41, +970.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +971.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58844] received 'GET /get_r'
+on ln. 41, +972.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +973.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58846] received 'GET /get_r'
+on ln. 41, +975.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +976.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58848] received 'GET /get_r'
+on ln. 41, +977.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +978.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58850] received 'GET /get_r'
+on ln. 41, +980.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +981.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58852] received 'GET /get_r'
+on ln. 41, +982.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +983.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58854] received 'GET /get_r'
+on ln. 41, +985.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +986.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58860] received 'GET /get_r'
+on ln. 41, +987.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +988.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58862] received 'GET /get_r'
+on ln. 41, +990.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +991.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58864] received 'GET /get_r'
+on ln. 41, +992.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +993.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58866] received 'GET /get_r'
+on ln. 41, +995.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +996.39
+	of handle_http_requests(...)
+	| [192.168.0.8:58870] received 'GET /get_r'
+on ln. 41, +997.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +998.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58872] received 'GET /get_r'
+on ln. 41, +1000.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1001.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58876] received 'GET /get_r'
+on ln. 41, +1002.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1003.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58878] received 'GET /get_r'
+on ln. 41, +1005.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1006.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58880] received 'GET /get_r'
+on ln. 41, +1007.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1008.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58882] received 'GET /get_r'
+on ln. 41, +1010.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1011.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58884] received 'GET /get_r'
+on ln. 41, +1012.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1013.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58886] received 'GET /get_r'
+on ln. 41, +1015.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1016.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58888] received 'GET /get_r'
+on ln. 41, +1017.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1018.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58890] received 'GET /get_r'
+on ln. 41, +1020.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1021.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58892] received 'GET /get_r'
+on ln. 41, +1022.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1023.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58894] received 'GET /get_r'
+on ln. 41, +1025.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1026.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58898] received 'GET /get_r'
+on ln. 41, +1027.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1028.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58900] received 'GET /get_r'
+on ln. 41, +1030.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1031.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58904] received 'GET /get_r'
+on ln. 41, +1032.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1033.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58906] received 'GET /get_r'
+on ln. 41, +1035.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1036.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58908] received 'GET /get_r'
+on ln. 41, +1037.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1038.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58910] received 'GET /get_r'
+on ln. 41, +1040.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1041.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58912] received 'GET /get_r'
+on ln. 41, +1042.9
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1043.9
+	of handle_http_requests(...)
+	| [192.168.0.8:58914] received 'GET /get_r'
+on ln. 41, +1045.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1046.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58920] received 'GET /get_r'
+on ln. 41, +1047.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1048.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58922] received 'GET /get_r'
+on ln. 41, +1050.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1051.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58924] received 'GET /get_r'
+on ln. 41, +1052.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1053.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58926] received 'GET /get_r'
+on ln. 41, +1055.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1056.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58928] received 'GET /get_r'
+on ln. 41, +1057.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1058.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58932] received 'GET /get_r'
+on ln. 41, +1060.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1061.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58936] received 'GET /get_r'
+on ln. 41, +1062.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1063.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58938] received 'GET /get_r'
+on ln. 41, +1065.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1066.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58940] received 'GET /get_r'
+on ln. 41, +1067.9
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1068.9
+	of handle_http_requests(...)
+	| [192.168.0.8:58942] received 'GET /get_r'
+on ln. 41, +1070.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1071.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58944] received 'GET /get_r'
+on ln. 41, +1072.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1073.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58946] received 'GET /get_r'
+on ln. 41, +1075.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1076.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58948] received 'GET /get_r'
+on ln. 41, +1077.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1078.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58950] received 'GET /get_r'
+on ln. 41, +1080.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1081.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58952] received 'GET /get_r'
+on ln. 41, +1082.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1083.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58954] received 'GET /get_r'
+on ln. 41, +1085.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1086.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58956] received 'GET /get_r'
+on ln. 41, +1087.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1088.89
+	of handle_http_requests(...)
+	| [192.168.0.8:58960] received 'GET /get_r'
+on ln. 41, +1090.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1091.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58964] received 'GET /get_r'
+on ln. 41, +1092.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1093.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58966] received 'GET /get_r'
+on ln. 41, +1095.39
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1096.4
+	of handle_http_requests(...)
+	| [192.168.0.8:58968] received 'GET /get_r'
+on ln. 41, +1097.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1098.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58970] received 'GET /get_r'
+on ln. 41, +1100.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1101.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58972] received 'GET /get_r'
+on ln. 41, +1102.9
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1103.9
+	of handle_http_requests(...)
+	| [192.168.0.8:58974] received 'GET /get_r'
+on ln. 41, +1105.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1106.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58980] received 'GET /get_r'
+on ln. 41, +1107.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1108.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58982] received 'GET /get_r'
+on ln. 41, +1110.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1111.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58984] received 'GET /get_r'
+on ln. 41, +1112.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1113.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58986] received 'GET /get_r'
+on ln. 41, +1115.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1116.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58988] received 'GET /get_r'
+on ln. 41, +1117.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1118.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58990] received 'GET /get_r'
+on ln. 41, +1120.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1121.38
+	of handle_http_requests(...)
+	| [192.168.0.8:58996] received 'GET /get_r'
+on ln. 41, +1122.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1123.88
+	of handle_http_requests(...)
+	| [192.168.0.8:58998] received 'GET /get_r'
+on ln. 41, +1125.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1126.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59000] received 'GET /get_r'
+on ln. 41, +1127.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1128.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59002] received 'GET /get_r'
+on ln. 41, +1130.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1131.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59004] received 'GET /get_r'
+on ln. 41, +1132.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1133.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59006] received 'GET /get_r'
+on ln. 41, +1135.39
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1136.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59008] received 'GET /get_r'
+on ln. 41, +1137.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1138.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59010] received 'GET /get_r'
+on ln. 41, +1140.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1141.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59012] received 'GET /get_r'
+on ln. 41, +1142.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1143.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59014] received 'GET /get_r'
+on ln. 41, +1145.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1146.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59018] received 'GET /get_r'
+on ln. 41, +1147.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1148.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59020] received 'GET /get_r'
+on ln. 41, +1150.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1151.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59026] received 'GET /get_r'
+on ln. 41, +1152.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1153.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59028] received 'GET /get_r'
+on ln. 41, +1155.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1156.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59030] received 'GET /get_r'
+on ln. 41, +1157.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1158.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59032] received 'GET /get_r'
+on ln. 41, +1160.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1161.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59034] received 'GET /get_r'
+on ln. 41, +1162.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1163.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59036] received 'GET /get_r'
+on ln. 41, +1165.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1166.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59042] received 'GET /get_r'
+on ln. 41, +1167.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1168.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59044] received 'GET /get_r'
+on ln. 41, +1170.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1171.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59046] received 'GET /get_r'
+on ln. 41, +1172.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1173.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59048] received 'GET /get_r'
+on ln. 41, +1175.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1176.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59050] received 'GET /get_r'
+on ln. 41, +1177.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1178.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59052] received 'GET /get_r'
+on ln. 41, +1180.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1181.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59056] received 'GET /get_r'
+on ln. 41, +1182.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1183.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59060] received 'GET /get_r'
+on ln. 41, +1185.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1186.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59062] received 'GET /get_r'
+on ln. 41, +1187.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1188.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59064] received 'GET /get_r'
+on ln. 41, +1190.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1191.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59066] received 'GET /get_r'
+on ln. 41, +1192.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1193.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59068] received 'GET /get_r'
+on ln. 41, +1195.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1196.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59070] received 'GET /get_r'
+on ln. 41, +1197.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1198.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59090] received 'GET /get_r'
+on ln. 41, +1200.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1201.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59092] received 'GET /get_r'
+on ln. 41, +1202.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1203.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59094] received 'GET /get_r'
+on ln. 41, +1205.43
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1206.43
+	of handle_http_requests(...)
+	| [192.168.0.8:59096] received 'GET /get_r'
+on ln. 41, +1207.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1208.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59098] received 'GET /get_r'
+on ln. 41, +1210.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1211.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59104] received 'GET /get_r'
+on ln. 41, +1212.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1213.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59110] received 'GET /get_r'
+on ln. 41, +1215.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1216.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59112] received 'GET /get_r'
+on ln. 41, +1217.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1218.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59114] received 'GET /get_r'
+on ln. 41, +1220.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1221.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59116] received 'GET /get_r'
+on ln. 41, +1222.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1223.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59118] received 'GET /get_r'
+on ln. 41, +1225.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1226.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59124] received 'GET /get_r'
+on ln. 41, +1227.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1228.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59126] received 'GET /get_r'
+on ln. 41, +1230.39
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1231.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59128] received 'GET /get_r'
+on ln. 41, +1232.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1233.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59130] received 'GET /get_r'
+on ln. 41, +1235.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1236.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59132] received 'GET /get_r'
+on ln. 41, +1237.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1238.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59134] received 'GET /get_r'
+on ln. 41, +1240.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1241.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59136] received 'GET /get_r'
+on ln. 41, +1242.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1243.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59142] received 'GET /get_r'
+on ln. 41, +1245.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1246.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59144] received 'GET /get_r'
+on ln. 41, +1247.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1248.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59146] received 'GET /get_r'
+on ln. 41, +1250.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1251.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59148] received 'GET /get_r'
+on ln. 41, +1252.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1253.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59152] received 'GET /get_r'
+on ln. 41, +1255.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1256.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59154] received 'GET /get_r'
+on ln. 41, +1257.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1258.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59156] received 'GET /get_r'
+on ln. 41, +1260.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1261.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59158] received 'GET /get_r'
+on ln. 41, +1262.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1263.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59160] received 'GET /get_r'
+on ln. 41, +1265.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1266.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59162] received 'GET /get_r'
+on ln. 41, +1267.89
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1268.89
+	of handle_http_requests(...)
+	| [192.168.0.8:59164] received 'GET /get_r'
+on ln. 41, +1270.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1271.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59166] received 'GET /get_r'
+on ln. 41, +1272.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1273.89
+	of handle_http_requests(...)
+	| [192.168.0.8:59170] received 'GET /get_r'
+on ln. 41, +1275.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1276.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59174] received 'GET /get_r'
+on ln. 41, +1277.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1278.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59176] received 'GET /get_r'
+on ln. 41, +1280.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1281.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59178] received 'GET /get_r'
+on ln. 41, +1282.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1283.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59180] received 'GET /get_r'
+on ln. 41, +1285.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1286.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59186] received 'GET /get_r'
+on ln. 41, +1287.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1288.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59188] received 'GET /get_r'
+on ln. 41, +1290.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1291.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59190] received 'GET /get_r'
+on ln. 41, +1292.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1293.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59192] received 'GET /get_r'
+on ln. 41, +1295.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1296.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59194] received 'GET /get_r'
+on ln. 41, +1297.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1298.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59196] received 'GET /get_r'
+on ln. 41, +1300.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1301.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59198] received 'GET /get_r'
+on ln. 41, +1302.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1303.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59202] received 'GET /get_r'
+on ln. 41, +1305.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1306.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59206] received 'GET /get_r'
+on ln. 41, +1307.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1308.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59208] received 'GET /get_r'
+on ln. 41, +1310.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1311.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59210] received 'GET /get_r'
+on ln. 41, +1312.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1313.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59212] received 'GET /get_r'
+on ln. 41, +1315.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1316.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59214] received 'GET /get_r'
+on ln. 41, +1317.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1318.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59216] received 'GET /get_r'
+on ln. 41, +1320.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1321.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59218] received 'GET /get_r'
+on ln. 41, +1322.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1323.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59220] received 'GET /get_r'
+on ln. 41, +1325.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1326.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59222] received 'GET /get_r'
+on ln. 41, +1327.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1328.89
+	of handle_http_requests(...)
+	| [192.168.0.8:59224] received 'GET /get_r'
+on ln. 41, +1330.39
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1331.4
+	of handle_http_requests(...)
+	| [192.168.0.8:59226] received 'GET /get_r'
+on ln. 41, +1332.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1333.89
+	of handle_http_requests(...)
+	| [192.168.0.8:59228] received 'GET /get_r'
+on ln. 41, +1335.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1336.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59232] received 'GET /get_r'
+on ln. 41, +1337.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1338.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59236] received 'GET /get_r'
+on ln. 41, +1340.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1341.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59238] received 'GET /get_r'
+on ln. 41, +1342.9
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1343.9
+	of handle_http_requests(...)
+	| [192.168.0.8:59240] received 'GET /get_r'
+on ln. 41, +1345.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1346.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59246] received 'GET /get_r'
+on ln. 41, +1347.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1348.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59248] received 'GET /get_r'
+on ln. 41, +1350.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1351.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59250] received 'GET /get_r'
+on ln. 41, +1352.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1353.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59252] received 'GET /get_r'
+on ln. 41, +1355.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1356.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59254] received 'GET /get_r'
+on ln. 41, +1357.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1358.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59256] received 'GET /get_r'
+on ln. 41, +1360.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1361.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59258] received 'GET /get_r'
+on ln. 41, +1362.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1363.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59260] received 'GET /get_r'
+on ln. 41, +1365.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1366.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59264] received 'GET /get_r'
+on ln. 41, +1367.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1368.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59268] received 'GET /get_r'
+on ln. 41, +1370.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1371.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59270] received 'GET /get_r'
+on ln. 41, +1372.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1373.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59272] received 'GET /get_r'
+on ln. 41, +1375.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1376.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59274] received 'GET /get_r'
+on ln. 41, +1377.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1378.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59276] received 'GET /get_r'
+on ln. 41, +1380.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1381.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59278] received 'GET /get_r'
+on ln. 41, +1382.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1383.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59280] received 'GET /get_r'
+on ln. 41, +1385.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1386.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59282] received 'GET /get_r'
+on ln. 41, +1387.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1388.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59284] received 'GET /get_r'
+on ln. 41, +1390.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1391.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59286] received 'GET /get_r'
+on ln. 41, +1392.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1393.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59288] received 'GET /get_r'
+on ln. 41, +1395.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1396.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59292] received 'GET /get_r'
+on ln. 41, +1397.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1398.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59294] received 'GET /get_r'
+on ln. 41, +1400.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1401.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59298] received 'GET /get_r'
+on ln. 41, +1402.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1403.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59300] received 'GET /get_r'
+on ln. 41, +1405.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1406.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59306] received 'GET /get_r'
+on ln. 41, +1407.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1408.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59308] received 'GET /get_r'
+on ln. 41, +1410.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1411.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59310] received 'GET /get_r'
+on ln. 41, +1412.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1413.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59312] received 'GET /get_r'
+on ln. 41, +1415.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1416.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59314] received 'GET /get_r'
+on ln. 41, +1417.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1418.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59316] received 'GET /get_r'
+on ln. 41, +1420.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1421.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59318] received 'GET /get_r'
+on ln. 41, +1422.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1423.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59320] received 'GET /get_r'
+on ln. 41, +1425.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1426.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59324] received 'GET /get_r'
+on ln. 41, +1427.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1428.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59326] received 'GET /get_r'
+on ln. 41, +1430.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1431.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59330] received 'GET /get_r'
+on ln. 41, +1432.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1433.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59332] received 'GET /get_r'
+on ln. 41, +1435.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1436.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59334] received 'GET /get_r'
+on ln. 41, +1437.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1438.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59336] received 'GET /get_r'
+on ln. 41, +1440.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1441.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59338] received 'GET /get_r'
+on ln. 41, +1442.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1443.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59340] received 'GET /get_r'
+on ln. 41, +1445.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1446.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59346] received 'GET /get_r'
+on ln. 41, +1447.89
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1448.89
+	of handle_http_requests(...)
+	| [192.168.0.8:59348] received 'GET /get_r'
+on ln. 41, +1450.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1451.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59350] received 'GET /get_r'
+on ln. 41, +1452.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1453.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59352] received 'GET /get_r'
+on ln. 41, +1455.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1456.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59356] received 'GET /get_r'
+on ln. 41, +1457.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1458.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59358] received 'GET /get_r'
+on ln. 41, +1460.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1461.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59360] received 'GET /get_r'
+on ln. 41, +1462.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1463.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59364] received 'GET /get_r'
+on ln. 41, +1465.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1466.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59370] received 'GET /get_r'
+on ln. 41, +1467.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1468.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59372] received 'GET /get_r'
+on ln. 41, +1470.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1471.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59374] received 'GET /get_r'
+on ln. 41, +1472.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1473.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59376] received 'GET /get_r'
+on ln. 41, +1475.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1476.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59378] received 'GET /get_r'
+on ln. 41, +1477.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1478.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59380] received 'GET /get_r'
+on ln. 41, +1480.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1480.97
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1481.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59382] received 'GET /get_r'
+on ln. 178, +1481.98
+	of handle_http_requests(...)
+	| [82.36.76.238:48038] received 'GET / HTTP'
+on ln. 41, +1482.45
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1482.5
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1482.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1483.46
+	of handle_http_requests(...)
+	| [82.36.76.238:48040] received 'GET /get_r'
+on ln. 178, +1483.51
+	of handle_http_requests(...)
+	| [82.36.76.238:48042] received 'GET /favic'
+on ln. 178, +1483.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59384] received 'GET /get_r'
+on ln. 41, +1485.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1486.32
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1486.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59386] received 'GET /get_r'
+on ln. 178, +1487.33
+	of handle_http_requests(...)
+	| [82.36.76.238:48044] received 'GET /get_r'
+on ln. 41, +1487.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1488.81
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1488.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59390] received 'GET /get_r'
+on ln. 178, +1489.82
+	of handle_http_requests(...)
+	| [82.36.76.238:48046] received 'GET /get_r'
+on ln. 41, +1490.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1490.89
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1491.32
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1491.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59392] received 'GET /get_r'
+on ln. 178, +1491.9
+	of handle_http_requests(...)
+	| [82.36.76.238:48048] received 'GET /regis'
+on ln. 178, +1492.22
+	of handle_http_requests(...)
+	| [82.36.76.238:48050] received 'GET /get_r'
+on ln. 41, +1492.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1493.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59396] received 'GET /get_r'
+on ln. 41, +1495.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1496.04
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1496.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59398] received 'GET /get_r'
+on ln. 178, +1497.04
+	of handle_http_requests(...)
+	| [82.36.76.238:48054] received 'POST /regi'
+on ln. 41, +1497.19
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1497.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1498.2
+	of handle_http_requests(...)
+	| [82.36.76.238:48056] received 'GET / HTTP'
+on ln. 41, +1498.48
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1498.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59400] received 'GET /get_r'
+on ln. 178, +1499.49
+	of handle_http_requests(...)
+	| [82.36.76.238:48058] received 'GET /get_r'
+on ln. 41, +1500.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1501.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59402] received 'GET /get_r'
+on ln. 41, +1502.31
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1502.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1503.32
+	of handle_http_requests(...)
+	| [82.36.76.238:48060] received 'GET /get_r'
+on ln. 178, +1503.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59404] received 'GET /get_r'
+on ln. 41, +1504.39
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1504.82
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1505.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1505.39
+	of handle_http_requests(...)
+	| [82.36.76.238:48062] received 'POST /make'
+on ln. 41, +1505.58
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1505.82
+	of handle_http_requests(...)
+	| [82.36.76.238:48064] received 'GET /get_r'
+on ln. 178, +1506.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59406] received 'GET /get_r'
+on ln. 178, +1506.59
+	of handle_http_requests(...)
+	| [82.36.76.238:48066] received 'GET / HTTP'
+on ln. 41, +1506.87
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1507.88
+	of handle_http_requests(...)
+	| [82.36.76.238:48068] received 'GET /get_r'
+on ln. 41, +1507.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1508.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59408] received 'GET /get_r'
+on ln. 41, +1510.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1510.69
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1511.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59410] received 'GET /get_r'
+on ln. 178, +1511.69
+	of handle_http_requests(...)
+	| [82.36.76.238:48070] received 'GET /get_r'
+on ln. 41, +1511.74
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1512.74
+	of handle_http_requests(...)
+	| [82.36.76.238:48072] received 'GET /membe'
+on ln. 41, +1512.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1513.26
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1513.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59412] received 'GET /get_r'
+on ln. 178, +1514.27
+	of handle_http_requests(...)
+	| [82.36.76.238:48074] received 'GET /get_r'
+on ln. 41, +1515.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1516.3
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1516.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59414] received 'GET /get_r'
+on ln. 178, +1517.3
+	of handle_http_requests(...)
+	| [82.36.76.238:48076] received 'GET /get_r'
+on ln. 41, +1517.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1518.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59418] received 'GET /get_r'
+on ln. 41, +1519.3
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1520.3
+	of handle_http_requests(...)
+	| [82.36.76.238:48078] received 'GET /get_r'
+on ln. 41, +1520.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1521.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59420] received 'GET /get_r'
+on ln. 41, +1522.33
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1522.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1523.33
+	of handle_http_requests(...)
+	| [82.36.76.238:48080] received 'GET /get_r'
+on ln. 178, +1523.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59422] received 'GET /get_r'
+on ln. 41, +1525.31
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1525.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1526.31
+	of handle_http_requests(...)
+	| [82.36.76.238:48090] received 'GET /get_r'
+on ln. 178, +1526.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59430] received 'GET /get_r'
+on ln. 41, +1527.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1528.3
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1528.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59432] received 'GET /get_r'
+on ln. 178, +1529.31
+	of handle_http_requests(...)
+	| [82.36.76.238:48104] received 'GET /get_r'
+on ln. 41, +1530.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1531.31
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1531.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59434] received 'GET /get_r'
+on ln. 178, +1532.31
+	of handle_http_requests(...)
+	| [82.36.76.238:48118] received 'GET /get_r'
+on ln. 41, +1532.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1533.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59436] received 'GET /get_r'
+on ln. 41, +1534.31
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1535.31
+	of handle_http_requests(...)
+	| [82.36.76.238:48120] received 'GET /get_r'
+on ln. 41, +1535.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1536.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59438] received 'GET /get_r'
+on ln. 41, +1536.83
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1537.83
+	of handle_http_requests(...)
+	| [82.36.76.238:48122] received 'GET /get_r'
+on ln. 41, +1537.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1538.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59440] received 'GET /get_r'
+on ln. 41, +1539.32
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1540.33
+	of handle_http_requests(...)
+	| [82.36.76.238:48124] received 'GET /get_r'
+on ln. 41, +1540.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1541.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59442] received 'GET /get_r'
+on ln. 41, +1541.81
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1542.82
+	of handle_http_requests(...)
+	| [82.36.76.238:48126] received 'GET /get_r'
+on ln. 41, +1542.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1543.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59444] received 'GET /get_r'
+on ln. 41, +1544.33
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1545.34
+	of handle_http_requests(...)
+	| [82.36.76.238:48128] received 'GET /get_r'
+on ln. 41, +1545.39
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1546.4
+	of handle_http_requests(...)
+	| [192.168.0.8:59446] received 'GET /get_r'
+on ln. 41, +1546.82
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1547.83
+	of handle_http_requests(...)
+	| [82.36.76.238:48130] received 'GET /get_r'
+on ln. 41, +1547.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1548.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59450] received 'GET /get_r'
+on ln. 41, +1549.31
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1550.31
+	of handle_http_requests(...)
+	| [82.36.76.238:48132] received 'GET /get_r'
+on ln. 41, +1550.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1551.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59452] received 'GET /get_r'
+on ln. 41, +1551.81
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1552.82
+	of handle_http_requests(...)
+	| [82.36.76.238:48134] received 'GET /get_r'
+on ln. 41, +1552.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1553.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59454] received 'GET /get_r'
+on ln. 41, +1554.32
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1555.33
+	of handle_http_requests(...)
+	| [82.36.76.238:48136] received 'GET /get_r'
+on ln. 41, +1555.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1556.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59458] received 'GET /get_r'
+on ln. 41, +1556.83
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1557.83
+	of handle_http_requests(...)
+	| [82.36.76.238:48138] received 'GET /get_r'
+on ln. 41, +1557.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1558.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59460] received 'GET /get_r'
+on ln. 41, +1559.32
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1560.33
+	of handle_http_requests(...)
+	| [82.36.76.238:48140] received 'GET /get_r'
+on ln. 41, +1560.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1561.33
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1561.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59462] received 'GET /get_r'
+on ln. 41, +1561.8
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1562.33
+	of handle_http_requests(...)
+	| [82.36.76.238:48142] received 'GET / HTTP'
+on ln. 178, +1562.56
+	of handle_http_requests(...)
+	| [82.36.76.238:48144] received 'GET /get_r'
+on ln. 41, +1562.59
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1562.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1563.6
+	of handle_http_requests(...)
+	| [82.36.76.238:48146] received 'GET /get_r'
+on ln. 178, +1563.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59464] received 'GET /get_r'
+on ln. 41, +1565.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1566.35
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1566.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59466] received 'GET /get_r'
+on ln. 178, +1567.35
+	of handle_http_requests(...)
+	| [82.36.76.238:48148] received 'GET /get_r'
+on ln. 41, +1567.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1568.4
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1568.85
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1568.89
+	of handle_http_requests(...)
+	| [192.168.0.8:59480] received 'GET /get_r'
+on ln. 178, +1569.41
+	of handle_http_requests(...)
+	| [82.36.76.238:48150] received 'GET /profi'
+on ln. 178, +1569.85
+	of handle_http_requests(...)
+	| [82.36.76.238:48152] received 'GET /get_r'
+on ln. 41, +1570.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1571.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59482] received 'GET /get_r'
+on ln. 41, +1571.45
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1572.45
+	of handle_http_requests(...)
+	| [82.36.76.238:48154] received 'GET /get_r'
+on ln. 41, +1572.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1573.89
+	of handle_http_requests(...)
+	| [192.168.0.8:59488] received 'GET /get_r'
+on ln. 41, +1573.94
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1574.95
+	of handle_http_requests(...)
+	| [82.36.76.238:48156] received 'GET /get_r'
+on ln. 41, +1575.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1576.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59490] received 'GET /get_r'
+on ln. 41, +1576.45
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1577.45
+	of handle_http_requests(...)
+	| [82.36.76.238:48160] received 'GET /get_r'
+on ln. 41, +1577.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1578.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59494] received 'GET /get_r'
+on ln. 41, +1578.94
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1579.94
+	of handle_http_requests(...)
+	| [82.36.76.238:48162] received 'GET /get_r'
+on ln. 41, +1580.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1581.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59500] received 'GET /get_r'
+on ln. 41, +1581.45
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1582.45
+	of handle_http_requests(...)
+	| [82.36.76.238:48164] received 'GET /get_r'
+on ln. 41, +1582.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1583.89
+	of handle_http_requests(...)
+	| [192.168.0.8:59502] received 'GET /get_r'
+on ln. 41, +1583.93
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1584.94
+	of handle_http_requests(...)
+	| [82.36.76.238:48166] received 'GET /get_r'
+on ln. 41, +1585.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1586.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59510] received 'GET /get_r'
+on ln. 41, +1586.44
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1587.44
+	of handle_http_requests(...)
+	| [82.36.76.238:48168] received 'GET /get_r'
+on ln. 41, +1587.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1588.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59512] received 'GET /get_r'
+on ln. 41, +1588.95
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1589.95
+	of handle_http_requests(...)
+	| [82.36.76.238:48170] received 'GET /get_r'
+on ln. 41, +1590.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1591.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59514] received 'GET /get_r'
+on ln. 41, +1591.45
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1592.45
+	of handle_http_requests(...)
+	| [82.36.76.238:48172] received 'GET /get_r'
+on ln. 41, +1592.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1593.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59516] received 'GET /get_r'
+on ln. 41, +1593.94
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1594.95
+	of handle_http_requests(...)
+	| [82.36.76.238:48174] received 'GET /get_r'
+on ln. 41, +1595.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1596.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59518] received 'GET /get_r'
+on ln. 41, +1596.44
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1597.45
+	of handle_http_requests(...)
+	| [82.36.76.238:48176] received 'GET /get_r'
+on ln. 41, +1597.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1598.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59520] received 'GET /get_r'
+on ln. 41, +1598.94
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1599.71
+	of handle_http_requests(...)
+	| [82.36.76.238:48178] received 'GET /get_r'
+on ln. 41, +1599.76
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1600.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1600.76
+	of handle_http_requests(...)
+	| [82.36.76.238:48180] received 'POST /make'
+on ln. 41, +1600.9
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1601.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59522] received 'GET /get_r'
+on ln. 41, +1601.44
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1601.9
+	of handle_http_requests(...)
+	| [82.36.76.238:48182] received 'GET / HTTP'
+on ln. 178, +1602.17
+	of handle_http_requests(...)
+	| [82.36.76.238:48184] received 'GET /get_r'
+on ln. 41, +1602.24
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1602.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1603.24
+	of handle_http_requests(...)
+	| [82.36.76.238:48186] received 'GET /get_r'
+on ln. 178, +1603.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59524] received 'GET /get_r'
+on ln. 41, +1605.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1606.02
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1606.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59526] received 'GET /get_r'
+on ln. 178, +1607.03
+	of handle_http_requests(...)
+	| [82.36.76.238:48188] received 'GET /get_r'
+on ln. 41, +1607.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1608.71
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1608.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59530] received 'GET /get_r'
+on ln. 178, +1609.71
+	of handle_http_requests(...)
+	| [82.36.76.238:48192] received 'GET /get_r'
+on ln. 41, +1610.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1611.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1611.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59532] received 'GET /get_r'
+on ln. 178, +1612.1
+	of handle_http_requests(...)
+	| [82.36.76.238:48196] received 'GET /get_r'
+on ln. 41, +1612.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1613.59
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1613.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59534] received 'GET /get_r'
+on ln. 178, +1614.59
+	of handle_http_requests(...)
+	| [82.36.76.238:48198] received 'GET /get_r'
+on ln. 41, +1615.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1616.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1616.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59536] received 'GET /get_r'
+on ln. 178, +1617.1
+	of handle_http_requests(...)
+	| [82.36.76.238:48200] received 'GET /get_r'
+on ln. 41, +1617.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1618.58
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1618.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59540] received 'GET /get_r'
+on ln. 178, +1619.59
+	of handle_http_requests(...)
+	| [82.36.76.238:48204] received 'GET /get_r'
+on ln. 41, +1620.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1621.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1621.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59542] received 'GET /get_r'
+on ln. 178, +1622.09
+	of handle_http_requests(...)
+	| [82.36.76.238:48206] received 'GET /get_r'
+on ln. 41, +1622.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1623.59
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1623.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59544] received 'GET /get_r'
+on ln. 178, +1624.61
+	of handle_http_requests(...)
+	| [82.36.76.238:48208] received 'GET /get_r'
+on ln. 41, +1625.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1626.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1626.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59546] received 'GET /get_r'
+on ln. 178, +1627.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48210] received 'GET /get_r'
+on ln. 41, +1627.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1628.58
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1628.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59548] received 'GET /get_r'
+on ln. 178, +1629.59
+	of handle_http_requests(...)
+	| [82.36.76.238:48212] received 'GET /get_r'
+on ln. 41, +1630.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1631.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59550] received 'GET /get_r'
+on ln. 41, +1632.12
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1632.37
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1632.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1633.12
+	of handle_http_requests(...)
+	| [82.36.76.238:48214] received 'GET /get_r'
+on ln. 178, +1633.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59552] received 'GET /get_r'
+on ln. 41, +1634.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1634.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1635.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48220] received 'GET /get_r'
+on ln. 41, +1635.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1636.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1636.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59554] received 'GET /get_r'
+on ln. 178, +1637.09
+	of handle_http_requests(...)
+	| [82.36.76.238:48222] received 'GET /get_r'
+on ln. 41, +1637.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1638.58
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1638.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59558] received 'GET /get_r'
+on ln. 178, +1639.59
+	of handle_http_requests(...)
+	| [82.36.76.238:48224] received 'GET /get_r'
+on ln. 41, +1640.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1641.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1641.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59560] received 'GET /get_r'
+on ln. 178, +1642.1
+	of handle_http_requests(...)
+	| [82.36.76.238:48226] received 'GET /get_r'
+on ln. 41, +1642.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1643.58
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1643.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59562] received 'GET /get_r'
+on ln. 178, +1644.58
+	of handle_http_requests(...)
+	| [82.36.76.238:48228] received 'GET /get_r'
+on ln. 41, +1645.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1646.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1646.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59568] received 'GET /get_r'
+on ln. 178, +1647.1
+	of handle_http_requests(...)
+	| [82.36.76.238:48230] received 'GET /get_r'
+on ln. 41, +1647.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1648.59
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1648.89
+	of handle_http_requests(...)
+	| [192.168.0.8:59572] received 'GET /get_r'
+on ln. 178, +1649.59
+	of handle_http_requests(...)
+	| [82.36.76.238:48232] received 'GET /get_r'
+on ln. 41, +1650.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1651.08
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1651.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59574] received 'GET /get_r'
+on ln. 178, +1652.08
+	of handle_http_requests(...)
+	| [82.36.76.238:48234] received 'GET /get_r'
+on ln. 41, +1652.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1653.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1653.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59576] received 'GET /get_r'
+on ln. 178, +1654.6
+	of handle_http_requests(...)
+	| [82.36.76.238:48236] received 'GET /get_r'
+on ln. 41, +1655.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1656.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1656.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59578] received 'GET /get_r'
+on ln. 178, +1657.09
+	of handle_http_requests(...)
+	| [82.36.76.238:48238] received 'GET /get_r'
+on ln. 41, +1657.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1658.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1658.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59580] received 'GET /get_r'
+on ln. 178, +1659.6
+	of handle_http_requests(...)
+	| [82.36.76.238:48240] received 'GET /get_r'
+on ln. 41, +1660.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1661.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1661.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59582] received 'GET /get_r'
+on ln. 178, +1662.09
+	of handle_http_requests(...)
+	| [82.36.76.238:48242] received 'GET /get_r'
+on ln. 41, +1662.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1663.58
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1663.89
+	of handle_http_requests(...)
+	| [192.168.0.8:59584] received 'GET /get_r'
+on ln. 178, +1664.58
+	of handle_http_requests(...)
+	| [82.36.76.238:48244] received 'GET /get_r'
+on ln. 41, +1665.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1666.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1666.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59586] received 'GET /get_r'
+on ln. 178, +1667.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48246] received 'GET /get_r'
+on ln. 41, +1667.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1668.79
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1668.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59588] received 'GET /get_r'
+on ln. 178, +1669.79
+	of handle_http_requests(...)
+	| [82.36.76.238:48248] received 'GET /get_r'
+on ln. 41, +1670.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1671.24
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1671.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59592] received 'GET /get_r'
+on ln. 178, +1672.24
+	of handle_http_requests(...)
+	| [82.36.76.238:48250] received 'GET /get_r'
+on ln. 41, +1672.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1673.58
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1673.89
+	of handle_http_requests(...)
+	| [192.168.0.8:59594] received 'GET /get_r'
+on ln. 178, +1674.59
+	of handle_http_requests(...)
+	| [82.36.76.238:48252] received 'GET /get_r'
+on ln. 41, +1675.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1676.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1676.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59596] received 'GET /get_r'
+on ln. 178, +1677.1
+	of handle_http_requests(...)
+	| [82.36.76.238:48254] received 'GET /get_r'
+on ln. 41, +1677.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1678.58
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1678.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59598] received 'GET /get_r'
+on ln. 178, +1679.59
+	of handle_http_requests(...)
+	| [82.36.76.238:48256] received 'GET /get_r'
+on ln. 41, +1680.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1681.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1681.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59602] received 'GET /get_r'
+on ln. 178, +1682.09
+	of handle_http_requests(...)
+	| [82.36.76.238:48258] received 'GET /get_r'
+on ln. 41, +1682.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1683.59
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1683.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59604] received 'GET /get_r'
+on ln. 178, +1684.59
+	of handle_http_requests(...)
+	| [82.36.76.238:48260] received 'GET /get_r'
+on ln. 41, +1685.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1686.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1686.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59606] received 'GET /get_r'
+on ln. 178, +1687.1
+	of handle_http_requests(...)
+	| [82.36.76.238:48262] received 'GET /get_r'
+on ln. 41, +1687.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1688.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1688.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59608] received 'GET /get_r'
+on ln. 178, +1689.6
+	of handle_http_requests(...)
+	| [82.36.76.238:48264] received 'GET /get_r'
+on ln. 41, +1690.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1691.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1691.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59610] received 'GET /get_r'
+on ln. 178, +1692.09
+	of handle_http_requests(...)
+	| [82.36.76.238:48266] received 'GET /get_r'
+on ln. 41, +1692.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1693.59
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1693.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59612] received 'GET /get_r'
+on ln. 178, +1694.59
+	of handle_http_requests(...)
+	| [82.36.76.238:48268] received 'GET /get_r'
+on ln. 41, +1695.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1696.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1696.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59614] received 'GET /get_r'
+on ln. 178, +1697.09
+	of handle_http_requests(...)
+	| [82.36.76.238:48270] received 'GET /get_r'
+on ln. 41, +1697.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1698.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1698.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59616] received 'GET /get_r'
+on ln. 178, +1699.6
+	of handle_http_requests(...)
+	| [82.36.76.238:48272] received 'GET /get_r'
+on ln. 41, +1700.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1701.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1701.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59620] received 'GET /get_r'
+on ln. 178, +1702.1
+	of handle_http_requests(...)
+	| [82.36.76.238:48274] received 'GET /get_r'
+on ln. 41, +1702.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1703.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1703.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59622] received 'GET /get_r'
+on ln. 178, +1704.6
+	of handle_http_requests(...)
+	| [82.36.76.238:48276] received 'GET /get_r'
+on ln. 41, +1705.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1706.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1706.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59628] received 'GET /get_r'
+on ln. 178, +1707.09
+	of handle_http_requests(...)
+	| [82.36.76.238:48278] received 'GET /get_r'
+on ln. 41, +1707.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1708.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1708.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59630] received 'GET /get_r'
+on ln. 178, +1709.6
+	of handle_http_requests(...)
+	| [82.36.76.238:48280] received 'GET /get_r'
+on ln. 41, +1710.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1711.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1711.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59634] received 'GET /get_r'
+on ln. 178, +1712.09
+	of handle_http_requests(...)
+	| [82.36.76.238:48282] received 'GET /get_r'
+on ln. 41, +1712.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1713.59
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1713.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59636] received 'GET /get_r'
+on ln. 178, +1714.6
+	of handle_http_requests(...)
+	| [82.36.76.238:48284] received 'GET /get_r'
+on ln. 41, +1715.4
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1716.4
+	of handle_http_requests(...)
+	| [192.168.0.8:59638] received 'GET /get_r'
+on ln. 41, +1717.11
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1717.36
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1717.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1718.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48286] received 'GET /get_r'
+on ln. 41, +1718.59
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1718.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59640] received 'GET /get_r'
+on ln. 178, +1719.6
+	of handle_http_requests(...)
+	| [82.36.76.238:48290] received 'GET /get_r'
+on ln. 41, +1720.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1721.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1721.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59642] received 'GET /get_r'
+on ln. 178, +1722.1
+	of handle_http_requests(...)
+	| [82.36.76.238:48292] received 'GET /get_r'
+on ln. 41, +1722.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1723.66
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1723.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59644] received 'GET /get_r'
+on ln. 178, +1724.67
+	of handle_http_requests(...)
+	| [82.36.76.238:48294] received 'GET /get_r'
+on ln. 41, +1725.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1726.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1726.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59646] received 'GET /get_r'
+on ln. 178, +1727.09
+	of handle_http_requests(...)
+	| [82.36.76.238:48296] received 'GET /get_r'
+on ln. 41, +1727.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1728.63
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1728.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59648] received 'GET /get_r'
+on ln. 178, +1729.63
+	of handle_http_requests(...)
+	| [82.36.76.238:48298] received 'GET /get_r'
+on ln. 41, +1730.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1731.11
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1731.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59652] received 'GET /get_r'
+on ln. 178, +1732.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48300] received 'GET /get_r'
+on ln. 41, +1732.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1733.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1733.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59654] received 'GET /get_r'
+on ln. 178, +1734.61
+	of handle_http_requests(...)
+	| [82.36.76.238:48302] received 'GET /get_r'
+on ln. 41, +1735.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1736.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1736.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59656] received 'GET /get_r'
+on ln. 178, +1737.09
+	of handle_http_requests(...)
+	| [82.36.76.238:48304] received 'GET /get_r'
+on ln. 41, +1737.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1738.59
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1738.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59658] received 'GET /get_r'
+on ln. 178, +1739.61
+	of handle_http_requests(...)
+	| [82.36.76.238:48306] received 'GET /get_r'
+on ln. 41, +1740.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1741.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1741.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59662] received 'GET /get_r'
+on ln. 178, +1742.1
+	of handle_http_requests(...)
+	| [82.36.76.238:48308] received 'GET /get_r'
+on ln. 41, +1742.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1743.84
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1743.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59664] received 'GET /get_r'
+on ln. 178, +1744.84
+	of handle_http_requests(...)
+	| [82.36.76.238:48312] received 'GET /get_r'
+on ln. 41, +1745.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1746.35
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1746.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59666] received 'GET /get_r'
+on ln. 41, +1746.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1747.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1747.35
+	of handle_http_requests(...)
+	| [82.36.76.238:48316] received 'GET /get_r'
+on ln. 41, +1747.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1748.58
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1748.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59668] received 'GET /get_r'
+on ln. 178, +1749.59
+	of handle_http_requests(...)
+	| [82.36.76.238:48318] received 'GET /get_r'
+on ln. 41, +1750.39
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1751.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1751.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59674] received 'GET /get_r'
+on ln. 178, +1752.12
+	of handle_http_requests(...)
+	| [82.36.76.238:48322] received 'GET /get_r'
+on ln. 41, +1752.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1753.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1753.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59684] received 'GET /get_r'
+on ln. 178, +1754.6
+	of handle_http_requests(...)
+	| [82.36.76.238:48324] received 'GET /get_r'
+on ln. 41, +1755.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1756.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1756.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59692] received 'GET /get_r'
+on ln. 178, +1757.1
+	of handle_http_requests(...)
+	| [82.36.76.238:48328] received 'GET /get_r'
+on ln. 41, +1757.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1758.59
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1758.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59694] received 'GET /get_r'
+on ln. 178, +1759.6
+	of handle_http_requests(...)
+	| [82.36.76.238:48330] received 'GET /get_r'
+on ln. 41, +1760.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1761.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1761.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59704] received 'GET /get_r'
+on ln. 178, +1762.1
+	of handle_http_requests(...)
+	| [82.36.76.238:48332] received 'GET /get_r'
+on ln. 41, +1762.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1763.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1763.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59706] received 'GET /get_r'
+on ln. 178, +1764.6
+	of handle_http_requests(...)
+	| [82.36.76.238:48334] received 'GET /get_r'
+on ln. 41, +1765.39
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1766.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1766.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59712] received 'GET /get_r'
+on ln. 178, +1767.1
+	of handle_http_requests(...)
+	| [82.36.76.238:48336] received 'GET /get_r'
+on ln. 41, +1767.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1768.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1768.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59714] received 'GET /get_r'
+on ln. 178, +1769.62
+	of handle_http_requests(...)
+	| [82.36.76.238:48338] received 'GET /get_r'
+on ln. 41, +1770.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1771.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1771.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59716] received 'GET /get_r'
+on ln. 178, +1772.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48342] received 'GET /get_r'
+on ln. 41, +1772.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1773.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1773.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59720] received 'GET /get_r'
+on ln. 178, +1774.61
+	of handle_http_requests(...)
+	| [82.36.76.238:48344] received 'GET /get_r'
+on ln. 41, +1775.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1776.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1776.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59722] received 'GET /get_r'
+on ln. 178, +1777.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48346] received 'GET /get_r'
+on ln. 41, +1777.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1778.59
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1778.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59724] received 'GET /get_r'
+on ln. 178, +1779.6
+	of handle_http_requests(...)
+	| [82.36.76.238:48348] received 'GET /get_r'
+on ln. 41, +1780.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1781.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1781.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59726] received 'GET /get_r'
+on ln. 178, +1782.1
+	of handle_http_requests(...)
+	| [82.36.76.238:48350] received 'GET /get_r'
+on ln. 41, +1782.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1783.61
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1783.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59728] received 'GET /get_r'
+on ln. 178, +1784.62
+	of handle_http_requests(...)
+	| [82.36.76.238:48352] received 'GET /get_r'
+on ln. 41, +1785.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1786.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1786.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59730] received 'GET /get_r'
+on ln. 178, +1787.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48354] received 'GET /get_r'
+on ln. 41, +1787.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1788.59
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1788.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59732] received 'GET /get_r'
+on ln. 178, +1789.6
+	of handle_http_requests(...)
+	| [82.36.76.238:48364] received 'GET /get_r'
+on ln. 41, +1790.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1791.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1791.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59736] received 'GET /get_r'
+on ln. 178, +1792.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48366] received 'GET /get_r'
+on ln. 41, +1792.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1793.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1793.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59738] received 'GET /get_r'
+on ln. 178, +1794.61
+	of handle_http_requests(...)
+	| [82.36.76.238:48368] received 'GET /get_r'
+on ln. 41, +1795.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1796.09
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1796.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59740] received 'GET /get_r'
+on ln. 178, +1797.1
+	of handle_http_requests(...)
+	| [82.36.76.238:48370] received 'GET /get_r'
+on ln. 41, +1797.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1798.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1798.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59742] received 'GET /get_r'
+on ln. 178, +1799.61
+	of handle_http_requests(...)
+	| [82.36.76.238:48372] received 'GET /get_r'
+on ln. 41, +1800.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1801.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1801.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59744] received 'GET /get_r'
+on ln. 178, +1802.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48374] received 'GET /get_r'
+on ln. 41, +1802.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1803.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1803.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59748] received 'GET /get_r'
+on ln. 178, +1804.61
+	of handle_http_requests(...)
+	| [82.36.76.238:48376] received 'GET /get_r'
+on ln. 41, +1805.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1806.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1806.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59750] received 'GET /get_r'
+on ln. 178, +1807.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48378] received 'GET /get_r'
+on ln. 41, +1807.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1808.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1808.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59752] received 'GET /get_r'
+on ln. 178, +1809.61
+	of handle_http_requests(...)
+	| [82.36.76.238:48380] received 'GET /get_r'
+on ln. 41, +1810.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1811.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1811.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59754] received 'GET /get_r'
+on ln. 178, +1812.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48382] received 'GET /get_r'
+on ln. 41, +1812.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1813.61
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1813.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59756] received 'GET /get_r'
+on ln. 178, +1814.62
+	of handle_http_requests(...)
+	| [82.36.76.238:48384] received 'GET /get_r'
+on ln. 41, +1815.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1816.11
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1816.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59758] received 'GET /get_r'
+on ln. 178, +1817.12
+	of handle_http_requests(...)
+	| [82.36.76.238:48386] received 'GET /get_r'
+on ln. 41, +1817.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1818.59
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1818.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59760] received 'GET /get_r'
+on ln. 178, +1819.6
+	of handle_http_requests(...)
+	| [82.36.76.238:48388] received 'GET /get_r'
+on ln. 41, +1820.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1821.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1821.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59762] received 'GET /get_r'
+on ln. 178, +1822.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48390] received 'GET /get_r'
+on ln. 41, +1822.89
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1823.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1823.89
+	of handle_http_requests(...)
+	| [192.168.0.8:59766] received 'GET /get_r'
+on ln. 178, +1824.61
+	of handle_http_requests(...)
+	| [82.36.76.238:48392] received 'GET /get_r'
+on ln. 41, +1825.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1826.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1826.39
+	of handle_http_requests(...)
+	| [192.168.0.8:59772] received 'GET /get_r'
+on ln. 178, +1827.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48394] received 'GET /get_r'
+on ln. 41, +1827.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1828.61
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1828.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59774] received 'GET /get_r'
+on ln. 178, +1829.62
+	of handle_http_requests(...)
+	| [82.36.76.238:48396] received 'GET /get_r'
+on ln. 41, +1830.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1831.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1831.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59776] received 'GET /get_r'
+on ln. 178, +1832.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48398] received 'GET /get_r'
+on ln. 41, +1832.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1833.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1833.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59778] received 'GET /get_r'
+on ln. 178, +1834.61
+	of handle_http_requests(...)
+	| [82.36.76.238:48400] received 'GET /get_r'
+on ln. 41, +1835.38
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1836.11
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1836.38
+	of handle_http_requests(...)
+	| [192.168.0.8:59782] received 'GET /get_r'
+on ln. 178, +1837.12
+	of handle_http_requests(...)
+	| [82.36.76.238:48402] received 'GET /get_r'
+on ln. 41, +1837.88
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1838.22
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1838.62
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1838.88
+	of handle_http_requests(...)
+	| [192.168.0.8:59784] received 'GET /get_r'
+on ln. 178, +1839.22
+	of handle_http_requests(...)
+	| [192.168.0.8:59786] received 'POST /make'
+on ln. 41, +1839.23
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1839.62
+	of handle_http_requests(...)
+	| [82.36.76.238:48404] received 'GET /get_r'
+on ln. 178, +1840.23
+	of handle_http_requests(...)
+	| [192.168.0.8:59788] received 'GET / HTTP'
+on ln. 41, +1840.29
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1841.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1841.3
+	of handle_http_requests(...)
+	| [192.168.0.8:59790] received 'GET /get_r'
+on ln. 41, +1841.45
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1842.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48406] received 'GET /get_r'
+on ln. 178, +1842.46
+	of handle_http_requests(...)
+	| [192.168.0.8:59792] received 'GET /favic'
+on ln. 41, +1843.62
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1843.85
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1844.63
+	of handle_http_requests(...)
+	| [82.36.76.238:48408] received 'GET /get_r'
+on ln. 178, +1844.85
+	of handle_http_requests(...)
+	| [192.168.0.8:59794] received 'GET /get_r'
+on ln. 41, +1846.11
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1846.35
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1847.12
+	of handle_http_requests(...)
+	| [82.36.76.238:48410] received 'GET /get_r'
+on ln. 178, +1847.35
+	of handle_http_requests(...)
+	| [192.168.0.8:59796] received 'GET /get_r'
+on ln. 41, +1848.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1848.84
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1849.61
+	of handle_http_requests(...)
+	| [82.36.76.238:48412] received 'GET /get_r'
+on ln. 178, +1849.84
+	of handle_http_requests(...)
+	| [192.168.0.8:59798] received 'GET /get_r'
+on ln. 41, +1851.11
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1851.34
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1852.12
+	of handle_http_requests(...)
+	| [82.36.76.238:48414] received 'GET /get_r'
+on ln. 178, +1852.34
+	of handle_http_requests(...)
+	| [192.168.0.8:59804] received 'GET /get_r'
+on ln. 41, +1853.61
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1853.84
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1854.61
+	of handle_http_requests(...)
+	| [82.36.76.238:48416] received 'GET /get_r'
+on ln. 178, +1854.85
+	of handle_http_requests(...)
+	| [192.168.0.8:59806] received 'GET /get_r'
+on ln. 41, +1856.11
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1856.35
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1857.12
+	of handle_http_requests(...)
+	| [82.36.76.238:48418] received 'GET /get_r'
+on ln. 178, +1857.35
+	of handle_http_requests(...)
+	| [192.168.0.8:59808] received 'GET /get_r'
+on ln. 41, +1858.61
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1858.85
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1859.62
+	of handle_http_requests(...)
+	| [82.36.76.238:48420] received 'GET /get_r'
+on ln. 178, +1859.85
+	of handle_http_requests(...)
+	| [192.168.0.8:59810] received 'GET /get_r'
+on ln. 41, +1861.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1861.34
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1862.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48422] received 'GET /get_r'
+on ln. 178, +1862.34
+	of handle_http_requests(...)
+	| [192.168.0.8:59812] received 'GET /get_r'
+on ln. 41, +1863.6
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1863.84
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1864.61
+	of handle_http_requests(...)
+	| [82.36.76.238:48424] received 'GET /get_r'
+on ln. 178, +1864.85
+	of handle_http_requests(...)
+	| [192.168.0.8:59814] received 'GET /get_r'
+on ln. 41, +1866.1
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1866.34
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1867.11
+	of handle_http_requests(...)
+	| [82.36.76.238:48426] received 'GET /get_r'
+on ln. 178, +1867.35
+	of handle_http_requests(...)
+	| [192.168.0.8:59818] received 'GET /get_r'
+on ln. 41, +1868.61
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1868.85
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1869.62
+	of handle_http_requests(...)
+	| [82.36.76.238:48428] received 'GET /get_r'
+on ln. 178, +1869.85
+	of handle_http_requests(...)
+	| [192.168.0.8:59820] received 'GET /get_r'
+on ln. 41, +1871.4
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1871.41
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1872.22
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1872.41
+	of handle_http_requests(...)
+	| [82.36.76.238:48430] received 'GET /get_r'
+on ln. 178, +1873.22
+	of handle_http_requests(...)
+	| [192.168.0.8:59824] received 'GET /get_r'
+on ln. 41, +1873.61
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1874.23
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1874.62
+	of handle_http_requests(...)
+	| [82.36.76.238:48434] received 'GET /get_r'
+on ln. 178, +1875.23
+	of handle_http_requests(...)
+	| [192.168.0.8:59826] received 'GET /get_r'
+on ln. 41, +1876.12
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1877.13
+	of handle_http_requests(...)
+	| [82.36.76.238:48436] received 'GET /get_r'
+on ln. 41, +1877.22
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1877.81
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1878.23
+	of handle_http_requests(...)
+	| [192.168.0.8:59828] received 'GET /get_r'
+on ln. 41, +1878.62
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1878.82
+	of handle_http_requests(...)
+	| [82.36.76.238:48438] received 'POST /make'
+on ln. 41, +1878.92
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1879.23
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1879.62
+	of handle_http_requests(...)
+	| [82.36.76.238:48440] received 'GET /get_r'
+on ln. 178, +1879.93
+	of handle_http_requests(...)
+	| [82.36.76.238:48442] received 'GET / HTTP'
+on ln. 178, +1880.23
+	of handle_http_requests(...)
+	| [192.168.0.8:59830] received 'GET /get_r'
+on ln. 41, +1880.25
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1881.26
+	of handle_http_requests(...)
+	| [82.36.76.238:48444] received 'GET /get_r'
+on ln. 41, +1882.22
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1883.23
+	of handle_http_requests(...)
+	| [192.168.0.8:59834] received 'GET /get_r'
+on ln. 41, +1884.12
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1884.23
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1885.13
+	of handle_http_requests(...)
+	| [82.36.76.238:48446] received 'GET /get_r'
+on ln. 178, +1885.23
+	of handle_http_requests(...)
+	| [192.168.0.8:59840] received 'GET /get_r'
+on ln. 41, +1886.63
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1887.22
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1887.64
+	of handle_http_requests(...)
+	| [82.36.76.238:48448] received 'GET /get_r'
+on ln. 178, +1888.23
+	of handle_http_requests(...)
+	| [192.168.0.8:59842] received 'GET /get_r'
+on ln. 41, +1889.13
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1889.22
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1890.14
+	of handle_http_requests(...)
+	| [82.36.76.238:48450] received 'GET /get_r'
+on ln. 178, +1890.23
+	of handle_http_requests(...)
+	| [192.168.0.8:59844] received 'GET /get_r'
+on ln. 41, +1892.04
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1892.22
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1893.04
+	of handle_http_requests(...)
+	| [82.36.76.238:48452] received 'GET /get_r'
+on ln. 178, +1893.23
+	of handle_http_requests(...)
+	| [192.168.0.8:59846] received 'GET /get_r'
+on ln. 41, +1894.12
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1894.22
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1895.13
+	of handle_http_requests(...)
+	| [82.36.76.238:48454] received 'GET /get_r'
+on ln. 178, +1895.23
+	of handle_http_requests(...)
+	| [192.168.0.8:59848] received 'GET /get_r'
+on ln. 41, +1896.62
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1897.22
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1897.63
+	of handle_http_requests(...)
+	| [82.36.76.238:48456] received 'GET /get_r'
+on ln. 178, +1898.22
+	of handle_http_requests(...)
+	| [192.168.0.8:59852] received 'GET /get_r'
+on ln. 41, +1899.13
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1899.23
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1900.14
+	of handle_http_requests(...)
+	| [82.36.76.238:48458] received 'GET /get_r'
+on ln. 178, +1900.23
+	of handle_http_requests(...)
+	| [192.168.0.8:59854] received 'GET /get_r'
+on ln. 41, +1901.63
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1902.22
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1902.63
+	of handle_http_requests(...)
+	| [82.36.76.238:48460] received 'GET /get_r'
+on ln. 178, +1903.22
+	of handle_http_requests(...)
+	| [192.168.0.8:59856] received 'GET /get_r'
+on ln. 41, +1904.14
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1904.22
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1905.14
+	of handle_http_requests(...)
+	| [82.36.76.238:48462] received 'GET /get_r'
+on ln. 178, +1905.23
+	of handle_http_requests(...)
+	| [192.168.0.8:59858] received 'GET /get_r'
+on ln. 41, +1906.63
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1907.22
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1907.64
+	of handle_http_requests(...)
+	| [82.36.76.238:48464] received 'GET /get_r'
+on ln. 178, +1908.23
+	of handle_http_requests(...)
+	| [192.168.0.8:59860] received 'GET /get_r'
+on ln. 41, +1909.12
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1909.23
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1910.13
+	of handle_http_requests(...)
+	| [82.36.76.238:48466] received 'GET /get_r'
+on ln. 178, +1910.23
+	of handle_http_requests(...)
+	| [192.168.0.8:59862] received 'GET /get_r'
+on ln. 41, +1911.63
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1912.25
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1912.64
+	of handle_http_requests(...)
+	| [82.36.76.238:48468] received 'GET /get_r'
+on ln. 178, +1913.26
+	of handle_http_requests(...)
+	| [192.168.0.8:59866] received 'GET /get_r'
+on ln. 41, +1913.84
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1914.13
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1914.85
+	of handle_http_requests(...)
+	| [192.168.0.8:59868] received 'GET /get_r'
+on ln. 178, +1915.14
+	of handle_http_requests(...)
+	| [82.36.76.238:48470] received 'GET /get_r'
+on ln. 41, +1916.34
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1916.63
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1917.34
+	of handle_http_requests(...)
+	| [192.168.0.8:59870] received 'GET /get_r'
+on ln. 178, +1917.64
+	of handle_http_requests(...)
+	| [82.36.76.238:48472] received 'GET /get_r'
+on ln. 41, +1918.85
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1919.13
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1919.85
+	of handle_http_requests(...)
+	| [192.168.0.8:59872] received 'GET /get_r'
+on ln. 178, +1920.13
+	of handle_http_requests(...)
+	| [82.36.76.238:48474] received 'GET /get_r'
+on ln. 41, +1921.34
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1921.63
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1922.34
+	of handle_http_requests(...)
+	| [192.168.0.8:59874] received 'GET /get_r'
+on ln. 178, +1922.63
+	of handle_http_requests(...)
+	| [82.36.76.238:48476] received 'GET /get_r'
+on ln. 41, +1923.84
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1924.13
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1924.84
+	of handle_http_requests(...)
+	| [192.168.0.8:59876] received 'GET /get_r'
+on ln. 178, +1925.14
+	of handle_http_requests(...)
+	| [82.36.76.238:48478] received 'GET /get_r'
+on ln. 41, +1925.99
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1926.35
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1926.62
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1927.0
+	of handle_http_requests(...)
+	| [192.168.0.8:59878] received 'POST /make'
+on ln. 41, +1927.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1927.14
+	of handle_http_requests(...)
+	| [82.36.76.238:48480] received 'GET /get_r'
+on ln. 41, +1927.21
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1927.35
+	of handle_http_requests(...)
+	| [192.168.0.8:59880] received 'GET /get_r'
+on ln. 178, +1928.0
+	of handle_http_requests(...)
+	| [192.168.0.8:59884] received 'GET / HTTP'
+on ln. 41, +1928.08
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1928.22
+	of handle_http_requests(...)
+	| [82.36.76.238:48482] received 'POST /make'
+on ln. 41, +1928.4
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1929.09
+	of handle_http_requests(...)
+	| [192.168.0.8:59886] received 'GET /get_r'
+on ln. 41, +1929.13
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1929.23
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1929.41
+	of handle_http_requests(...)
+	| [82.36.76.238:48484] received 'GET / HTTP'
+on ln. 178, +1929.66
+	of handle_http_requests(...)
+	| [82.36.76.238:48486] received 'GET /get_r'
+on ln. 41, +1929.73
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1930.23
+	of handle_http_requests(...)
+	| [192.168.0.8:59888] received 'GET /favic'
+on ln. 178, +1930.74
+	of handle_http_requests(...)
+	| [82.36.76.238:48488] received 'GET /get_r'
+on ln. 41, +1931.64
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1932.65
+	of handle_http_requests(...)
+	| [192.168.0.8:59890] received 'GET /get_r'
+on ln. 41, +1933.52
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1934.13
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1934.52
+	of handle_http_requests(...)
+	| [82.36.76.238:48490] received 'GET /get_r'
+on ln. 178, +1935.14
+	of handle_http_requests(...)
+	| [192.168.0.8:59892] received 'GET /get_r'
+on ln. 41, +1936.01
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1936.64
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1937.02
+	of handle_http_requests(...)
+	| [82.36.76.238:48492] received 'GET /get_r'
+on ln. 178, +1937.64
+	of handle_http_requests(...)
+	| [192.168.0.8:59894] received 'GET /get_r'
+on ln. 41, +1938.51
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1939.13
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1939.51
+	of handle_http_requests(...)
+	| [82.36.76.238:48494] received 'GET /get_r'
+on ln. 178, +1940.14
+	of handle_http_requests(...)
+	| [192.168.0.8:59896] received 'GET /get_r'
+on ln. 41, +1941.01
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1941.63
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1942.02
+	of handle_http_requests(...)
+	| [82.36.76.238:48496] received 'GET /get_r'
+on ln. 178, +1942.64
+	of handle_http_requests(...)
+	| [192.168.0.8:59898] received 'GET /get_r'
+on ln. 41, +1943.62
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1944.13
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1944.63
+	of handle_http_requests(...)
+	| [82.36.76.238:48498] received 'GET /get_r'
+on ln. 178, +1945.13
+	of handle_http_requests(...)
+	| [192.168.0.8:59906] received 'GET /get_r'
+on ln. 41, +1946.02
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1946.64
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1947.03
+	of handle_http_requests(...)
+	| [82.36.76.238:48500] received 'GET /get_r'
+on ln. 178, +1947.64
+	of handle_http_requests(...)
+	| [192.168.0.8:59910] received 'GET /get_r'
+on ln. 41, +1948.51
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1949.13
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1949.52
+	of handle_http_requests(...)
+	| [82.36.76.238:48502] received 'GET /get_r'
+on ln. 178, +1950.14
+	of handle_http_requests(...)
+	| [192.168.0.8:59912] received 'GET /get_r'
+on ln. 41, +1950.55
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1951.03
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1951.55
+	of handle_http_requests(...)
+	| [192.168.0.8:59914] received 'POST /make'
+on ln. 41, +1951.56
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1951.63
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1952.03
+	of handle_http_requests(...)
+	| [82.36.76.238:48504] received 'GET /get_r'
+on ln. 178, +1952.56
+	of handle_http_requests(...)
+	| [192.168.0.8:59916] received 'GET / HTTP'
+on ln. 178, +1952.6
+	of handle_http_requests(...)
+	| [192.168.0.8:59918] received 'GET /get_r'
+on ln. 184, +1952.6
+	of handle_http_requests(...)
+	| [192.168.0.8:59918] abruptly closed
+on ln. 41, +1952.63
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1953.51
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1953.64
+	of handle_http_requests(...)
+	| [192.168.0.8:59920] received 'GET /get_r'
+on ln. 41, +1953.78
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1954.52
+	of handle_http_requests(...)
+	| [82.36.76.238:48506] received 'GET /get_r'
+on ln. 178, +1954.78
+	of handle_http_requests(...)
+	| [192.168.0.8:59922] received 'GET /favic'
+on ln. 41, +1956.2
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1956.21
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1957.2
+	of handle_http_requests(...)
+	| [192.168.0.8:59924] received 'GET /get_r'
+on ln. 178, +1957.22
+	of handle_http_requests(...)
+	| [82.36.76.238:48508] received 'GET /get_r'
+on ln. 41, +1958.52
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1958.68
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1959.53
+	of handle_http_requests(...)
+	| [82.36.76.238:48510] received 'GET /get_r'
+on ln. 178, +1959.68
+	of handle_http_requests(...)
+	| [192.168.0.8:59928] received 'GET /get_r'
+on ln. 41, +1961.18
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +1961.22
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 178, +1962.19
+	of handle_http_requests(...)
+	| [192.168.0.8:59930] received 'GET /get_r'
+on ln. 178, +1962.22
+	of handle_http_requests(...)
+	| [82.36.76.238:48512] received 'GET /get_r'
+on ln. 41, +1963.51
+	of handle_connections(...)
+	| received connection from 82.36.76.238
+on ln. 41, +1963.68
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 50, +1964.0
+	of handle_connections(...)
+	| user-interrupt caught
+	| fatal error, exiting ...
+on ln. 178, +1964.52
+	of handle_http_requests(...)
+	| [82.36.76.238:48514] received 'GET /get_r'
+on ln. 178, +1964.68
+	of handle_http_requests(...)
+	| [192.168.0.8:59932] received 'GET /get_r'
+on ln. 59, +1964.7
+	of __del__(...)
+	| garbage collecting SocketServer instance

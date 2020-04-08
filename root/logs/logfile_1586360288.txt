@@ -1,0 +1,70 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to :6969
+on ln. 41, +0.54
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +1.54
+	of handle_http_requests(...)
+	| [192.168.0.8:54880] received 'GET /get_r'
+on ln. 184, +1.54
+	of handle_http_requests(...)
+	| [192.168.0.8:54880] abruptly closed
+on ln. 41, +1.55
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +2.54
+	of handle_http_requests(...)
+	| [192.168.0.8:54882] received 'GET /get_r'
+on ln. 184, +2.54
+	of handle_http_requests(...)
+	| [192.168.0.8:54882] abruptly closed
+on ln. 41, +2.54
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +3.54
+	of handle_http_requests(...)
+	| [192.168.0.8:54884] received 'GET /get_r'
+on ln. 184, +3.54
+	of handle_http_requests(...)
+	| [192.168.0.8:54884] abruptly closed
+on ln. 41, +3.54
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +4.53
+	of handle_http_requests(...)
+	| [192.168.0.8:54886] received 'GET /get_r'
+on ln. 184, +4.53
+	of handle_http_requests(...)
+	| [192.168.0.8:54886] abruptly closed
+on ln. 41, +4.54
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +5.54
+	of handle_http_requests(...)
+	| [192.168.0.8:54888] received 'GET /get_r'
+on ln. 184, +5.54
+	of handle_http_requests(...)
+	| [192.168.0.8:54888] abruptly closed
+on ln. 41, +5.54
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +6.55
+	of handle_http_requests(...)
+	| [192.168.0.8:54890] received 'GET /get_r'
+on ln. 41, +6.56
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 50, +7.11
+	of handle_connections(...)
+	| user-interrupt caught
+	| fatal error, exiting ...
+on ln. 178, +7.54
+	of handle_http_requests(...)
+	| [192.168.0.8:54892] received 'GET /get_r'
+on ln. 184, +7.54
+	of handle_http_requests(...)
+	| [192.168.0.8:54892] abruptly closed
+on ln. 59, +7.55
+	of __del__(...)
+	| garbage collecting SocketServer instance

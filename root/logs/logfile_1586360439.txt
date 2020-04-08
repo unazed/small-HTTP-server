@@ -1,0 +1,364 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to :6969
+on ln. 41, +6.18
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +7.18
+	of handle_http_requests(...)
+	| [192.168.0.8:55014] received 'GET / HTTP'
+on ln. 41, +7.3
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +8.3
+	of handle_http_requests(...)
+	| [192.168.0.8:55016] received 'GET /get_r'
+on ln. 41, +8.58
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +9.34
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +9.59
+	of handle_http_requests(...)
+	| [192.168.0.8:55018] received 'GET /favic'
+on ln. 178, +10.34
+	of handle_http_requests(...)
+	| [192.168.0.8:55020] received 'GET /get_r'
+on ln. 184, +10.35
+	of handle_http_requests(...)
+	| [192.168.0.8:55020] abruptly closed
+on ln. 41, +10.35
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +10.84
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +11.34
+	of handle_http_requests(...)
+	| [192.168.0.8:55022] received 'GET /get_r'
+on ln. 184, +11.34
+	of handle_http_requests(...)
+	| [192.168.0.8:55022] abruptly closed
+on ln. 41, +11.35
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +11.84
+	of handle_http_requests(...)
+	| [192.168.0.8:55024] received 'POST /make'
+on ln. 41, +11.85
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +12.34
+	of handle_http_requests(...)
+	| [192.168.0.8:55026] received 'GET /get_r'
+on ln. 184, +12.34
+	of handle_http_requests(...)
+	| [192.168.0.8:55026] abruptly closed
+on ln. 41, +12.35
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +12.85
+	of handle_http_requests(...)
+	| [192.168.0.8:55028] received 'GET / HTTP'
+on ln. 178, +12.91
+	of handle_http_requests(...)
+	| [192.168.0.8:55030] received 'GET /get_r'
+on ln. 184, +12.91
+	of handle_http_requests(...)
+	| [192.168.0.8:55030] abruptly closed
+on ln. 41, +12.93
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +13.93
+	of handle_http_requests(...)
+	| [192.168.0.8:55032] received 'GET /get_r'
+on ln. 41, +14.17
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +15.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +15.18
+	of handle_http_requests(...)
+	| [192.168.0.8:55034] received 'GET /favic'
+on ln. 178, +16.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55036] received 'GET /get_r'
+on ln. 184, +16.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55036] abruptly closed
+on ln. 41, +16.01
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +17.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55038] received 'GET /get_r'
+on ln. 184, +17.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55038] abruptly closed
+on ln. 41, +17.01
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +18.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55042] received 'GET /get_r'
+on ln. 41, +18.01
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +19.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55044] received 'GET /get_r'
+on ln. 184, +19.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55044] abruptly closed
+on ln. 41, +19.01
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +20.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55046] received 'GET /get_r'
+on ln. 184, +20.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55046] abruptly closed
+on ln. 41, +20.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +21.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55048] received 'GET /get_r'
+on ln. 184, +21.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55048] abruptly closed
+on ln. 41, +21.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +22.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55054] received 'GET /get_r'
+on ln. 184, +22.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55054] abruptly closed
+on ln. 41, +22.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +23.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55056] received 'GET /get_r'
+on ln. 184, +23.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55056] abruptly closed
+on ln. 41, +23.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +24.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55058] received 'GET /get_r'
+on ln. 184, +24.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55058] abruptly closed
+on ln. 41, +24.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +25.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55060] received 'GET /get_r'
+on ln. 184, +25.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55060] abruptly closed
+on ln. 41, +25.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +26.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55064] received 'GET /get_r'
+on ln. 184, +26.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55064] abruptly closed
+on ln. 41, +26.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +27.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55066] received 'GET /get_r'
+on ln. 184, +27.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55066] abruptly closed
+on ln. 41, +27.01
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +28.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55068] received 'GET /get_r'
+on ln. 184, +28.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55068] abruptly closed
+on ln. 41, +28.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +29.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55070] received 'GET /get_r'
+on ln. 184, +29.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55070] abruptly closed
+on ln. 41, +29.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +30.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55072] received 'GET /get_r'
+on ln. 184, +30.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55072] abruptly closed
+on ln. 41, +30.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +31.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55074] received 'GET /get_r'
+on ln. 184, +31.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55074] abruptly closed
+on ln. 41, +31.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +32.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55076] received 'GET /get_r'
+on ln. 184, +32.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55076] abruptly closed
+on ln. 41, +32.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +33.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55078] received 'GET /get_r'
+on ln. 184, +33.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55078] abruptly closed
+on ln. 41, +33.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +34.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55080] received 'GET /get_r'
+on ln. 184, +34.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55080] abruptly closed
+on ln. 41, +34.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +35.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55082] received 'GET /get_r'
+on ln. 184, +35.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55082] abruptly closed
+on ln. 41, +35.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +36.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55084] received 'GET /get_r'
+on ln. 184, +36.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55084] abruptly closed
+on ln. 41, +36.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +37.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55086] received 'GET /get_r'
+on ln. 184, +37.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55086] abruptly closed
+on ln. 41, +37.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +38.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55088] received 'GET /get_r'
+on ln. 184, +38.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55088] abruptly closed
+on ln. 41, +38.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +39.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55090] received 'GET /get_r'
+on ln. 184, +39.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55090] abruptly closed
+on ln. 41, +39.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +40.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55092] received 'GET /get_r'
+on ln. 184, +40.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55092] abruptly closed
+on ln. 41, +40.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +41.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55094] received 'GET /get_r'
+on ln. 184, +41.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55094] abruptly closed
+on ln. 41, +41.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +42.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55096] received 'GET /get_r'
+on ln. 184, +42.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55096] abruptly closed
+on ln. 41, +42.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +43.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55098] received 'GET /get_r'
+on ln. 184, +43.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55098] abruptly closed
+on ln. 41, +43.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +44.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55100] received 'GET /get_r'
+on ln. 184, +44.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55100] abruptly closed
+on ln. 41, +44.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +45.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55102] received 'GET /get_r'
+on ln. 184, +45.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55102] abruptly closed
+on ln. 41, +45.0
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 50, +45.01
+	of handle_connections(...)
+	| user-interrupt caught
+	| fatal error, exiting ...
+on ln. 178, +46.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55104] received 'GET /get_r'
+on ln. 184, +46.0
+	of handle_http_requests(...)
+	| [192.168.0.8:55104] abruptly closed
+on ln. 59, +46.01
+	of __del__(...)
+	| garbage collecting SocketServer instance

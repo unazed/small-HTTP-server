@@ -1,0 +1,82 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to :6969
+on ln. 41, +4.32
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +5.32
+	of handle_http_requests(...)
+	| [192.168.0.8:45950] received 'GET /logou'
+on ln. 41, +5.33
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +6.33
+	of handle_http_requests(...)
+	| [192.168.0.8:45952] received 'GET / HTTP'
+on ln. 41, +6.56
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +7.56
+	of handle_http_requests(...)
+	| [192.168.0.8:45954] received 'GET /favic'
+on ln. 41, +7.92
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +8.92
+	of handle_http_requests(...)
+	| [192.168.0.8:45956] received 'GET /login'
+on ln. 41, +9.14
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +10.14
+	of handle_http_requests(...)
+	| [192.168.0.8:45958] received 'GET /favic'
+on ln. 41, +13.5
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +14.5
+	of handle_http_requests(...)
+	| [192.168.0.8:45960] received 'POST /logi'
+on ln. 41, +14.51
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +15.52
+	of handle_http_requests(...)
+	| [192.168.0.8:45962] received 'GET / HTTP'
+on ln. 41, +15.73
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +16.29
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +16.73
+	of handle_http_requests(...)
+	| [192.168.0.8:45964] received 'GET /favic'
+on ln. 178, +17.29
+	of handle_http_requests(...)
+	| [192.168.0.8:45966] received 'GET /profi'
+on ln. 41, +17.5
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +18.5
+	of handle_http_requests(...)
+	| [192.168.0.8:45970] received 'GET /favic'
+on ln. 41, +20.18
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +21.18
+	of handle_http_requests(...)
+	| [192.168.0.8:45976] received 'GET / HTTP'
+on ln. 41, +21.42
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 178, +22.42
+	of handle_http_requests(...)
+	| [192.168.0.8:45980] received 'GET /favic'
+on ln. 50, +110.52
+	of handle_connections(...)
+	| user-interrupt caught
+	| fatal error, exiting ...
+on ln. 59, +110.53
+	of __del__(...)
+	| garbage collecting SocketServer instance
