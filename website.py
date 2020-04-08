@@ -240,6 +240,20 @@ def login(conn, headers, data, *, method):
         return ({"Status-code": 301, "Location": "/login?error=invalid credentials"}, "")
 
 
+def error(conn, headers, data, *, error):
+    return ({}, f"""
+<html>
+    <head>
+        <title>HTTP: {error}</title>
+    </head>
+    <body>
+        <h1>HTTP: {error}</h2> <hr> <br>
+        <p> An error has been encountered during the retrieval of this resource. </p>
+    </body>
+</html>
+            """)
+
+
 db = Database("root/logins.db")
 
 server = HttpServer(
@@ -250,6 +264,23 @@ server = HttpServer(
         port=(port := 6969),
         )
 print(f"[localhost:{port}] address bound")
+
+server.add_route(404, handlers={
+    "GET": lambda *args, **kwargs: error(*args, **kwargs, error=404)
+    })
+server.add_route(400, handlers={
+    "GET": lambda *args, **kwargs: error(*args, **kwargs, error=400)
+    })
+server.add_route(403, handlers={
+    "GET": lambda *args, **kwargs: error(*args, **kwargs, error=403)
+    })
+server.add_route(405, handlers={
+    "GET": lambda *args, **kwargs: error(*args, **kwargs, error=405)
+    })
+server.add_route(505, handlers={
+    "GET": lambda *args, **kwargs: error(*args, **kwargs, error=505)
+    })
+
 server.add_route("/", handlers={
     "GET": index
     })

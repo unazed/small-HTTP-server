@@ -1,0 +1,61 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to :6969
+on ln. 41, +0.23
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 172, +1.23
+	of handle_http_requests(...)
+	| [192.168.0.8:37128] received 'GET /get_r'
+on ln. 41, +2.73
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 172, +3.73
+	of handle_http_requests(...)
+	| [192.168.0.8:37130] received 'GET /get_r'
+on ln. 41, +5.22
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 172, +6.23
+	of handle_http_requests(...)
+	| [192.168.0.8:37132] received 'GET /get_r'
+on ln. 41, +7.73
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 172, +8.73
+	of handle_http_requests(...)
+	| [192.168.0.8:37134] received 'GET /get_r'
+on ln. 41, +10.22
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 172, +11.23
+	of handle_http_requests(...)
+	| [192.168.0.8:37136] received 'GET /get_r'
+on ln. 41, +12.72
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 41, +13.42
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 172, +13.72
+	of handle_http_requests(...)
+	| [192.168.0.8:37140] received 'GET /get_r'
+on ln. 172, +14.43
+	of handle_http_requests(...)
+	| [192.168.0.8:37142] received 'GET /asdas'
+on ln. 41, +15.23
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 172, +15.24
+	of handle_http_requests(...)
+	| [192.168.0.8:37144] received 'GET /get_r'
+on ln. 178, +15.24
+	of handle_http_requests(...)
+	| [192.168.0.8:37144] abruptly closed
+on ln. 50, +16.89
+	of handle_connections(...)
+	| user-interrupt caught
+	| fatal error, exiting ...
+on ln. 59, +16.91
+	of __del__(...)
+	| garbage collecting SocketServer instance

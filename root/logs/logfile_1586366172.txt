@@ -1,0 +1,16 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to :6969
+on ln. 41, +4.18
+	of handle_connections(...)
+	| received connection from 192.168.0.8
+on ln. 173, +5.18
+	of handle_http_requests(...)
+	| [192.168.0.8:37232] received 'GET /asdas'
+on ln. 50, +11.78
+	of handle_connections(...)
+	| user-interrupt caught
+	| fatal error, exiting ...
+on ln. 59, +11.79
+	of __del__(...)
+	| garbage collecting SocketServer instance

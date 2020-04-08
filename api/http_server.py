@@ -112,15 +112,9 @@ class HttpServer(SocketServer):
 
     def add_route(self, path, handlers):
         # handlers = {"method": lambda conn, headers, data: ...}
-        if not path.startswith("/"):
+        if not str(path).startswith("/"):
             path = f"/{path}"
         self.routes[path] = handlers
-
-    def _get_error_page(self, code):
-        if error_page_cache.get(code, None) is None:
-            with open(f"{self.error_dir}/{ERROR_PAGES[code]}") as error_file:
-                error_page_cache[code] = error_file.read()
-        return error_page_cache[code]
 
     def _select_page(self, conn, addr, data):
         global error_page_cache
@@ -135,15 +129,15 @@ class HttpServer(SocketServer):
                 }
         if not success:
             code, error = data
-            error_page = self._get_error_page(code)
+            _, page = self.routes[f"/{code}"]["GET"](conn, {}, "")
             http_resp['status_code'] = code
             http_resp['reason_phrase'] = error
-            return construct_http_response(http_resp, error_page)
+            return construct_http_response(http_resp, page)
         info, content = data
         method = info["method"]
         if (path := "/" + info["request_uri"].path.split("/", 1)[1]) in self.routes:
             if method not in self.routes[path]:
-                error_page = self._get_error_page(405)
+                _, error_page = self.routes["/405"]["GET"](conn, {}, "")
                 http_resp['status_code'] = 405
                 return construct_http_response(http_resp, error_page)
             headers, page = self.routes[path][method](conn, info, content)
@@ -153,7 +147,7 @@ class HttpServer(SocketServer):
             print(f"[{addr[0]}:{addr[1]}] [200] {method} {path!r}")
             return construct_http_response(http_resp, page)
         else:
-            error_page = self._get_error_page(404)
+            _, error_page = self.routes["/404"]["GET"](conn, {}, "")
             http_resp['status_code'] = 404
             http_resp['reason_phrase'] = "Not found"
             print(f"[{addr[0]}:{addr[1]}] [404] {method} {path!r}")
