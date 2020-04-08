@@ -55,15 +55,18 @@ def members(conn, headers, data, *, method):
         if not has_valid_token:
             with open("root/errors/403.html") as error:
                 return ({"Status-code": 403, "Reason-phrase": "Forbidden"}, error.read())
+        error = parse_post(headers['request_uri'].query).get("error", "")
         with open("root/public/members.html") as members:
             return ({}, members.read().format(
-                body='<br>'.join(f"<p>{user} -- {hash_}</p>" for hash_, user in db.database.items())
+                body='<br>'.join(f"<p>{user} -- {hash_}</p>" for hash_, user in db.database.items()),
+                error=error
                 ))
     elif method == "POST":
         post = parse_post(data)
         if 'uname' not in post:
             return ({"Status-code": 301, "Location": "/members?error=invalid post data"}, "")
-        elif post['uname'] not in db.database.values():
+        post['uname'] = escape(post['uname'])
+        if post['uname'] not in db.database.values():
             return ({"Status-code": 301, "Location": "/members?error=user doesn't exist"}, "")
         db.remove_user(post['uname'])
         return ({"Status-code": 301, "Location": "/members"}, "")
@@ -104,10 +107,11 @@ def logout(conn, headers, data):
     cookies = parse_cookies(headers['ignored'].get("Cookie", ""))
     has_valid_token = (token := cookies.get("token")) in db.database
     if not has_valid_token:
-        return ({"Status-code": 301, "Location": "/"}, "")
+        return ({"Status-code": 301, "Location": "/", "Cache-Control": "no-store"}, "")
     return ({
         "Status-code": 301,
         "Location": "/",
+        "Cache-Control": "no-store",
         "Set-Cookie": "token=; Expires=Sat, 1 Jan 2000 00:00:00 GMT"
         }, "")
 
@@ -148,7 +152,8 @@ server = HttpServer(
         root_dir="root/public/",
         error_dir="root/errors/",
         logger_folder="root/logs/",
-        port=(port := randint(49152, 65535))
+        host='',
+        port=(port := 6969)
         )
 print(f"[localhost:{port}] address bound")
 server.add_route("/", handlers={

@@ -42,6 +42,8 @@ def parse_post(dat):
 
 
 def parse_http_request(data):
+    if not data:
+        return 
     info = {
             "method": None,
             "request_uri": None,
@@ -159,15 +161,21 @@ class HttpServer(SocketServer):
 
     def handle_http_requests(self, *args, **kwargs):
         def handle_http_requests(inst, idx, conn, addr, **kwargs):
-            conn.settimeout(kwargs.get('timeout', 2))
+            conn.settimeout(1)
             buff = ""
             try:
                 while (dat := conn.recv(512).decode()):
                     buff += dat
             except socket.timeout:
                 pass
+            if not buff:
+                conn.close()
+                return
             conn.settimeout(None)
             dat = parse_http_request(buff)
+            if not dat:
+                conn.shutdown(socket.SHUT_RDWR)
+                conn.close()
             self.logger.log(_gf(), f"[{addr[0]}:{addr[1]}] received {buff[:10]!r}")
             conn.send(self._select_page(conn, addr, dat).encode())
             try:
