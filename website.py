@@ -4,6 +4,7 @@ from api.http_server import parse_cookies
 from api.http_server import parse_post
 from random import randint
 from hashlib import sha512
+from html import escape
 import datetime
 import json
 
@@ -94,7 +95,7 @@ def register(conn, headers, data, *, method):
             return ({"Status-code": 301, "Location": "/register?error=invalid login data"}, "")
         elif post['uname'] in db.database.values():
             return ({"Status-code": 301, "Location": "/register?error=already existing username"}, "")
-        t = db.add_user(post['uname'], post['pword'])
+        t = db.add_user(escape(post['uname']), post['pword'])
         print(f"[localhost:{port}] user {post['uname']} registered")
         return ({"Status-code": 301, "Set-Cookie": f"token={t}", "Location": "/"}, "")
 
