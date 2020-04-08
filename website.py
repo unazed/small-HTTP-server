@@ -43,6 +43,19 @@ def conv_uname(uname):
         b += format(ord(char), 'x').rjust(2, '0')
     return b
 
+def error(conn, headers, data, *, error):
+    return ({}, f"""
+<html>
+    <head>
+        <title>HTTP: {error}</title>
+    </head>
+    <body>
+        <h1>HTTP: {error}</h2> <hr> <br>
+        <p> An error has been encountered during the retrieval of this resource. </p>
+    </body>
+</html>
+            """)
+
 
 def index(conn, headers, data):
     cookies = parse_cookies(headers['ignored'].get("Cookie", ""))
@@ -72,8 +85,8 @@ def profile(conn, headers, data, *, method):
     cookies = parse_cookies(headers['ignored'].get("Cookie", ""))
     has_valid_token = (token := cookies.get("token", "")) in db.database
     if not has_valid_token:
-        with open("root/errors/403.html") as error:
-            return ({"Status-code": 403, "Reason-phrase": "Forbidden"}, error.read())
+        _, page = server.routes["/403"]["GET"](conn, {}, "")
+        return ({"Status-code": 403, "Reason-phrase": "Forbidden"}, page)
     if method == "GET":
         username = conv_uname(db.database[token])
         messages = []
@@ -108,8 +121,8 @@ def members(conn, headers, data, *, method):
     has_valid_token = cookies.get("token", "") in db.database
     if method == "GET":
         if not has_valid_token:
-            with open("root/errors/403.html") as error:
-                return ({"Status-code": 403, "Reason-phrase": "Forbidden"}, error.read())
+            _, page = server.routes["/403"]["GET"](conn, {}, "")
+            return ({"Status-code": 403, "Reason-phrase": "Forbidden"}, page)
         error = parse_post(headers['request_uri'].query).get("error", "")
         with open("root/public/members.html") as members:
             return ({}, members.read().format(
@@ -238,20 +251,6 @@ def login(conn, headers, data, *, method):
         if digest.hexdigest() in db.database:
             return ({"Status-code": 301, "Set-Cookie": f"token={digest.hexdigest()}", "Location": "/"}, "")
         return ({"Status-code": 301, "Location": "/login?error=invalid credentials"}, "")
-
-
-def error(conn, headers, data, *, error):
-    return ({}, f"""
-<html>
-    <head>
-        <title>HTTP: {error}</title>
-    </head>
-    <body>
-        <h1>HTTP: {error}</h2> <hr> <br>
-        <p> An error has been encountered during the retrieval of this resource. </p>
-    </body>
-</html>
-            """)
 
 
 db = Database("root/logins.db")
