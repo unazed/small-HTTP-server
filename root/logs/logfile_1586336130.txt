@@ -1,0 +1,172 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to localhost:50966
+on ln. 41, +9.39
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +11.39
+	of handle_http_requests(...)
+	| [127.0.0.1:51720] received 'GET /regis'
+on ln. 41, +11.7
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +13.7
+	of handle_http_requests(...)
+	| [127.0.0.1:51724] received 'GET /favic'
+on ln. 41, +23.4
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +25.4
+	of handle_http_requests(...)
+	| [127.0.0.1:51728] received 'POST /regi'
+on ln. 41, +25.42
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +27.42
+	of handle_http_requests(...)
+	| [127.0.0.1:51732] received 'GET / HTTP'
+on ln. 41, +27.76
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +29.77
+	of handle_http_requests(...)
+	| [127.0.0.1:51736] received 'GET /favic'
+on ln. 41, +40.03
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +42.04
+	of handle_http_requests(...)
+	| [127.0.0.1:51744] received 'GET /membe'
+on ln. 41, +42.34
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +44.36
+	of handle_http_requests(...)
+	| [127.0.0.1:51748] received 'GET /favic'
+on ln. 41, +47.72
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +49.72
+	of handle_http_requests(...)
+	| [127.0.0.1:51752] received 'POST /memb'
+on ln. 41, +49.74
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +51.75
+	of handle_http_requests(...)
+	| [127.0.0.1:51756] received 'GET /membe'
+on ln. 41, +52.08
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +54.08
+	of handle_http_requests(...)
+	| [127.0.0.1:51760] received 'GET /favic'
+on ln. 41, +60.19
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +62.2
+	of handle_http_requests(...)
+	| [127.0.0.1:51764] received 'POST /memb'
+on ln. 41, +62.21
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +64.22
+	of handle_http_requests(...)
+	| [127.0.0.1:51768] received 'GET /membe'
+on ln. 41, +64.55
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +66.55
+	of handle_http_requests(...)
+	| [127.0.0.1:51772] received 'GET /favic'
+on ln. 41, +69.57
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +71.57
+	of handle_http_requests(...)
+	| [127.0.0.1:51776] received 'POST /memb'
+on ln. 41, +71.58
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +73.59
+	of handle_http_requests(...)
+	| [127.0.0.1:51780] received 'GET /membe'
+on ln. 41, +73.87
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +75.87
+	of handle_http_requests(...)
+	| [127.0.0.1:51784] received 'GET /favic'
+on ln. 41, +77.21
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +79.22
+	of handle_http_requests(...)
+	| [127.0.0.1:51788] received 'POST /memb'
+on ln. 41, +79.23
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +81.23
+	of handle_http_requests(...)
+	| [127.0.0.1:51792] received 'GET /membe'
+on ln. 41, +81.48
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +83.49
+	of handle_http_requests(...)
+	| [127.0.0.1:51796] received 'GET /favic'
+on ln. 41, +84.32
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +86.32
+	of handle_http_requests(...)
+	| [127.0.0.1:51800] received 'POST /memb'
+on ln. 41, +86.34
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +88.34
+	of handle_http_requests(...)
+	| [127.0.0.1:51804] received 'GET /membe'
+on ln. 41, +88.6
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +90.61
+	of handle_http_requests(...)
+	| [127.0.0.1:51808] received 'GET /favic'
+on ln. 41, +90.78
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +92.79
+	of handle_http_requests(...)
+	| [127.0.0.1:51816] received 'POST /memb'
+on ln. 41, +92.8
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +94.8
+	of handle_http_requests(...)
+	| [127.0.0.1:51820] received 'GET /membe'
+on ln. 41, +95.04
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +97.05
+	of handle_http_requests(...)
+	| [127.0.0.1:51824] received 'GET /favic'
+on ln. 41, +98.72
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +100.72
+	of handle_http_requests(...)
+	| [127.0.0.1:51828] received 'GET / HTTP'
+on ln. 41, +100.98
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +102.98
+	of handle_http_requests(...)
+	| [127.0.0.1:51832] received 'GET /favic'
+on ln. 50, +109.94
+	of handle_connections(...)
+	| user-interrupt caught
+	| fatal error, exiting ...
+on ln. 59, +109.95
+	of __del__(...)
+	| garbage collecting SocketServer instance

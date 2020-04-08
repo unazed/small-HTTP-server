@@ -1,0 +1,10 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to localhost:53575
+on ln. 88, +0.0
+	of __init__(...)
+	| '405.html' doesn't exist in 'root/errors/'
+	| fatal error, exiting ...
+on ln. 59, +0.0
+	of __del__(...)
+	| garbage collecting SocketServer instance

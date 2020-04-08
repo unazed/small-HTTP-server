@@ -1,0 +1,22 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to localhost:53913
+on ln. 41, +8.66
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 156, +10.67
+	of handle_http_requests(...)
+	| [127.0.0.1:42252] received 'GET / HTTP'
+on ln. 41, +11.02
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 156, +13.02
+	of handle_http_requests(...)
+	| [127.0.0.1:42256] received 'GET /favic'
+on ln. 50, +37.1
+	of handle_connections(...)
+	| user-interrupt caught
+	| fatal error, exiting ...
+on ln. 59, +37.11
+	of __del__(...)
+	| garbage collecting SocketServer instance

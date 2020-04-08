@@ -1,0 +1,118 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to localhost:63354
+on ln. 41, +6.54
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +8.54
+	of handle_http_requests(...)
+	| [127.0.0.1:46586] received 'GET / HTTP'
+on ln. 41, +8.8
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +10.8
+	of handle_http_requests(...)
+	| [127.0.0.1:46590] received 'GET /favic'
+on ln. 41, +11.48
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +13.48
+	of handle_http_requests(...)
+	| [127.0.0.1:46594] received 'GET /logou'
+on ln. 41, +13.49
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +15.5
+	of handle_http_requests(...)
+	| [127.0.0.1:46598] received 'GET / HTTP'
+on ln. 41, +15.74
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 41, +17.35
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +17.74
+	of handle_http_requests(...)
+	| [127.0.0.1:46602] received 'GET /favic'
+on ln. 170, +19.36
+	of handle_http_requests(...)
+	| [127.0.0.1:46606] received 'GET /login'
+on ln. 41, +19.6
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +21.6
+	of handle_http_requests(...)
+	| [127.0.0.1:46610] received 'GET /favic'
+on ln. 41, +22.28
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +24.28
+	of handle_http_requests(...)
+	| [127.0.0.1:46614] received 'POST /logi'
+on ln. 41, +24.29
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +26.3
+	of handle_http_requests(...)
+	| [127.0.0.1:46618] received 'GET /login'
+on ln. 41, +26.91
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +28.91
+	of handle_http_requests(...)
+	| [127.0.0.1:46622] received 'GET /favic'
+on ln. 41, +58.19
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +60.19
+	of handle_http_requests(...)
+	| [127.0.0.1:46630] received 'POST /logi'
+on ln. 41, +60.21
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +62.21
+	of handle_http_requests(...)
+	| [127.0.0.1:46634] received 'GET /login'
+on ln. 41, +62.46
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +64.46
+	of handle_http_requests(...)
+	| [127.0.0.1:46638] received 'GET /favic'
+on ln. 41, +66.84
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +68.84
+	of handle_http_requests(...)
+	| [127.0.0.1:46642] received 'POST /logi'
+on ln. 41, +68.86
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +70.86
+	of handle_http_requests(...)
+	| [127.0.0.1:46646] received 'GET / HTTP'
+on ln. 41, +71.12
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +73.12
+	of handle_http_requests(...)
+	| [127.0.0.1:46650] received 'GET /favic'
+on ln. 41, +78.75
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 170, +80.75
+	of handle_http_requests(...)
+	| [127.0.0.1:46654] received 'GET /membe'
+on ln. 41, +81.03
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 50, +82.47
+	of handle_connections(...)
+	| user-interrupt caught
+	| fatal error, exiting ...
+on ln. 170, +83.03
+	of handle_http_requests(...)
+	| [127.0.0.1:46658] received 'GET /favic'
+on ln. 59, +83.04
+	of __del__(...)
+	| garbage collecting SocketServer instance

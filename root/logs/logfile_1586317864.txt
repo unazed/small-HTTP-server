@@ -1,0 +1,46 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to localhost:55529
+on ln. 41, +6.06
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 165, +8.07
+	of handle_http_requests(...)
+	| [127.0.0.1:32852] received 'GET / HTTP'
+on ln. 41, +8.44
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 41, +9.63
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 165, +10.44
+	of handle_http_requests(...)
+	| [127.0.0.1:32856] received 'GET /favic'
+on ln. 165, +11.63
+	of handle_http_requests(...)
+	| [127.0.0.1:32860] received 'GET /regis'
+on ln. 41, +11.91
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 165, +13.91
+	of handle_http_requests(...)
+	| [127.0.0.1:32864] received 'GET /favic'
+on ln. 41, +19.76
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 165, +21.76
+	of handle_http_requests(...)
+	| [127.0.0.1:32868] received 'GET /regis'
+on ln. 41, +22.0
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 165, +24.0
+	of handle_http_requests(...)
+	| [127.0.0.1:32872] received 'GET /favic'
+on ln. 50, +31.06
+	of handle_connections(...)
+	| user-interrupt caught
+	| fatal error, exiting ...
+on ln. 59, +31.08
+	of __del__(...)
+	| garbage collecting SocketServer instance

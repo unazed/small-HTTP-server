@@ -1,0 +1,16 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to localhost:61860
+on ln. 41, +7.93
+	of handle_connections(...)
+	| received connection from 127.0.0.1
+on ln. 156, +9.94
+	of handle_http_requests(...)
+	| [127.0.0.1:48192] received 'GET / HTTP'
+on ln. 50, +15.38
+	of handle_connections(...)
+	| user-interrupt caught
+	| fatal error, exiting ...
+on ln. 59, +15.4
+	of __del__(...)
+	| garbage collecting SocketServer instance

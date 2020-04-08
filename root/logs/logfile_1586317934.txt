@@ -1,0 +1,10 @@
+on ln. 29, +0.0
+	of __init__(...)
+	| bound successfully to localhost:52044
+on ln. 50, +6.53
+	of handle_connections(...)
+	| user-interrupt caught
+	| fatal error, exiting ...
+on ln. 59, +6.54
+	of __del__(...)
+	| garbage collecting SocketServer instance
