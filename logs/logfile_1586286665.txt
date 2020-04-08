@@ -1,6 +1,0 @@
-on ln. 29, +0.0
-	of __init__(...)
-	| bound successfully to localhost:60529
-on ln. 59, +0.04
-	of __del__(...)
-	| garbage collecting SocketServer instance
