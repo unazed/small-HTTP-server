@@ -7,3 +7,4 @@ The logger is accessible through `HttpServer.logger`, having main function `Logg
 
 The uploaded `unittest_http_server.py` demonstrates basic HTTP authorization. There isn't that much of an abstraction barrier between the socketed layer and the highest layer, but there is some added uniformity and visible interface.
 
+
