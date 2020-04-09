@@ -24,19 +24,7 @@ class SocketServer:
         conn, addr = self.socket.accept()
         print(f"[{self.host}:{self.port}] received connection from {addr[0]}:{addr[1]}")
         return handler(conn, addr)
-
-#        conn.settimeout(timeout)
-#        data = ""
-#        try:
-#            while (recv := conn.recv(buff_size).decode()):
-#                data += recv
-#        except socket.timeout:
-#            pass
-#        conn.settimeout(None)
-#        print(f"[{addr[0]}:{addr[1]}] received {len(data)} bytes of data")
-#
-#        return handler(conn, addr, data)
-        
+    
     def __del__(self):
         if self.logger_file is not None:
             sys.stdout = sys.__stdout__
