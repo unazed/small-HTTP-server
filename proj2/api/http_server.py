@@ -5,8 +5,6 @@ import os
 import socket
 import threading
 
-
-
                         
 class HttpServer(SocketServer):
     SUPPORTED_HTTP_VERSION = "HTTP/1.1"
@@ -50,32 +48,50 @@ class HttpServer(SocketServer):
         if '?' in path:
             print(f"[HttpServer] [{self.host}:{self.port}] invalid character in path '?'")
             return False
+        print(f"[HttpServer] [{self.host}:{self.port}] adding route {path!r}")
         self._routes[path] = {
                     "methods_supported": methods_supported,
-                    "handler": handler,  # handler(conn, addr, method, params)
+                    "handler": handler,
+                    "host": path,
+                    "origin": None
                 }
+
+    def redirect_route(self, src_path, dst_path, *, inherit_methods=False):
+        if src_path not in self._routes or dst_path not in self._routes:
+            return False
+        print(f"[HttpServer] [{self.host}:{self.port}] redirecting {src_path!r} to {dst_path!r}")
+        ms = self._routes[src_path]['methods_supported']
+        self._routes[src_path] = self._routes[dst_path]
+        if not inherit_methods:
+            self._routes[src_path]['methods_supported'] = ms
+        return True
+
+    def remove_route(self, path):
+        if path not in self._routes:
+            return False
+        print(f"[HttpServer] [{self.host}:{self.port}] removing route {path!r}")
+        del self._routes[path]
+        return True
 
     def get_route(self, conn, addr, method, path, *, _error=False):
         print(f"[HttpServer] [{addr[0]}:{addr[1]}] {method} {path!r}")
-        if path not in self._routes:
-            if _error == 404:
-                return HttpServer.DEFAULT_ERROR.format(
-                        status=404,
-                        reason_phrase="Not Found"
-                        )
-            return conn.send(self.get_route(conn, addr, "GET", "/404", _error=404).encode())
-        elif method not in self._routes[path]['methods_supported']:
-            if _error == 405:  # prevent recursion
-                return HttpServer.DEFAULT_ERROR.format(
-                        status=405,
-                        reason_phrase="Method Unsupported"
-                        )
-            return conn.send(self.get_route(conn, addr, "GET", "/405", _error=405).encode())
         params = None
-        if '?' in path:
-            params = [{pair.split("=")[0], pair.split("=")[1]} for pair in path.split("?", 1)[1].split("&")]
+        if '?' in path and not _error:
+            try:
+                params = {pair.split("=")[0]: unquote_plus(pair.split("=")[1]) for pair in path.split("?", 1)[1].split("&")}
+            except IndexError:
+                return conn.send(self.get_route(conn, addr, "GET", "/400", _error=(400, "Bad Request")).encode())
             path = path.split("?")[0]
-        return self._routes[path]['handler'](conn, addr, method, params)
+        if path not in self._routes or _error:
+            if _error:
+                return HttpServer.DEFAULT_ERROR.format(
+                        status=_error[0],
+                        reason_phrase=_error[1]
+                        )
+            return conn.send(self.get_route(conn, addr, "GET", "/404", _error=(404, "Not Found")).encode())
+        elif method not in self._routes[path]['methods_supported']:
+            return conn.send(self.get_route(conn, addr, "GET", "/405", _error=(405, "Method Unsupported")).encode())
+        return (route := self._routes[path])['handler'](self, conn, addr, method, params, route)
 
     def handle_http_connections(self):
         def handler(conn, addr):
@@ -88,7 +104,6 @@ class HttpServer(SocketServer):
                 pass
             conn.settimeout(None)
             headers, content = self.parse_http_request(data)
-            print(headers)
             self.get_route(conn, addr, headers[":method"], headers[':uri'])
             conn.close()
 
@@ -115,13 +130,14 @@ class HttpServer(SocketServer):
                     except IndexError:
                         continue
 
+
 if __name__ == "__main__":
-    def index(conn, addr, method, params):
-        conn.send(b"""HTTP/1.1 200 OK\r\n\r\n
-                <html>
-                hi bitch
+    def index(server, conn, addr, method, params, route):
+        server.redirect_route("/index", "/meme")
+        conn.send(b"""HTTP/1.1 200 OK\r\nConnection: keepa-live\r\n\r\n<html>
+                hi bitch, got params=%s host=%s
                 </html>
-                """)
+                """ % (str(params).encode(), str(route['host']).encode()))
     server = HttpServer(
             root_dir="html/",
             max_conn=5,
@@ -129,5 +145,6 @@ if __name__ == "__main__":
             port=6969
             )
     server.add_route(["GET"], "/index", index)
+    server.add_route([], "/meme", index)
     server.handle_http_connections()
 

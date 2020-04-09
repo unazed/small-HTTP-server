@@ -17,12 +17,12 @@ class SocketServer:
         self.socket = socket.socket()
         self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.socket.bind((host, port))
-        print(f"[{host}:{port}] successfully bound")
+        print(f"[SocketServer] [{host}:{port}] successfully bound")
 
     def handle_raw_connection(self, handler, *, buff_size=1, timeout=1):
         self.socket.listen(1)
         conn, addr = self.socket.accept()
-        print(f"[{self.host}:{self.port}] received connection from {addr[0]}:{addr[1]}")
+        print(f"[SocketServer] [{self.host}:{self.port}] received connection from {addr[0]}:{addr[1]}")
         return handler(conn, addr)
     
     def __del__(self):
