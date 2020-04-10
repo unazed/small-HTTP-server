@@ -62,6 +62,7 @@ class HttpServer(SocketServer):
         print(f"[HttpServer] [{self.host}:{self.port}] redirecting {src_path!r} to {dst_path!r}")
         ms = self._routes[src_path]['methods_supported']
         self._routes[src_path] = self._routes[dst_path]
+        self._routes[src_path]["origin"] = src_path
         if not inherit_methods:
             self._routes[src_path]['methods_supported'] = ms
         return True
@@ -134,10 +135,13 @@ class HttpServer(SocketServer):
 if __name__ == "__main__":
     def index(server, conn, addr, method, params, route):
         server.redirect_route("/index", "/meme")
+        server.redirect_route("/meme", "/index")  # doesn't force refresh
+                                                  # thus no infinite loop
+        server.redirect_route("/meme", "/meme")
         conn.send(b"""HTTP/1.1 200 OK\r\nConnection: keepa-live\r\n\r\n<html>
-                hi bitch, got params=%s host=%s
+                hi bitch, got params=%s host=%s origin=%s
                 </html>
-                """ % (str(params).encode(), str(route['host']).encode()))
+                """ % (str(params).encode(), str(route['host']).encode(), str(route['origin']).encode()))
     server = HttpServer(
             root_dir="html/",
             max_conn=5,
