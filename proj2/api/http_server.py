@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from socket_server import SocketServer
+from .socket_server import SocketServer
 from urllib.parse import unquote_plus
 import os
 import socket
@@ -10,12 +10,13 @@ class HttpServer(SocketServer):
     SUPPORTED_HTTP_VERSION = "HTTP/1.1"
     DEFAULT_ERROR = SUPPORTED_HTTP_VERSION \
             + " {status} {reason_phrase}\r\n\r\n<html><body><h1>{status} - {reason_phrase}</h1><p>This resource is inaccessible.</p></body></html>"
+    INTERNAL_ERRORS = ("/404", "/405", "/400")
 
     def __init__(self, root_dir, *args, max_conn=10, **kwargs):
         super().__init__(*args, **kwargs)
         if not os.path.exists(root_dir):
             print(f"[HttpServer] [{self.host}:{self.port}] {root_dir!r} doesn't exist")
-            raise OSError
+            raise FileNotFoundError
         self.root_dir = root_dir
         self.max_conn = max_conn
         self._routes = {}
@@ -92,10 +93,12 @@ class HttpServer(SocketServer):
                         status=_error[0],
                         reason_phrase=_error[1]
                         )
+            if '/*' in self._routes and path not in HttpServer.INTERNAL_ERRORS:
+                return self._routes['/*']['handler'](self, conn, addr, method, {"path": path}, None)
             return conn.send(self.get_route(conn, addr, "GET", "/404", _error=(404, "Not Found")).encode())
         elif method not in self._routes[path]['methods_supported']:
             return conn.send(self.get_route(conn, addr, "GET", "/405", _error=(405, "Method Unsupported")).encode())
-        return (route := self._routes[path])['handler'](self, conn, addr, method, params, route)
+        return (route := self._routes)[path]['handler'](self, conn, addr, method, params, route)
 
     def handle_http_connections(self):
         def handler(conn, addr):
