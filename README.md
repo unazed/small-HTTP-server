@@ -10,11 +10,14 @@ a little HTTP server in Python
 
 `proj2` is the refined API, with no definitive test-case as of yet, but with the following API functions:
 
-- `HttpServer.__init__(root_dir, max_conn=10, )`
+- `HttpServer.__init__(root_dir, host, port, logger_file=None, max_conn=10)`
 - `@staticmethod HttpServer.parse_http_request(data)`
 - `HttpServer.add_route(methods_supported, path, handler)`
 - `HttpServer.redirect_route(src_path, dst_path, *, inherit_methods=False)`
 - `HttpServer.remove_route(path)`
 - `HttpServer.get_route(conn, addr, method, path)`
 - `HttpServer.handle_http_connections()`
+
+
+Both variants are based from socket-level, using `socket` alone with delegating instances of `threading.Thread` per request, maintaing (probably) a persistent TCP connection, enforcing the `keep-alive` standard where necessary. However, neither projects strictly abide RFC 2616 or any such semantic definitions of grammars such as the URI, GET/POST parameters, etc..
 
