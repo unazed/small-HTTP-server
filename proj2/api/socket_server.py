@@ -19,9 +19,18 @@ class SocketServer:
         self.socket.bind((host, port))
         print(f"[SocketServer] [{host}:{port}] successfully bound")
 
-    def handle_raw_connection(self, handler, *, buff_size=1, timeout=1):
+    def handle_raw_connection(self, handler, *, buff_size=1, timeout=None):
         self.socket.listen(1)
-        conn, addr = self.socket.accept()
+        self.socket.settimeout(timeout)
+        while True:
+            try:
+                conn, addr = self.socket.accept()
+                break        
+            except KeyboardInterrupt:
+                print(f"[SocketServer] [{self.host}:{self.port}] received keyboard interrupt, exiting...")
+                return False
+            except socket.timeout:
+                continue
         print(f"[SocketServer] [{self.host}:{self.port}] received connection from {addr[0]}:{addr[1]}")
         return handler(conn, addr)
     

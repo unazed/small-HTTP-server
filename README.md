@@ -17,6 +17,7 @@ a little HTTP server in Python
 - `HttpServer.remove_route(path)`
 - `HttpServer.get_route(conn, addr, method, path)`
 - `HttpServer.handle_http_connections()`
+- `HttpServer.close_connections()`
 
 
 Both variants are based from socket-level, using `socket` alone with delegating instances of `threading.Thread` per request, maintaing (probably) a persistent TCP connection, enforcing the `keep-alive` standard where necessary. However, neither projects strictly abide RFC 2616 or any such semantic definitions of grammars such as the URI, GET/POST parameters, etc..

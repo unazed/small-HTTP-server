@@ -19,6 +19,7 @@ class HttpServer(SocketServer):
         self.root_dir = root_dir
         self.max_conn = max_conn
         self._routes = {}
+        self._threads = []
 
     @staticmethod
     def parse_http_request(data):
@@ -57,7 +58,9 @@ class HttpServer(SocketServer):
                 }
 
     def redirect_route(self, src_path, dst_path, *, inherit_methods=False):
-        if src_path not in self._routes or dst_path not in self._routes:
+        if src_path == dst_path:
+            return False
+        elif src_path not in self._routes or dst_path not in self._routes:
             return False
         print(f"[HttpServer] [{self.host}:{self.port}] redirecting {src_path!r} to {dst_path!r}")
         ms = self._routes[src_path]['methods_supported']
@@ -109,27 +112,37 @@ class HttpServer(SocketServer):
             conn.close()
 
         def delegate_handler(*args, **kwargs):
-            counter[0] += 1
-            counter.append(threading.Thread(
+            self._threads[0] += 1
+            self._threads.append(threading.Thread(
                 target=handler, args=args, kwargs=kwargs
                 ))
-            counter[-1].start()
+            self._threads[-1].start()
             print(f"[HttpServer] [{self.host}:{self.port}] spawned worker thread")
+            return True
 
-        counter = [0]
+        self._threads = [0]
         while True:
-            while counter[0] < self.max_conn:
+            while self._threads[0] < self.max_conn:
                 print(f"[HttpServer] [{self.host}:{self.port}] delegating new worker thread")
-                super().handle_raw_connection(delegate_handler, timeout=1)
+                if not super().handle_raw_connection(delegate_handler, timeout=1):
+                    print(f"[HttpServer] [{self.host}:{self.port}] caught keyboard interrupt, exiting...")
+                    return self.close_connections()
             print(f"[HttpServer] [{self.host}:{self.port}] idling while active threads exit")
-            for idx, thd in enumerate(counter[1:]):
+            for idx, thd in enumerate(self._threads[1:]):
                 if not thd.is_alive():
                     print(f"[HttpServer] [{self.host}:{self.port}] killing dead thread")
-                    counter[0] -= 1
+                    self._threads[0] -= 1
                     try:
-                        del counter[idx+1]
+                        del self._threads[idx+1]
                     except IndexError:
                         continue
+
+    def close_connections(self):
+        print(f"[HttpServer] [{self.host}:{self.port}] closing all active connections")
+        for idx, thd in enumerate(self._threads[1:]):
+            print(f"[HttpServer] [{self.host}:{self.port}] waiting for thread #{idx} to close")
+            thd.join()
+        print(f"[HttpServer] [{self.host}:{self.port}] closed all active connections")
 
 
 if __name__ == "__main__":
@@ -146,7 +159,7 @@ if __name__ == "__main__":
             root_dir="html/",
             max_conn=5,
             host="localhost",
-            port=6969
+             port=6969
             )
     server.add_route(["GET"], "/index", index)
     server.add_route([], "/meme", index)
