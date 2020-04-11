@@ -113,7 +113,7 @@ class HttpServer(SocketServer):
         elif method not in self._routes[path]['methods_supported']:
             return conn.send(self.get_route(conn, addr, "GET", "/405", _error=(405, "Method Unsupported")).encode())
         
-        return (route := self._routes)[path]['handler'](self, conn, addr, method, params, route, cookies)
+        return (route := self._routes[path])['handler'](self, conn, addr, method, params, route, cookies)
 
     def handle_http_connections(self):
         def handler(conn, addr):

@@ -3,6 +3,7 @@ from api.http_server import HttpServer
 from database import LoginDatabase
 from functools import partial
 from html import escape
+import hashlib
 import utils
 import json
 import os
@@ -35,19 +36,6 @@ def index(server, conn, addr, method, params, route, cookies):
             body=params
             )
         ))
-
-
-def global_handler(server, conn, addr, method, params, route, cookies):
-    path = params['path']
-    _, *ext = path.split(".")
-    if not ext:
-        return server.get_route(conn, addr, "GET", "/404")
-    if ext[0] in ACCEPTABLE_WILDCARDS:
-        if not (data := utils.read_file(path)):
-            return server.get_route(conn, addr, "GET", "/404")
-        return conn.send(utils.construct_http_response(
-            200, "OK", {}, data
-            ))
 
 
 def register(server, conn, addr, method, params, route, cookies):
@@ -91,7 +79,101 @@ def register(server, conn, addr, method, params, route, cookies):
 
 
 def login(server, conn, addr, method, params, route, cookies):
-    pass
+    username = server._db.get_user(cookies.get("token", None))
+    if not (index := utils.read_file("index.html")):
+        return server.get_route(conn, addr, "GET", "/404")
+    elif not (data := utils.read_file("login.html")):
+        return server.get_route(conn, addr, "GET", "/404")
+    elif username:
+        return conn.send(utils.consruct_http_response(
+            403, "Forbidden", {}, utils.determine_template(
+                index, username,
+                forum_title=FORUM_TITLE,
+                body=f"""
+                <p>You're already logged in under {username!r}, did you
+                want to <a href="/logout">log out</a>?</p>
+                """
+                )
+            ))
+
+    if method == "GET":
+        error = escape(params["GET"].get("error", ""))
+        return conn.send(utils.construct_http_response(
+            200, "OK", {}, utils.determine_template(
+                index, username,
+                forum_title=FORUM_TITLE,
+                body=data.format(error=error)
+                )
+            ))
+    elif method == "POST":
+        if not ('username' in params['POST'] or 'password' in params['POST']):
+            return server.get_route(conn, addr, "GET", "/400")
+        elif (u := params['POST']['username']) not in server._db.database:
+            return server.get_route(conn, addr, "GET", "/403")
+        elif not server._db.get_user((t := hashlib.sha256(f"{u}:{params['POST']['password']}".encode()).hexdigest())):
+            return server.get_route(conn, addr, "GET", "/403")
+        return conn.send(utils.construct_http_response(
+            301, "Redirect", {
+                "Set-Cookie": f"token={t}",
+                "Location": "/"
+                }, ""
+            ))
+
+
+def logout(server, conn, addr, method, param, route, cookies):
+    username = server._db.get_user(cookies.get("token", None))
+    if not username:
+        return conn.send(utils.construct_http_response(
+            301, "Redirect", {"Location": "/"}, ""
+            ))
+    return conn.send(utils.construct_http_response(
+        301, "Redirect", {
+            "Location": "/",
+            "Set-Cookie": "token=; expires=Thu, 01 Jan 1970 00:00:00 GMT"
+            }, ""
+        ))
+
+
+def error_handler(server, conn, addr, method, param, route, cookies):
+    host = route['host']
+    if not (index := utils.read_file("index.html")):
+        index = """
+        <html>
+            <head>
+                <title>Forum Index</title>
+            </head>
+            <body>
+                <h1>{forum_title} - Error</h1>
+                <hr>
+                {body}
+            </body>
+        </html>
+        """
+    status = 400
+    if host[1:].isdigit():
+        status = int(host[1:])
+
+    return conn.send(utils.construct_http_response(
+        status, "Error", {}, index.format(
+                forum_title=FORUM_TITLE,
+                body="<p>An error has been encountered during the processing of this request.<br>" \
+                    f"Code: {host}</p>",
+                items=""
+            )
+        ))
+
+
+def global_handler(server, conn, addr, method, params, route, cookies):
+    path = params['path']
+    _, *ext = path.split(".")
+    if not ext:
+        return server.get_route(conn, addr, "GET", "/404")
+    if ext[0] in ACCEPTABLE_WILDCARDS:
+        if not (data := utils.read_file(path)):
+            return server.get_route(conn, addr, "GET", "/404")
+        return conn.send(utils.construct_http_response(
+            200, "OK", {}, data
+            ))
 
 
 if __name__ != "__main__":
@@ -129,6 +211,11 @@ server.add_route(["GET"], "/index", index)
 
 server.add_route(["GET", "POST"], "/login", login)
 server.add_route(["GET", "POST"], "/register", register)
+server.add_route(["GET"], "/logout", logout)
+
+server.add_route(["GET"], "/404", error_handler)
+server.add_route(["GET"], "/403", error_handler)
+server.add_route(["GET"], "/400", error_handler)
 
 server.add_route(["GET"], "/*", global_handler)
 server.handle_http_connections()
