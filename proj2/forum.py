@@ -1,221 +1,93 @@
-#!/usr/bin/env python3
-from api.http_server import HttpServer
-from database import LoginDatabase
-from functools import partial
-from html import escape
-import hashlib
-import utils
 import json
 import os
+import shutil
 
 
-CONFIG_KEYS = ("host", "port", "root_dir", "logger_file", "database_file")
-FORUM_TITLE = "Unazed's Forum"
-ACCEPTABLE_WILDCARDS = ("css", "js")
+class Forum:
+    def __init__(self, root_dir):
+        if not os.path.exists(root_dir):
+            os.mkdir(root_dir)
+            with open(f"{root_dir}/roles.json", "w") as roles:
+                roles.write("{}")
+            self.roles = {}
+        else:
+            with open(f"{root_dir}/roles.json") as roles:
+                self.roles = json.load(roles)
+        self.root_dir = root_dir
+        self.sections = {name: {
+            "sid": idx,
+            "allowed_roles": json.load(open(p)) \
+                    if os.path.isfile((p := os.path.join(root_dir, name, "allowed_roles.json"))) else [],
+            "threads": os.listdir(os.path.join(root_dir, name))
+            } for idx, name in enumerate(os.listdir(root_dir)) \
+                    if name != "roles.json"}
 
+    def add_section(self, name, allowed_roles):
+        if name in self.sections:
+            return False
+        self.sections[name] = {"allowed_roles": allowed_roles, "threads": []}
+        os.mkdir(f"{self.root_dir}/{name}")
+        return True
 
-def index(server, conn, addr, method, params, route, cookies):
-    print(cookies)
-    username = server._db.get_user(cookies.get("token", None))
-    if not (data := utils.read_file("index.html")):
-        return server.get_route(conn, addr, "GET", "/404")
+    def remove_section(self, name):
+        if name not in self.sections:
+            return False
+        del self.sections[name]
+        shutil.rmtree(f"{self.root_dir}/{name}")
+        return True
 
-    elif not (params["GET"] or params["POST"]):
-        return conn.send(utils.construct_http_response(
-            200, "OK", {}, utils.determine_template(
-                data, username,
-                forum_title=FORUM_TITLE,
-                body="<p>nothing to see here yet</p>"
-                )
-            ))
+    def make_thread(self, section, username, title, content):
+        if section not in self.sections:
+            return False
+        self.sections['threads'].append((c := {
+            "tid": (tid := len(self.sections['threads']) + 1),
+            "username": username,
+            "title": title,
+            "content": content
+            }))
+        os.mkdir(f"{self.root_dir}/{section}/{tid}")
+        with open(f"{self.root_dir}/{section}/{tid}/info", "w") as info:
+            json.dump(c, info)
+        return True
 
-    return conn.send(utils.construct_http_response(
-        200, "OK", {}, utils.determine_template(
-            data, username,
-            forum_title=FORUM_TITLE,
-            body=params
-            )
-        ))
+    def delete_thread(self, section, tid):
+        if section not in self.sections:
+            return False
+        elif len(self.sections[section]['threads']) < tid:
+            return False
+        del self.sections[section]['threads'][tid-1]
+        shutil.rmtree(f"{self.root_dir}/{section}/{tid}")
+        return True
 
+    def make_reply(self, section, tid, username, content):
+        if section not in self.sections:
+            return False
+        elif len(self.sections[section]['threads']) < tid:
+            return False
+        pid = len(os.listdir(f"{self.root_dir}/{section}/{tid}"))
+        with open(f"{self.root_dir}/{section}/{tid}/{pid}.reply", "w") as post:
+            json.dump({"username": username, "content": content}, post)
+        return True
 
-def register(server, conn, addr, method, params, route, cookies):
-    username = server._db.get_user(cookies.get("token", None)) 
-    if not (index := utils.read_file("index.html")):
-        return server.get_route(conn, addr, "GET", "/404")
-    elif not (data := utils.read_file("register.html")):
-        return server.get_route(conn, addr, "GET", "/404")
-    elif username:
-        return conn.send(utils.construct_http_response(
-            403, "Forbidden", {}, utils.determine_template(
-                index, username,
-                forum_title=FORUM_TITLE,
-                body=f"""
-                <p>You've already registered under {username!r}.</p>
-                """
-                )
-            ))
+    def delete_reply(self, section, tid, pid):
+        if section not in self.sections:
+            return False
+        elif len(self.sections[section]['threads']) < tid:
+            return False
+        elif len(os.listdir(f"{self.root_dir}/{section}/{tid}")) - 1 < pid:
+            return False
+        os.remove(f"{self.root_dir}/{section}/{tid}/{pid}.reply")
+        return True
 
-    if method == "GET":
-        error = escape(params["GET"].get("error", ""))
-        return conn.send(utils.construct_http_response(
-            200, "OK", {}, utils.determine_template(
-                index, username,
-                forum_title=FORUM_TITLE,
-                body=data.format(error=error)
-                )
-            ))
-    elif method == "POST":
-        if 'username' not in params['POST'] or 'password' not in params['POST']:
-            return server.get_route(conn, addr, "GET", "/400")
-        elif not (t := server._db.add_user(params['POST']['username'], params['POST']['password'])):
-            return server.get_route(conn, addr, "GET", "/register?error=Username exists.")
-        print(f"[WebServer] user registered: {params['POST']['username']!r}")
-        return conn.send(utils.construct_http_response(
-            301, "Redirect", {
-                "Location": "/index",
-                "Set-Cookie": f"token={t}"
-                }, ""
-            ))
-
-
-def login(server, conn, addr, method, params, route, cookies):
-    username = server._db.get_user(cookies.get("token", None))
-    if not (index := utils.read_file("index.html")):
-        return server.get_route(conn, addr, "GET", "/404")
-    elif not (data := utils.read_file("login.html")):
-        return server.get_route(conn, addr, "GET", "/404")
-    elif username:
-        return conn.send(utils.consruct_http_response(
-            403, "Forbidden", {}, utils.determine_template(
-                index, username,
-                forum_title=FORUM_TITLE,
-                body=f"""
-                <p>You're already logged in under {username!r}, did you
-                want to <a href="/logout">log out</a>?</p>
-                """
-                )
-            ))
-
-    if method == "GET":
-        error = escape(params["GET"].get("error", ""))
-        return conn.send(utils.construct_http_response(
-            200, "OK", {}, utils.determine_template(
-                index, username,
-                forum_title=FORUM_TITLE,
-                body=data.format(error=error)
-                )
-            ))
-    elif method == "POST":
-        if not ('username' in params['POST'] or 'password' in params['POST']):
-            return server.get_route(conn, addr, "GET", "/400")
-        elif (u := params['POST']['username']) not in server._db.database:
-            return server.get_route(conn, addr, "GET", "/403")
-        elif not server._db.get_user((t := hashlib.sha256(f"{u}:{params['POST']['password']}".encode()).hexdigest())):
-            return server.get_route(conn, addr, "GET", "/403")
-        return conn.send(utils.construct_http_response(
-            301, "Redirect", {
-                "Set-Cookie": f"token={t}",
-                "Location": "/"
-                }, ""
-            ))
-
-
-def logout(server, conn, addr, method, param, route, cookies):
-    username = server._db.get_user(cookies.get("token", None))
-    if not username:
-        return conn.send(utils.construct_http_response(
-            301, "Redirect", {"Location": "/"}, ""
-            ))
-    return conn.send(utils.construct_http_response(
-        301, "Redirect", {
-            "Location": "/",
-            "Set-Cookie": "token=; expires=Thu, 01 Jan 1970 00:00:00 GMT"
-            }, ""
-        ))
-
-
-def error_handler(server, conn, addr, method, param, route, cookies):
-    host = route['host']
-    if not (index := utils.read_file("index.html")):
-        index = """
-        <html>
-            <head>
-                <title>Forum Index</title>
-            </head>
-            <body>
-                <h1>{forum_title} - Error</h1>
-                <hr>
-                {body}
-            </body>
-        </html>
-        """
-    status = 400
-    if host[1:].isdigit():
-        status = int(host[1:])
-
-    return conn.send(utils.construct_http_response(
-        status, "Error", {}, index.format(
-                forum_title=FORUM_TITLE,
-                body="<p>An error has been encountered during the processing of this request.<br>" \
-                    f"Code: {host}</p>",
-                items=""
-            )
-        ))
-
-
-def global_handler(server, conn, addr, method, params, route, cookies):
-    path = params['path']
-    _, *ext = path.split(".")
-    if not ext:
-        return server.get_route(conn, addr, "GET", "/404")
-    if ext[0] in ACCEPTABLE_WILDCARDS:
-        if not (data := utils.read_file(path)):
-            return server.get_route(conn, addr, "GET", "/404")
-        return conn.send(utils.construct_http_response(
-            200, "OK", {}, data
-            ))
-
-
-if __name__ != "__main__":
-    raise SystemExit("run at top-level")
-
-if not os.path.isfile("./config.json"):
-    raise FileNotFoundError("[WebServer] 'config.json' must exist")
-    
-with open("./config.json") as config:
-    config = json.load(config)
-    
-for key in CONFIG_KEYS:
-    if key not in config:
-        raise KeyError(f"[WebServer] key {key!r} not in 'config.json'")
-
-host, port = config['host'], config['port']
-root_dir = config['root_dir']
-logger_file = config['logger_file'] or None
-database_file = config['database_file']
-
-utils.read_file = partial(utils.read_file, root_dir)
-utils.construct_http_response = partial(utils.construct_http_response, HttpServer.SUPPORTED_HTTP_VERSION)
-
-server = HttpServer(
-        root_dir=root_dir,
-        host=host,
-        port=int(port),
-        logger_file=logger_file
-        )
-
-server._db = LoginDatabase(database_file)
-
-server.add_route(["GET"], "/", index)
-server.add_route(["GET"], "/index", index)
-
-server.add_route(["GET", "POST"], "/login", login)
-server.add_route(["GET", "POST"], "/register", register)
-server.add_route(["GET"], "/logout", logout)
-
-server.add_route(["GET"], "/404", error_handler)
-server.add_route(["GET"], "/403", error_handler)
-server.add_route(["GET"], "/400", error_handler)
-
-server.add_route(["GET"], "/*", global_handler)
-server.handle_http_connections()
+    def get_replies(self, section, tid):
+        if section not in self.sections:
+            return False
+        elif len(self.sections[section]['threads']) < tid:
+            return False
+        replies = []
+        for reply in sorted(os.listdir(f"{self.root_dir}/{section}/{tid}")):
+            if reply == "info":
+                continue
+            with open(f"{self.root_dir}/{section}/{tid}/{reply}") as reply:
+                replies.append(json.load(reply))
+        return replies

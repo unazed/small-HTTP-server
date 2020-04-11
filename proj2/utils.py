@@ -37,7 +37,7 @@ def determine_template(data, username, *args, **kwargs):
 
 def construct_http_response(version, status_code, reason_phrase, headers, content):
     return (f"{version} {status_code} {reason_phrase}\r\n"
-        + "\r\n".join(f"{k}: {v}" for k, v in headers.items()) + "\r\n"
+        + "\r\n".join(f"{k.split('#', 1)[0]}: {v}" for k, v in headers.items()) + "\r\n"
         + content).encode()
 
 

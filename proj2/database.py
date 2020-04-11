@@ -18,16 +18,21 @@ class LoginDatabase:
         with open(self.filename, "w") as db:
             json.dump(self.database, db)
 
-    def add_user(self, username, password, *, replace=False):
+    def add_user(self, username, password, *, properties={}, replace=False):
         if username in self.database and not replace:
             return False
-        self.database[username] = (t := hashlib.sha256(f"{username}:{password}".encode()).hexdigest())
+        elif not username:
+            return False
+        self.database[username] = (
+                (t := hashlib.sha256(f"{username}:{password}".encode()).hexdigest()),
+                properties
+                )
         self.write_changes()
         return t
 
     def get_user(self, token):
         for uname, tok in self.database.items():
-            if token == tok:
+            if token == tok[0]:
                 return uname
         return False
 

@@ -84,7 +84,7 @@ class HttpServer(SocketServer):
         del self._routes[path]
         return True
 
-    def get_route(self, conn, addr, method, path, *, content=None, cookies=None, _error=False):
+    def get_route(self, conn, addr, method, path, *, content=None, cookies={}, _error=False):
         print(f"[HttpServer] [{addr[0]}:{addr[1]}] {method} {path!r}")
         params = {"GET": {}, "POST": {}}
         if '?' in path and not _error:
