@@ -32,6 +32,11 @@ class HttpServer(SocketServer):
                     hdr.split(": ", 1)[0]: hdr.split(": ", 1)[1]
                     for hdr in headers
                     }
+            cookies = {}
+            if 'Cookie' in headers:
+                for pair in headers['Cookie'].split("&"):
+                    pair = pair.split("=")
+                    cookies[pair[0]] = unquote_plus(pair[1])
         except (ValueError, IndexError):
             headers = {}
             content = ""
@@ -39,7 +44,8 @@ class HttpServer(SocketServer):
             headers.update({
                 ":method": method,
                 ":uri": uri,
-                ":version": version
+                ":version": version,
+                ":cookies": cookies
                 })
         return headers, content
 
@@ -78,15 +84,22 @@ class HttpServer(SocketServer):
         del self._routes[path]
         return True
 
-    def get_route(self, conn, addr, method, path, *, _error=False):
+    def get_route(self, conn, addr, method, path, *, content=None, cookies=None, _error=False):
         print(f"[HttpServer] [{addr[0]}:{addr[1]}] {method} {path!r}")
-        params = None
+        params = {"GET": {}, "POST": {}}
         if '?' in path and not _error:
             try:
-                params = {pair.split("=")[0]: unquote_plus(pair.split("=")[1]) for pair in path.split("?", 1)[1].split("&")}
+                params["GET"] = {pair.split("=")[0]: unquote_plus(pair.split("=")[1]) for pair in path.split("?", 1)[1].split("&")}
             except IndexError:
                 return conn.send(self.get_route(conn, addr, "GET", "/400", _error=(400, "Bad Request")).encode())
             path = path.split("?")[0]
+
+        if method == "POST":
+            try:
+                params["POST"] = {pair.split("=")[0]: unquote_plus(pair.split("=")[1]) for pair in content.split("&")}
+            except IndexError:
+                return conn.send(self.get_route(conn, addr, "GET", "/400", _error=(400, "Bad Request")).encode())
+ 
         if path not in self._routes or _error:
             if _error:
                 return HttpServer.DEFAULT_ERROR.format(
@@ -94,11 +107,13 @@ class HttpServer(SocketServer):
                         reason_phrase=_error[1]
                         )
             if '/*' in self._routes and path not in HttpServer.INTERNAL_ERRORS:
-                return self._routes['/*']['handler'](self, conn, addr, method, {"path": path}, None)
+                return self._routes['/*']['handler'](self, conn, addr, method, {"path": path}, None, cookies)
             return conn.send(self.get_route(conn, addr, "GET", "/404", _error=(404, "Not Found")).encode())
+
         elif method not in self._routes[path]['methods_supported']:
             return conn.send(self.get_route(conn, addr, "GET", "/405", _error=(405, "Method Unsupported")).encode())
-        return (route := self._routes)[path]['handler'](self, conn, addr, method, params, route)
+        
+        return (route := self._routes)[path]['handler'](self, conn, addr, method, params, route, cookies)
 
     def handle_http_connections(self):
         def handler(conn, addr):
@@ -111,7 +126,12 @@ class HttpServer(SocketServer):
                 pass
             conn.settimeout(None)
             headers, content = self.parse_http_request(data)
-            self.get_route(conn, addr, headers[":method"], headers[':uri'])
+
+            method = headers[':method']
+            uri = headers[':uri']
+            cookies = headers[':cookies']
+            
+            self.get_route(conn, addr, method, uri, content=content, cookies=cookies)
             conn.close()
 
         def delegate_handler(*args, **kwargs):
@@ -146,25 +166,3 @@ class HttpServer(SocketServer):
             print(f"[HttpServer] [{self.host}:{self.port}] waiting for thread #{idx} to close")
             thd.join()
         print(f"[HttpServer] [{self.host}:{self.port}] closed all active connections")
-
-
-if __name__ == "__main__":
-    def index(server, conn, addr, method, params, route):
-        server.redirect_route("/index", "/meme")
-        server.redirect_route("/meme", "/index")  # doesn't force refresh
-                                                  # thus no infinite loop
-        server.redirect_route("/meme", "/meme")
-        conn.send(b"""HTTP/1.1 200 OK\r\nConnection: keepa-live\r\n\r\n<html>
-                hi bitch, got params=%s host=%s origin=%s
-                </html>
-                """ % (str(params).encode(), str(route['host']).encode(), str(route['origin']).encode()))
-    server = HttpServer(
-            root_dir="html/",
-            max_conn=5,
-            host="localhost",
-             port=6969
-            )
-    server.add_route(["GET"], "/index", index)
-    server.add_route([], "/meme", index)
-    server.handle_http_connections()
-

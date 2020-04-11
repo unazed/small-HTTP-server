@@ -1,10 +1,21 @@
 <html>
   <head>
-    <title>Forum Index</title
+    <title>Forum Index</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
   </head>
 
   <body>
-    <h1>{forum_title}</h1>
+    <div id="bar">
+      <ul class="bar-items">
+        <li id="title">
+          <a href="/">{forum_title}</a>
+        </li>
+        {items}
+      </ul>
+    </div>
+    <div id="body">
+      {body}
+    </div>
 
   </body>
 </html>

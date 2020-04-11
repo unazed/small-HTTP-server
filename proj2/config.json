@@ -2,5 +2,6 @@
   "host": "",
   "port": "6969",
   "root_dir": "www/",
-  "logger_file": ""
+  "logger_file": "",
+  "database_file": "login.db"
 }
