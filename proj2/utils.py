@@ -18,7 +18,7 @@ def determine_template(data, username, *args, **kwargs):
             </li>
             <li id="username">
                 <a href="/profile">{escape(username)}</a>
-            </li>""" if username else """
+            </li>""" if username != "Guest" else """
             <li>
                 <a href="/login">Login</a>
             </li>
@@ -36,9 +36,10 @@ def determine_template(data, username, *args, **kwargs):
 
 
 def construct_http_response(version, status_code, reason_phrase, headers, content):
-    return (f"{version} {status_code} {reason_phrase}\r\n"
-        + "\r\n".join(f"{k.split('#', 1)[0]}: {v}" for k, v in headers.items()) + "\r\n"
+    a= (f"{version} {status_code} {reason_phrase}\r\n"
+        + "".join(f"{k.split('#', 1)[0]}: {v}\r\n" for k, v in headers.items()) + "\r\n"
         + content).encode()
+    return a
 
 
 def read_file(root_dir, name):

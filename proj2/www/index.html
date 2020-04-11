@@ -3,19 +3,22 @@
     <title>Forum Index</title>
     <link rel="stylesheet" type="text/css" href="./index.css" />
   </head>
-
   <body>
     <div id="bar">
       <ul class="bar-items">
         <li id="title">
-          <a href="/">{forum_title}</a>
+          <a href="/" id="title">{forum_title}</a>
         </li>
         {items}
       </ul>
     </div>
     <div id="body">
       {body}
+      <div id="footer">
+        <p>A forum hosted on a completely custom-designed webserver, 
+           developed and designed by <i>unazed</i>.<br>
+           100% Python.</p>
+      </div>
     </div>
-
   </body>
 </html>

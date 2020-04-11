@@ -30,6 +30,12 @@ class LoginDatabase:
         self.write_changes()
         return t
 
+    def get_properties_from_token(self, token):
+        for tok, prop in self.database.values():
+            if tok == token:
+                return prop
+        return False
+
     def get_user(self, token):
         for uname, tok in self.database.items():
             if token == tok[0]:

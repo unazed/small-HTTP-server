@@ -1,0 +1,10 @@
+{
+  "member": {
+    "color": "#fff",
+    "background-color": "cadetblue"
+  },
+  "admin": {
+    "color": "#fff",
+    "background-color": "brown"
+  }
+}

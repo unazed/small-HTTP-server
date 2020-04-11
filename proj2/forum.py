@@ -1,10 +1,11 @@
+from html import escape
 import json
 import os
 import shutil
 
 
 class Forum:
-    def __init__(self, root_dir):
+    def __init__(self, database, root_dir):
         if not os.path.exists(root_dir):
             os.mkdir(root_dir)
             with open(f"{root_dir}/roles.json", "w") as roles:
@@ -13,20 +14,34 @@ class Forum:
         else:
             with open(f"{root_dir}/roles.json") as roles:
                 self.roles = json.load(roles)
+        self.database = database
         self.root_dir = root_dir
         self.sections = {name: {
             "sid": idx,
             "allowed_roles": json.load(open(p)) \
                     if os.path.isfile((p := os.path.join(root_dir, name, "allowed_roles.json"))) else [],
-            "threads": os.listdir(os.path.join(root_dir, name))
+            "threads": list(map(int, filter(str.isdigit, os.listdir(os.path.join(root_dir, name)))))
             } for idx, name in enumerate(os.listdir(root_dir)) \
                     if name != "roles.json"}
+
+    def get_section(self, sid):
+        if isinstance(sid, str):
+            if not sid.isdigit():
+                return False
+            sid = int(sid)
+        for section, info in self.sections.items():
+            if info['sid'] == sid:
+                return section, info
+        return False
 
     def add_section(self, name, allowed_roles):
         if name in self.sections:
             return False
-        self.sections[name] = {"allowed_roles": allowed_roles, "threads": []}
+        print(allowed_roles)
+        self.sections[name] = {"sid": len(self.sections)+1, "allowed_roles": allowed_roles, "threads": []}
         os.mkdir(f"{self.root_dir}/{name}")
+        with open(os.path.join(self.root_dir, name, "allowed_roles.json"), "w") as roles:
+            json.dump(self.sections[name]['allowed_roles'], roles)
         return True
 
     def remove_section(self, name):
@@ -39,16 +54,17 @@ class Forum:
     def make_thread(self, section, username, title, content):
         if section not in self.sections:
             return False
-        self.sections['threads'].append((c := {
-            "tid": (tid := len(self.sections['threads']) + 1),
+        self.sections[section]['threads'].append((c := {
+            "tid": (tid := len(self.sections[section]['threads']) + 1),
+            "uid": self.database.database[username][1]['uid'],
             "username": username,
-            "title": title,
-            "content": content
-            }))
+            "title": escape(title),
+            "content": escape(content)
+            })['tid'])
         os.mkdir(f"{self.root_dir}/{section}/{tid}")
         with open(f"{self.root_dir}/{section}/{tid}/info", "w") as info:
             json.dump(c, info)
-        return True
+        return tid
 
     def delete_thread(self, section, tid):
         if section not in self.sections:
@@ -66,7 +82,7 @@ class Forum:
             return False
         pid = len(os.listdir(f"{self.root_dir}/{section}/{tid}"))
         with open(f"{self.root_dir}/{section}/{tid}/{pid}.reply", "w") as post:
-            json.dump({"username": username, "content": content}, post)
+            json.dump({"uid": self.database.database[username][1]['uid'], "username": username, "content": escape(content)}, post)
         return True
 
     def delete_reply(self, section, tid, pid):
@@ -85,9 +101,8 @@ class Forum:
         elif len(self.sections[section]['threads']) < tid:
             return False
         replies = []
-        for reply in sorted(os.listdir(f"{self.root_dir}/{section}/{tid}")):
-            if reply == "info":
-                continue
-            with open(f"{self.root_dir}/{section}/{tid}/{reply}") as reply:
-                replies.append(json.load(reply))
+        for reply in os.listdir(f"{self.root_dir}/{section}/{tid}"):
+            if reply.endswith(".reply"):
+                with open(f"{self.root_dir}/{section}/{tid}/{reply}") as reply:
+                    replies.append(json.load(reply))
         return replies

@@ -106,6 +106,7 @@ class HttpServer(SocketServer):
                         status=_error[0],
                         reason_phrase=_error[1]
                         )
+            
             if '/*' in self._routes and path not in HttpServer.INTERNAL_ERRORS:
                 return self._routes['/*']['handler'](self, conn, addr, method, {"path": path}, None, cookies)
             return conn.send(self.get_route(conn, addr, "GET", "/404", _error=(404, "Not Found")).encode())

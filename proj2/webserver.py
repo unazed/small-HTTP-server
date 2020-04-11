@@ -16,11 +16,12 @@ ACCEPTABLE_WILDCARDS = ("css", "js")
 
 
 def index(server, conn, addr, method, params, route, cookies):
-    username = server._db.get_user(cookies.get("token", None))
+    username = server._db.get_user(cookies.get("token", None)) or "Guest"
     if not (data := utils.read_file("index.html")):
         return server.get_route(conn, addr, "GET", "/404")
-
     elif not (params["GET"] or params["POST"]):
+        print(server._forum.sections, username)
+        print(server._db.database[username])
         return conn.send(utils.construct_http_response(
             200, "OK", {}, utils.determine_template(
                 data, username,
@@ -28,29 +29,112 @@ def index(server, conn, addr, method, params, route, cookies):
                 body=f"""
                 <ul class="sections">
                 """ +
-                '\n'.join("<li> <a href='/index?section=%d'>%s</a> </li>" % (info['sid'], section) for section, info in server._forum.sections.items())
+                '\n'.join(
+                    f"<li> <a href='/index?sid={info['sid']}'>{section}</a> </li>" \
+                            for section, info in server._forum.sections.items() \
+                            if any((server._db.database[username][1]['role'] == role) for role in info['allowed_roles'])
+                    )
                 + """
                 </ul>
                 """
                 )
             ))
-
+    elif (g := params["GET"]) and not params["POST"]:
+        if (sid := g.get("sid", "")) and not g.get("tid", ""):
+            if not (section := server._forum.get_section(sid)):
+                return server.get_route(conn, addr, "GET", "/400")
+            threads = []
+            for thread in section[1]['threads']:
+                with open(os.path.join(server._forum.root_dir, section[0], str(thread), "info")) as info:
+                    threads.append(json.load(info))
+            threads = sorted(threads, key=lambda k: int(k['tid']), reverse=True)
+            return conn.send(utils.construct_http_response(
+                200, "OK", {}, utils.determine_template(
+                    data, username,
+                    forum_title=FORUM_TITLE,
+                    body=f"""
+                    <h3 id='subtitle'>{section[0]}</h3>
+                    <ul class="threads">
+                    """ +
+                    "\n".join(
+                        f"<li> <a href='/index?sid={sid}&tid={thread['tid']}'>{thread['title']} <label class='username'>{thread['tid']} {thread['username']}</label></a></li>" \
+                                for thread in threads
+                        )
+                    + """
+                    </ul>
+                    """
+                    )
+                ))
+        elif (sid := g.get("sid", "")) and (tid := g.get("tid", "")):
+            if not (section := server._forum.get_section(sid)):
+                return server.get_route(conn, addr, "GET", "/400")
+            elif not tid.isdigit() or (tid := int(tid)) not in section[1]['threads']:
+                print(tid, section[1]['threads'])
+                return server.get_route(conn, addr, "GET", "/400")
+            replies = server._forum.get_replies(section[0], tid)
+            thread_dir = os.path.join(server._forum.root_dir, section[0], str(tid))
+            with open(os.path.join(thread_dir, "info")) as info:
+                thread = json.load(info)
+            if not (author := server._db.database.get((u := thread['username']), "")):
+                print(author, thread)
+                # invalid author?
+                return conn.send(utils.construct_http_response(
+                    301, "Redirect", {"Location": f"/index?sid={sid}"}, ""
+                    ))
+            author = author[1]
+            return conn.send(utils.construct_http_response(
+                200, "OK", {}, utils.determine_template(
+                    data, username,
+                    forum_title=FORUM_TITLE,
+                    body=f"""
+                    <div id="thread">
+                        <div id="profile">
+                            <p id="username"><label id="uid">{author['uid']}</label>{u}</p>
+                            <p id="threads">Threads: {author['threads']}</p> 
+                            <p id="posts">Posts: {author['posts']}</p> 
+                            <p id="reputation">Reputation: {author['reputation']}</p>
+                        </div>
+                        <div id="post">
+                            <p id="content">{thread['content']}</p>
+                        </div>
+                    </div>
+                    <ul class="posts">
+                    """ +
+                    ''.join(f"""
+                        <li id="post">
+                            <div id="post_div">
+                                <a style=" """ +
+                                ';'.join(f"{k}: {v}" for k, v in server._forum.roles[server._db.database[reply['username']][1]['role']].items())
+                                + f""" "id="username" href="/profile?uid={reply['uid']}">{reply['username']}: </a>
+                                <p id="post_content">{reply['content']}</p>
+                            </div>
+                        </li>
+                        """ for reply in replies)
+                    + """
+                    </ul>
+                    <form id="post_form" method="post">
+                        <textarea id="postbox" name="post"> </textarea>
+                        <input id="postbtn" type="submit" value="Post" />
+                    </form>
+                    """
+                    )
+                ))
     return conn.send(utils.construct_http_response(
         200, "OK", {}, utils.determine_template(
             data, username,
             forum_title=FORUM_TITLE,
-            body=params
+            body=f"<p>{params}</p>"
             )
         ))
 
 
 def register(server, conn, addr, method, params, route, cookies):
-    username = server._db.get_user(cookies.get("token", None)) 
+    username = server._db.get_user(cookies.get("token", None)) or "Guest"
     if not (index := utils.read_file("index.html")):
         return server.get_route(conn, addr, "GET", "/404")
     elif not (data := utils.read_file("register.html")):
         return server.get_route(conn, addr, "GET", "/404")
-    elif username:
+    elif username != "Guest":
         return conn.send(utils.construct_http_response(
             403, "Forbidden", {}, utils.determine_template(
                 index, username,
@@ -81,9 +165,9 @@ def register(server, conn, addr, method, params, route, cookies):
                     "threads": 0,
                     "posts": 0,
                     "reputation": 0,
-                    "rank": None
+                    "role": "member"
                     }
-                )):
+                    )):
             return server.get_route(conn, addr, "GET", "/register?error=The username entered is either invalid or taken.")
         print(f"[WebServer] user registered: {params['POST']['username']!r}")
         return conn.send(utils.construct_http_response(
@@ -95,19 +179,19 @@ def register(server, conn, addr, method, params, route, cookies):
 
 
 def login(server, conn, addr, method, params, route, cookies):
-    username = server._db.get_user(cookies.get("token", None))
+    username = server._db.get_user(cookies.get("token", None)) or "Guest"
     if not (index := utils.read_file("index.html")):
         return server.get_route(conn, addr, "GET", "/404")
     elif not (data := utils.read_file("login.html")):
         return server.get_route(conn, addr, "GET", "/404")
-    elif username:
-        return conn.send(utils.consruct_http_response(
+    elif username != "Guest":
+        return conn.send(utils.construct_http_response(
             403, "Forbidden", {}, utils.determine_template(
                 index, username,
                 forum_title=FORUM_TITLE,
                 body=f"""
                 <p>You're already logged in under {username!r}, did you
-                want to <a href="/logout">log out</a>?</p>
+                want to <a id="logout" href="/logout">log out</a>?</p>
                 """
                 )
             ))
@@ -137,8 +221,8 @@ def login(server, conn, addr, method, params, route, cookies):
 
 
 def logout(server, conn, addr, method, param, route, cookies):
-    username = server._db.get_user(cookies.get("token", None))
-    if not username:
+    username = server._db.get_user(cookies.get("token", None)) or "Guest"
+    if username == "Guest":
         return conn.send(utils.construct_http_response(
             301, "Redirect", {
                 "Location": "/",
@@ -192,7 +276,7 @@ def global_handler(server, conn, addr, method, params, route, cookies):
         if not (data := utils.read_file(path)):
             return server.get_route(conn, addr, "GET", "/404")
         return conn.send(utils.construct_http_response(
-            200, "OK", {}, data
+            200, "OK", {"Cache-Control": "no-store"}, data
             ))
 
 
@@ -225,12 +309,30 @@ server = HttpServer(
         )
 
 server._db = LoginDatabase(database_file)
-server._forum = Forum("forum/")
+server._forum = Forum(server._db, "forum/")
 
+server._db.add_user("Admin", "", properties={
+    "uid": 1,
+    "role": "admin",
+    "threads": 0,
+    "posts": 0,
+    "reputation": 0
+    })
+
+server._db.add_user("Guest", "", properties={
+    "uid": 2,
+    "role": "guest",
+    "threads": 0,
+    "posts": 0,
+    "reputation": 0
+    })
+
+server._forum.add_section("Public", ["guest", "member", "admin"])
 server._forum.add_section("Lounge", ["member", "admin"])
+server._forum.add_section("Admin-Only", ["admin"])
 
-server.add_route(["GET"], "/", index)
-server.add_route(["GET"], "/index", index)
+server.add_route(["GET", "POST"], "/", index)
+server.add_route(["GET", "POST"], "/index", index)
 
 server.add_route(["GET", "POST"], "/login", login)
 server.add_route(["GET", "POST"], "/register", register)

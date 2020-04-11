@@ -3,13 +3,11 @@ html {
 }
 
 #body {
-    background-color: #3e3e3e;
-    height: 100%;
-    padding-block-start: 1px;
-    padding-inline-start: 1em;
-    margin-left: 2em;
-    margin-right: 2em;
-    color: white;
+  background-color: #3e3e3e;
+  height: auto;
+  padding: 1em;
+  margin: 1em;
+  color: white;
 }
 
 ul.bar-items {
@@ -19,7 +17,7 @@ ul.bar-items {
   overflow: hidden;
   background-color: #3e3e3e;
   text-align: left;
-  border-bottom: 3px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 ul.bar-items li {
@@ -28,6 +26,7 @@ ul.bar-items li {
 
 ul.bar-items li a:hover {
   background-color: #7e7e7e;
+  opacity: 1;
 }
 
 ul.sections {
@@ -39,6 +38,7 @@ ul.sections li {
   overflow: hidden;
   text-align: left;
   padding-bottom: 10px;
+  padding-left: 1em;
   padding-right: 1em;
 }
 
@@ -69,13 +69,182 @@ ul.bar-items li a {
   padding: 15px 15px 14px;
   line-height: 16px;
   text-decoration: none;
+  opacity: 0.75;
+  transition: 0.3s;
 }
 
 ul.bar-items li#title {
   float: right;
-  border-left: 1px solid white;
+}
+
+ul.bar-items a#title {
+  opacity: 1 !important;
 }
 
 ul.bar-items li#username {
   float: right;
+}
+
+h3#subtitle {
+  border-bottom: 1px solid white;
+  background-color: #333;
+  padding: 0.75em;
+  margin-bottom: unset;
+}
+
+ul.threads {
+  margin-top: 0.5em;
+}
+
+ul.threads li {
+  color: white;
+  display: block;
+  position: relative;
+  padding-bottom: 1px;
+  padding-top: 10px;
+  padding-right: 3em; 
+  line-height: 16px;
+  text-decoration: none;
+}
+
+ul.threads li a {
+  color: white;
+  display: block;
+  position: relative;
+  padding: 15px;
+  line-height: 10px;
+  padding-left: 18px;
+  text-decoration: none;
+  background-color: #2e2e2e;
+  border-left: 1px solid white;
+  transition: 0.3s;
+}
+
+label.username {
+  font-size: 12px;
+  float: right;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+label.username:hover {
+  opacity: 1;
+}
+
+div#footer {
+  padding-left: 1em;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-top: 2em;
+  background-color: #4e4e4e;
+  border: 1px solid white;
+}
+
+div#thread {
+  display: flex;
+  padding-bottom: 0.5em;
+}
+
+div#profile {
+  background-color: #4e4e4e;
+  width: fit-content;
+  padding: 1em;
+  font-size: 12px;
+  white-space: nowrap;
+  text-align: right;
+}
+
+div#post {
+  padding-left: 1em;
+  border-top: 3px solid #4e4e4e;
+  width: 100%;
+}
+
+label#uid {
+  font-size: 10px;
+  padding-right: 3px;
+}
+
+div#post#content {
+  margin: 0;
+}
+
+ul.posts {
+  list-style: none;
+  padding-left: 0;
+}
+
+div#post_div {
+  display: flex;
+  background-color: #4e4e4e;
+}
+
+a#username {
+  padding-left: 1em;
+  text-decoration: none;
+  color: white;
+  padding: 1em;
+  -webkit-filter: saturate(0.25);
+  -webkit-transition: all 0.5s ease;
+}
+
+a#username:hover {
+  -webkit-filter: saturate(1);
+  -webkit-transition: all 0.5s ease;
+}
+
+p#post_content {
+  margin: 0;
+  padding: 1em;
+  padding-left: 1em;
+}
+
+li#post {
+  padding-top: 0.5em;
+}
+
+input[type="text"] {
+  width: -webkit-fill-available;
+  margin-top: 8px;
+  margin-bottom: 1em;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  border: none;
+  background-color: white;
+  padding: 10px 20px;
+  margin-left: 1em;
+}
+
+input[type="password"] {
+  width: -webkit-fill-available;
+  margin-top: 8px;
+  margin-bottom: 1em;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+textarea#postbox {
+  background-color: #4e4e4e;
+  border: none;
+  color: white;
+  display: grid;
+  resize: none;
+  width: -webkit-fill-available;
+  height: 7em;
+}
+
+input#postbtn {
+  display: grid;
+  margin: 0;
+  width: -webkit-fill-available;
+  background-color: hsla(0, 0%, 50%, 1);
+  color: white;
+}
+
+a#logout {
+  text-decoration: none;
+  color: white;
 }
