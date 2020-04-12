@@ -37,7 +37,6 @@ class Forum:
     def add_section(self, name, allowed_roles):
         if name in self.sections:
             return False
-        print(allowed_roles)
         self.sections[name] = {"sid": len(self.sections)+1, "allowed_roles": allowed_roles, "threads": []}
         os.mkdir(f"{self.root_dir}/{name}")
         with open(os.path.join(self.root_dir, name, "allowed_roles.json"), "w") as roles:
@@ -51,12 +50,13 @@ class Forum:
         shutil.rmtree(f"{self.root_dir}/{name}")
         return True
 
-    def make_thread(self, section, username, title, content):
+    def make_thread(self, ip, section, username, title, content):
         if section not in self.sections:
             return False
         self.sections[section]['threads'].append((c := {
             "tid": (tid := len(self.sections[section]['threads']) + 1),
             "uid": self.database.database[username][1]['uid'],
+            "ip": ip,
             "username": username,
             "title": escape(title),
             "content": escape(content)
@@ -75,14 +75,21 @@ class Forum:
         shutil.rmtree(f"{self.root_dir}/{section}/{tid}")
         return True
 
-    def make_reply(self, section, tid, username, content):
+    def make_reply(self, ip, section, tid, username, content):
         if section not in self.sections:
             return False
         elif len(self.sections[section]['threads']) < tid:
             return False
         pid = len(os.listdir(f"{self.root_dir}/{section}/{tid}"))
         with open(f"{self.root_dir}/{section}/{tid}/{pid}.reply", "w") as post:
-            json.dump({"pid": pid, "uid": self.database.database[username][1]['uid'], "username": username, "content": escape(content)}, post)
+            json.dump({
+                "pid": pid,
+                "ip": ip,
+                "uid": self.database.database[username][1]['uid'],
+                "username": username,
+                "content": escape(content)
+                }, post
+                )
         return True
 
     def delete_reply(self, section, tid, pid):

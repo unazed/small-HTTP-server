@@ -1,6 +1,11 @@
 from html import escape
 
 
+def censor_ip(ip):
+    a, *_, d = ip.split(".")
+    return f"{a}.x.x.{d}"
+
+
 def determine_template(data, username, *args, **kwargs):
     return data.format(
             items=f"""

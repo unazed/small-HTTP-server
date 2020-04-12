@@ -1,11 +1,11 @@
 <br>
 {error}
-<form method="post">
+<form method="post" onsubmit="registerbtn.disabled=true;registerbtn.value='Registering...';">
   <label>Username: &nbsp;</label>
   <input type="text" name="username" />
   <br>
   <label>Password: &nbsp;</label>
   <input type="password" name="password" />
   <br>
-  <input type="submit" value="Register">
+  <input type="submit" name="registerbtn" value="Register">
 </form>

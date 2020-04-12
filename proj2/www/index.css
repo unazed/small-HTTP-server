@@ -273,3 +273,51 @@ textarea#thd_content {
   padding: 5px;
 }
 
+p#thd_title {
+    font-size: x-large;
+    margin: 0;
+    padding-bottom: 7px;
+    padding-left: 1em;
+    padding-top: 7px;
+    border-left: 3px solid #4e4e4e;
+    border-top: 3px solid #4e4e4e;
+}
+
+p#ip_sig {
+  margin: 1em;
+}
+
+a#title_sid {
+  text-decoration: none;
+  color: white;
+}
+
+div#thd_info_div {
+  display: flex;
+  float: left;
+  padding-left: 40px;
+}
+
+p#post_count {
+  background-color: #2e2e2e;
+  color: white;
+  padding: 1em;
+  margin: 0;
+  border: 1px solid white;
+  border-top: none;
+  border-right: none;
+}
+
+p#creator_ip {
+  background-color: #2e2e2e;
+  color: white;
+  padding: 1em;
+  margin: 0;
+  border: 1px solid white;
+  border-top: none;
+  border-left: none;
+}
+
+form#make_thread_div {
+  margin: 0;
+}

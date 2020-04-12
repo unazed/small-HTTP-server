@@ -5,9 +5,9 @@ from functools import partial
 from forum import Forum
 from html import escape
 import hashlib
-import utils
 import json
 import os
+import utils
 
 
 CONFIG_KEYS = ("host", "port", "root_dir", "logger_file", "database_file")
@@ -20,8 +20,6 @@ def index(server, conn, addr, method, params, route, cookies):
     if not (data := utils.read_file("index.html")):
         return server.get_route(conn, addr, "GET", "/404")
     elif not (params["GET"] or params["POST"]):
-        print(server._forum.sections, username)
-        print(server._db.database[username])
         return conn.send(utils.construct_http_response(
             200, "OK", {}, utils.determine_template(
                 data, username,
@@ -55,15 +53,29 @@ def index(server, conn, addr, method, params, route, cookies):
                     forum_title=FORUM_TITLE,
                     body=f"""
                     <h3 id='subtitle'>{section[0]}</h3>
-                    <form action="/make_thread" method="get">
+                    <form id="make_thread_div" action="/make_thread" method="get">
                         <input type="hidden" name="sid" value="{sid}" />
                         <input id="thread_btn" type="submit" value="Make thread" />
                     </form>
+                    <div id="thd_info_div">
+                        <p id="post_count">Posts: n/a</p>
+                        <p id="creator_ip">Author: n/a</p>
+                    </div>
                     <div style="clear: both;"> </div>
                     <ul class="threads">
                     """ +
                     "\n".join(
-                        f"<li> <a href='/index?sid={sid}&tid={thread['tid']}'>{thread['title']} <label class='username'>{thread['tid']} {thread['username']}</label></a></li>" \
+                        f"""
+                        <li>
+                            <a href='/index?sid={sid}&tid={thread['tid']}'
+                             onmouseover="show_info({len(server._forum.get_replies(section[0], thread['tid']))}, '{utils.censor_ip(thread['ip'])}')"
+                             onmouseout="clear_info()">
+                                {thread['title']}
+                                <label style="color: {server._forum.roles[server._db.database[thread['username']][1]['role']]['background-color']}" class='username'>
+                                    {thread['tid']} {thread['username']}
+                                </label>
+                            </a>
+                        </li>""" \
                                 for thread in threads
                         )
                     + """
@@ -75,14 +87,12 @@ def index(server, conn, addr, method, params, route, cookies):
             if not (section := server._forum.get_section(sid)):
                 return server.get_route(conn, addr, "GET", "/400")
             elif not tid.isdigit() or (tid := int(tid)) not in section[1]['threads']:
-                print(tid, section[1]['threads'])
                 return server.get_route(conn, addr, "GET", "/400")
             replies = server._forum.get_replies(section[0], tid)
             thread_dir = os.path.join(server._forum.root_dir, section[0], str(tid))
             with open(os.path.join(thread_dir, "info")) as info:
                 thread = json.load(info)
             if not (author := server._db.database.get((u := thread['username']), "")):
-                print(author, thread)
                 # invalid author?
                 return conn.send(utils.construct_http_response(
                     301, "Redirect", {"Location": f"/index?sid={sid}"}, ""
@@ -93,6 +103,7 @@ def index(server, conn, addr, method, params, route, cookies):
                     data, username,
                     forum_title=FORUM_TITLE,
                     body=f"""
+                    <p id="thd_title"><a href="/index?sid={sid}" id="title_sid">{section[0]}</a> > {thread['title']}</p>
                     <div id="thread">
                         <div id="profile">
                             <p id="username"><label id="uid">{author['uid']}</label>{u}</p>
@@ -109,26 +120,27 @@ def index(server, conn, addr, method, params, route, cookies):
                     ''.join(f"""
                         <li id="post">
                             <div id="post_div">
+                                <p id="ip_sig">{utils.censor_ip(reply['ip'])}</p>
                                 <a style=" """ +
                                 ';'.join(f"{k}: {v}" for k, v in server._forum.roles[server._db.database[reply['username']][1]['role']].items())
-                                + f""" "id="username" href="/profile?uid={reply['uid']}">{reply['username']}: </a>
+                                + f""" "id="username" href="/profile?uid={reply['uid']}">{reply['username']}</a>
                                 <p id="post_content">{reply['content']}</p>
                             </div>
                         </li>
                         """ for reply in sorted(replies, key=lambda r: r['pid']))
                     + """
                     </ul>
-                    <form id="post_form" method="post">
+                    <form id="post_form" method="post"
+                     onsubmit="postbtn.disabled=true;postbtn.value='Posting...'">
                         <textarea id="postbox" name="post"> </textarea>
                         <input type="hidden" name="action" value="make_reply" />
-                        <input id="postbtn" type="submit" value="Post" />
+                        <input name="postbtn" id="postbtn" type="submit" value="Post" />
                     </form>
                     """
                     )
                 ))
     elif g and (p := params['POST']):
         tid, sid = g.get("tid", ""), g.get("sid", "")
-        print(g, p)
         if not sid:
             return server.get_route(conn, addr, "GET", "/400")
         elif not sid.isdigit():
@@ -145,7 +157,7 @@ def index(server, conn, addr, method, params, route, cookies):
             if not (title := p.get("title", "")) or \
                     not (content := p.get("content", "")):
                 return server.get_route(conn, addr, "GET", "/400")
-            tid = server._forum.make_thread(section[0], username, title, content)
+            tid = server._forum.make_thread(addr[0], section[0], username, title, content)
             server._db.database[username][1]['threads'] += 1
             return conn.send(utils.construct_http_response(
                 301, "Redirect", {"Location": f"/index?sid={sid}&tid={tid}"}, ""
@@ -159,7 +171,7 @@ def index(server, conn, addr, method, params, route, cookies):
         if action == "make_reply":
             if not (content := p.get("post", "")):
                 return server.get_route(conn, addr, "GET", "/400")
-            server._forum.make_reply(section[0], tid, username, content)
+            server._forum.make_reply(addr[0], section[0], tid, username, content)
             server._db.database[username][1]['posts'] += 1
             return conn.send(utils.construct_http_response(
                 301, "Redirect", {"Location": f"/index?tid={tid}&sid={sid}"}, ""
@@ -321,7 +333,8 @@ def make_thread(server, conn, addr, method, params, route, cookies):
             index, username,
             forum_title=FORUM_TITLE,
             body=f"""
-            <form action="/index?sid={sid}" method="post">
+            <form action="/index?sid={sid}" method="post"
+             onsubmit="content.disabled=true;content.value="Posting..."">
                 <input type="hidden" name="action" value="make_thread" />
                 <label>Title: <label>
                 <input id="thd_title" type="text" name="title" />
