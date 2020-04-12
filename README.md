@@ -24,4 +24,4 @@ Both variants are based from socket-level, using `socket` alone with delegating 
 
 At the moment (4/12/20), both the `proj1` and `proj2` variants have test-cases displaying their usage. `proj2` in particular may be seen below, running locally with the filestructure currently uploaded in this commit.
 
-![](https://github.com/unazed/small-http-server/demonstration.gif)
+![](https://github.com/unazed/small-HTTP-server/blob/master/demonstration.gif)
