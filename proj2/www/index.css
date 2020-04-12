@@ -215,7 +215,6 @@ input[type="submit"] {
   border: none;
   background-color: white;
   padding: 10px 20px;
-  margin-left: 1em;
 }
 
 input[type="password"] {
@@ -248,3 +247,29 @@ a#logout {
   text-decoration: none;
   color: white;
 }
+
+input#thread_btn {
+  float: right;
+  overflow: hidden;
+}
+
+input#thd_title {
+  width: 50%;
+  margin-right: 50%;
+  background-color: #4e4e4e;
+  border-color: #4e4e4e;
+  border-style: none;
+  color: white;
+}
+
+textarea#thd_content {
+  width: -webkit-fill-available;
+  resize: none;
+  min-height: 7em;
+  margin-bottom: 1em;
+  background-color: #4e4e4e;
+  border: none;
+  color: white;
+  padding: 5px;
+}
+

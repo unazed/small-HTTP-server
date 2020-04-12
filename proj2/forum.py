@@ -82,7 +82,7 @@ class Forum:
             return False
         pid = len(os.listdir(f"{self.root_dir}/{section}/{tid}"))
         with open(f"{self.root_dir}/{section}/{tid}/{pid}.reply", "w") as post:
-            json.dump({"uid": self.database.database[username][1]['uid'], "username": username, "content": escape(content)}, post)
+            json.dump({"pid": pid, "uid": self.database.database[username][1]['uid'], "username": username, "content": escape(content)}, post)
         return True
 
     def delete_reply(self, section, tid, pid):

@@ -1,4 +1,8 @@
 {
+  "guest": {
+    "color": "#fff",
+    "background-color": "#006e98"
+  },
   "member": {
     "color": "#fff",
     "background-color": "cadetblue"

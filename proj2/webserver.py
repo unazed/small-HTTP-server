@@ -40,7 +40,8 @@ def index(server, conn, addr, method, params, route, cookies):
                 )
             ))
     elif (g := params["GET"]) and not params["POST"]:
-        if (sid := g.get("sid", "")) and not g.get("tid", ""):
+        sid, tid = g.get("sid"), g.get("tid")
+        if sid and not tid:
             if not (section := server._forum.get_section(sid)):
                 return server.get_route(conn, addr, "GET", "/400")
             threads = []
@@ -54,6 +55,11 @@ def index(server, conn, addr, method, params, route, cookies):
                     forum_title=FORUM_TITLE,
                     body=f"""
                     <h3 id='subtitle'>{section[0]}</h3>
+                    <form action="/make_thread" method="get">
+                        <input type="hidden" name="sid" value="{sid}" />
+                        <input id="thread_btn" type="submit" value="Make thread" />
+                    </form>
+                    <div style="clear: both;"> </div>
                     <ul class="threads">
                     """ +
                     "\n".join(
@@ -109,23 +115,55 @@ def index(server, conn, addr, method, params, route, cookies):
                                 <p id="post_content">{reply['content']}</p>
                             </div>
                         </li>
-                        """ for reply in replies)
+                        """ for reply in sorted(replies, key=lambda r: r['pid']))
                     + """
                     </ul>
                     <form id="post_form" method="post">
                         <textarea id="postbox" name="post"> </textarea>
+                        <input type="hidden" name="action" value="make_reply" />
                         <input id="postbtn" type="submit" value="Post" />
                     </form>
                     """
                     )
                 ))
-    return conn.send(utils.construct_http_response(
-        200, "OK", {}, utils.determine_template(
-            data, username,
-            forum_title=FORUM_TITLE,
-            body=f"<p>{params}</p>"
-            )
-        ))
+    elif g and (p := params['POST']):
+        tid, sid = g.get("tid", ""), g.get("sid", "")
+        print(g, p)
+        if not sid:
+            return server.get_route(conn, addr, "GET", "/400")
+        elif not sid.isdigit():
+            return server.get_route(conn, addr, "GET", "/400")
+        sid = int(sid)
+        if not (section := server._forum.get_section(sid)):
+            return server.get_route(conn, addr, "GET", "/404")
+        elif server._db.database[username][1]['role'] not in section[1]['allowed_roles']:
+            return server.get_route(conn, addr, "GET", "/403")
+        elif not (action := p.get("action", "")):
+            return server.get_route(conn, addr, "GET", "/400")
+
+        if action == "make_thread":
+            if not (title := p.get("title", "")) or \
+                    not (content := p.get("content", "")):
+                return server.get_route(conn, addr, "GET", "/400")
+            tid = server._forum.make_thread(section[0], username, title, content)
+            server._db.database[username][1]['threads'] += 1
+            return conn.send(utils.construct_http_response(
+                301, "Redirect", {"Location": f"/index?sid={sid}&tid={tid}"}, ""
+                ))
+        elif not tid or not tid.isdigit():
+            return server.get_route(conn, addr, "GET", "/400")
+        tid = int(tid)
+        if tid not in section[1]['threads']:
+            return server.get_route(conn, addr, "GET", "/404")
+
+        if action == "make_reply":
+            if not (content := p.get("post", "")):
+                return server.get_route(conn, addr, "GET", "/400")
+            server._forum.make_reply(section[0], tid, username, content)
+            server._db.database[username][1]['posts'] += 1
+            return conn.send(utils.construct_http_response(
+                301, "Redirect", {"Location": f"/index?tid={tid}&sid={sid}"}, ""
+                ))
 
 
 def register(server, conn, addr, method, params, route, cookies):
@@ -267,6 +305,35 @@ def error_handler(server, conn, addr, method, param, route, cookies):
         ))
 
 
+def make_thread(server, conn, addr, method, params, route, cookies):
+    username = server._db.get_user(cookies.get("token", "")) or "Guest"
+    if not (index := utils.read_file("index.html")):
+        return server.get_route(conn, addr, "GET", "/404")
+    elif not (sid := params["GET"].get("sid", "")):
+        return server.get_route(conn, addr, "GET", "/400")
+    elif not sid.isdigit() or not (section := server._forum.get_section(sid)):
+        return server.get_route(conn, addr, "GET", "/404")
+    elif server._db.database[username][1]['role'] not in \
+            section[1]['allowed_roles']:
+        return server.get_route(conn, addr, "GET", "/403")
+    return conn.send(utils.construct_http_response(
+        200, "OK", {}, utils.determine_template(
+            index, username,
+            forum_title=FORUM_TITLE,
+            body=f"""
+            <form action="/index?sid={sid}" method="post">
+                <input type="hidden" name="action" value="make_thread" />
+                <label>Title: <label>
+                <input id="thd_title" type="text" name="title" />
+                <label>Content: </label>
+                <textarea id="thd_content" name="content"> </textarea>
+                <input type="submit" value="Post" />
+            </form>
+            """
+            )
+        ))
+
+
 def global_handler(server, conn, addr, method, params, route, cookies):
     path = params['path']
     _, *ext = path.split(".")
@@ -337,6 +404,7 @@ server.add_route(["GET", "POST"], "/index", index)
 server.add_route(["GET", "POST"], "/login", login)
 server.add_route(["GET", "POST"], "/register", register)
 server.add_route(["GET"], "/logout", logout)
+server.add_route(["GET"], "/make_thread", make_thread)
 
 server.add_route(["GET"], "/404", error_handler)
 server.add_route(["GET"], "/403", error_handler)
