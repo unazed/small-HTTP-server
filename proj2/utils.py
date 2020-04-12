@@ -1,6 +1,14 @@
 from html import escape
 
 
+def sign(num):
+    if num > 0:
+        return "#38ff38"
+    elif num < 0:
+        return "#e25555"
+    return "white"
+
+
 def censor_ip(ip):
     a, *_, d = ip.split(".")
     return f"{a}.x.x.{d}"

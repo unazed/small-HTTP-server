@@ -53,7 +53,7 @@ def index(server, conn, addr, method, params, route, cookies):
                     forum_title=FORUM_TITLE,
                     body=f"""
                     <h3 id='subtitle'>{section[0]}</h3>
-                    <form id="make_thread_div" action="/make_thread" method="get">
+                    <form id="make_thread_div" action="/make-thread" method="get">
                         <input type="hidden" name="sid" value="{sid}" />
                         <input id="thread_btn" type="submit" value="Make thread" />
                     </form>
@@ -122,8 +122,8 @@ def index(server, conn, addr, method, params, route, cookies):
                             <div id="post_div">
                                 <p id="ip_sig">{utils.censor_ip(reply['ip'])}</p>
                                 <a style=" """ +
-                                ';'.join(f"{k}: {v}" for k, v in server._forum.roles[server._db.database[reply['username']][1]['role']].items())
-                                + f""" "id="username" href="/profile?uid={reply['uid']}">{reply['username']}</a>
+                                ';'.join(f"{k}: {v}" for k, v in server._forum.roles[server._db.database.get(reply['username'], server._db.database["Guest"])[1]['role']].items())
+                                + f""" "id="username" href="/profile?uid={reply['uid']}">{reply['username'] if reply['username'] in server._db.database else "<s>" + reply['username'] + "</s>"}</a>
                                 <p id="post_content">{reply['content']}</p>
                             </div>
                         </li>
@@ -146,6 +146,7 @@ def index(server, conn, addr, method, params, route, cookies):
         elif not sid.isdigit():
             return server.get_route(conn, addr, "GET", "/400")
         sid = int(sid)
+        print(sid, p)
         if not (section := server._forum.get_section(sid)):
             return server.get_route(conn, addr, "GET", "/404")
         elif server._db.database[username][1]['role'] not in section[1]['allowed_roles']:
@@ -159,6 +160,7 @@ def index(server, conn, addr, method, params, route, cookies):
                 return server.get_route(conn, addr, "GET", "/400")
             tid = server._forum.make_thread(addr[0], section[0], username, title, content)
             server._db.database[username][1]['threads'] += 1
+            server._db.write_changes()
             return conn.send(utils.construct_http_response(
                 301, "Redirect", {"Location": f"/index?sid={sid}&tid={tid}"}, ""
                 ))
@@ -173,6 +175,7 @@ def index(server, conn, addr, method, params, route, cookies):
                 return server.get_route(conn, addr, "GET", "/400")
             server._forum.make_reply(addr[0], section[0], tid, username, content)
             server._db.database[username][1]['posts'] += 1
+            server._db.write_changes()
             return conn.send(utils.construct_http_response(
                 301, "Redirect", {"Location": f"/index?tid={tid}&sid={sid}"}, ""
                 ))
@@ -212,9 +215,11 @@ def register(server, conn, addr, method, params, route, cookies):
                 params['POST']['password'],
                 properties={
                     "uid": len(server._db.database) + 1,
+                    "ip": addr[0],
                     "threads": 0,
                     "posts": 0,
                     "reputation": 0,
+                    "reputation_content": {},
                     "role": "member"
                     }
                     )):
@@ -339,12 +344,176 @@ def make_thread(server, conn, addr, method, params, route, cookies):
                 <label>Title: <label>
                 <input id="thd_title" type="text" name="title" />
                 <label>Content: </label>
-                <textarea id="thd_content" name="content"> </textarea>
+                <textarea id="thd_content" name="content"></textarea>
                 <input type="submit" value="Post" />
             </form>
             """
             )
         ))
+
+
+def profile(server, conn, addr, method, params, route, cookies):
+    username = server._db.get_user(cookies.get("token", "")) or "Guest"
+    if not (index := utils.read_file("index.html")):
+        return server.get_route(conn, addr, "GET", "/404")
+    g = params["GET"].get("uid", "")
+    if not g and username == "Guest":
+        return server.get_route(conn, addr, "GET", "/403")
+    elif not g:
+        g = server._db.database[username][1]['uid']
+    elif not g.isdigit():
+        return server.get_route(conn, addr, "GET", "/400")
+    g = int(g)
+    found = None
+    for name, prop in server._db.database.items():
+        if prop[1]['uid'] == g:
+            found = name
+            break
+    if found is None:
+        return server.get_route(conn, addr, "GET", "/404")
+    if not (action := params["GET"].get("action")):
+        role_color = server._forum.roles[(role := prop[1]['role'])]['background-color']
+        return conn.send(utils.construct_http_response(
+            200, "OK", {}, utils.determine_template(
+                    index, username,
+                    forum_title=FORUM_TITLE,
+                    body=f"""
+                    <div id="profile_content">
+                        <p style="background-image: linear-gradient(to right, #2e2e2e, {role_color})" id="profile_username">{name}</p>
+                        <div id="profile_info">
+                            <p id="profile_uid">UID {g}</p>
+                            <p id="profile_threads">Threads: {prop[1]['threads']} <a class="profile_link" href="/profile?uid={g}&action=view_threads">view threads</a></p>
+                            <p id="profile_posts">Posts: {prop[1]['posts']} <a class="profile_link" href="/profile?uid={g}&action=view_posts">view posts</a></p>
+                            <p id="profile_reputation">Reputation: {prop[1]['reputation']} <a class="profile_link" href="/profile?uid={g}&action=give_reputation">give reputation</a></p>
+                            <p id="profile_pm"><a id="profile_pm" href="/profile?uid={g}&action=make_pm">Send Message</a></p>
+                            """ +
+                            ["", f"""
+                            <p id="profile_edit"><a id="profile_edit" href="/profile?uid={g}&action=edit_profile">Edit Profile</a></p>
+                                """
+                                ][username == name]
+                            + """
+                        </div>
+                        <div id="reputation">
+                            <p id="reputation_title">Reputation</p>
+                                """ +
+                                    (("<ul id='reputation_list'>" + ''.join(
+                                        f"""
+                                        <li style="border-left: 1px solid {utils.sign(int(tup[0]))}">
+                                            <p class="reputation-item">
+                                                <label id="reputation-num" style="color: {utils.sign(int(tup[0]))}">{tup[0]}</label> {given_by}: {tup[1]}
+                                            </p>
+                                        </li>
+                                        """
+                                        for given_by, tup in rep.items())
+                                        + "</ul>") if (rep := prop[1]['reputation_content']) else "<p id='reputation-empty'>No reputation listing</p>")
+                                + """
+                        </div>
+                    </div>
+                    """ + ["", f"""
+                            <div id="admin_prompt">
+                                <p id="profile_ip">IP: {prop[1]['ip']}</p>
+                                """ +
+                                ["",  f"""
+                                    <p id="profile_delete"><a id="profile_delete" href="/profile?uid={g}&action=delete">Delete {name}</a></p>
+                                    <p id="profile_aedit"><a id="profile_aedit" href="/profile?uid={g}&action=edit_profile">Edit {name}</a></p>
+                                    """
+                                    ][username != name]  # fuck ternary
+                                + """
+                            </div>
+                        """][server._db.database[username][1]['role'] == "admin"]
+                )
+            ))
+
+    if action == "give_reputation":
+        return conn.send(utils.construct_http_response(
+            200, "OK", {}, utils.determine_template(
+                index, username,
+                forum_title=FORUM_TITLE,
+                body=f"""
+                <form id="reputation-form" action="/profile_action" method="post"
+                 onsubmit="this.give_btn.disabled=true; this.give_btn.value='Giving...';">
+                    <input type="hidden" name="uid" value="{g}" />
+                    <textarea name="content"></textarea>
+                    <label>-1</label>
+                    <input type="radio" name="num" value="-1" />
+
+                    <label>0</label>
+                    <input type="radio" name="num" value="0" />
+
+                    <label>+1</label>
+                    <input type="radio" name="num" value="1" />
+                    <input id="give_btn" type="submit" value="Give Reputation" />
+                </form>
+                """
+                )
+            ))
+    elif action == "delete":
+        if server._db.database[username][1]['role'] != "admin":
+            return server.get_route(conn, addr, "GET", "/400")
+        elif not server._db.remove_user(name):
+            return server.get_route(conn, addr, "GET", "/404")
+        return conn.send(utils.construct_http_response(
+            301, "Redirect", {"Location": "/index"}, ""
+            ))
+    elif action == "edit_profile":
+        if server._db.database[username][1]['uid'] != g and \
+                server._db.database[username][1]['role'] != "admin":
+            return server.get_route(conn, addr, "GET", "/403")
+        return conn.send(utils.construct_http_response(
+            200, "OK", {}, utils.determine_template(
+                index, username,
+                forum_title=FORUM_TITLE,
+                body=f"""
+                <form method="post" action="/profile_action"
+                 onsubmit="this.submit_btn.disabled=true;this.submit_btn.value='Updating...';">
+                    <input type="hidden" name="uid" value="{g}" />
+                    <label>Biography:</label>
+                    <textarea name="content"></textarea>
+                    <input type="submit" name="submit_btn" value="Update" />
+                </form>
+                """
+                )
+            ))
+
+
+def profile_action(server, conn, addr, method, params, route, cookies):
+    print(params)
+
+
+def about(server, conn, addr, method, params, route, cookies):
+    pass
+
+
+def member_list(server, conn, addr, method, params, route, cookies):
+    username = server._db.get_user(cookies.get("token", "")) or "Guest"
+    if not (index := utils.read_file("index.html")):
+        return server.get_route(conn, addr, "GET", "/404")
+    return conn.send(utils.construct_http_response(
+        200, "OK", {}, utils.determine_template(
+            index, username,
+            forum_title=FORUM_TITLE,
+            body=f"""
+            <div id="member-list">
+                <p id="subtitle">Member listing</p>
+                <ul id="member-list">
+                """ +
+                '\n'.join(f"""
+                    <li style="background-image: linear-gradient(to right, #2e2e2e, {server._forum.roles[info[1]['role']]['background-color']})">
+                        <p class="member-item">
+                            <a href="/profile?uid={info[1]['uid']}">{member}</a>
+                        </p>
+                    </li>
+                    """ for member, info in server._db.database.items())
+            + """
+                </ul>
+            </div>
+            """
+            )
+        ))
+
+
+def chat(server, conn, addr, method, params, route, cookies):
+    pass
 
 
 def global_handler(server, conn, addr, method, params, route, cookies):
@@ -396,7 +565,9 @@ server._db.add_user("Admin", "", properties={
     "role": "admin",
     "threads": 0,
     "posts": 0,
-    "reputation": 0
+    "reputation": 0,
+    "reputation_content": {},
+    "ip": "127.0.0.1"
     })
 
 server._db.add_user("Guest", "", properties={
@@ -404,7 +575,9 @@ server._db.add_user("Guest", "", properties={
     "role": "guest",
     "threads": 0,
     "posts": 0,
-    "reputation": 0
+    "reputation": 0,
+    "reputation_content": {},
+    "ip": "127.0.0.1"
     })
 
 server._forum.add_section("Public", ["guest", "member", "admin"])
@@ -417,7 +590,12 @@ server.add_route(["GET", "POST"], "/index", index)
 server.add_route(["GET", "POST"], "/login", login)
 server.add_route(["GET", "POST"], "/register", register)
 server.add_route(["GET"], "/logout", logout)
-server.add_route(["GET"], "/make_thread", make_thread)
+server.add_route(["GET"], "/make-thread", make_thread)
+server.add_route(["GET"], "/member-list", member_list)
+server.add_route(["GET"], "/profile", profile)
+server.add_route(["GET"], "/about", about)
+server.add_route(["GET"], "/chat", chat)
+server.add_route(["POST"], "/profile_action", profile_action)
 
 server.add_route(["GET"], "/404", error_handler)
 server.add_route(["GET"], "/403", error_handler)

@@ -321,3 +321,158 @@ p#creator_ip {
 form#make_thread_div {
   margin: 0;
 }
+
+p#profile_username {
+  font-size: x-large;
+  background-color: #2e2e2e;
+  padding: 0.5em;
+  margin-bottom: 0;
+  border-bottom: 1px solid white;
+}
+
+p#profile_uid {
+  margin-top: 0;
+  padding-top: 16px;
+}
+
+div#profile_info {
+  padding: 1em;
+  border-left: 1px solid white;
+  padding-top: 0;
+  margin-top: 0;
+  background-color: #2e2e2e;
+  width: fit-content;
+  display: inline-block;
+}
+
+p#profile_reputation {
+  margin-bottom: 0;
+}
+
+a.profile_link {
+  float: right;
+  padding-left: 1em;
+  text-decoration: none;
+  color: #4e4e4e;
+  transition: 0.3s;
+}
+
+a.profile_link:hover {
+  color: white;
+}
+
+p#profile_ip {
+  margin-top: 0;
+}
+
+div#admin_prompt{
+  padding: 1em;
+  border-left: 1px solid white;
+  padding-top: 16px;
+  margin-top: 1em;
+  padding-bottom: 1;
+  background-color: #2e2e2e;
+  width: fit-content;
+}
+
+a#profile_delete {
+  text-decoration: none;
+  color: #e25555;
+}
+
+a#profile_pm {
+  text-decoration: none;
+  color: white;
+}
+
+p#profile_pm {
+  margin-bottom: 0;
+}
+
+p#profile_edit {
+  margin-bottom: 0;
+}
+
+a#profile_edit {
+  text-decoration: none;
+  color: white;
+}
+
+a#profile_aedit {
+  text-decoration: none;
+  color: #e25555;
+}
+
+div#reputation {
+  float: right;
+  background-color: #2e2e2e;
+  padding: 0.5em;
+  padding-top: 0;
+  border-right: 1px solid white;
+}
+
+ul#reputation_list {
+  list-style: none;
+  padding: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  max-width: 16em;
+  word-break: break-all;
+}
+
+p#reputation_title {
+  text-align: center;
+}
+
+p#reputation-empty {
+  font-size: small;
+}
+
+#reputation_list > li {
+  border-left: 1px solid;
+  padding-left: 1em;
+  font-size: smaller;
+}
+
+#reputation-form > textarea {
+  width: -webkit-fill-available;
+  height: 5em;
+  margin-bottom: 1em;
+}
+
+#reputation-form > input[type="radio"] {
+  margin-right: 1em;
+  margin-left: 3;
+}
+
+#give_btn {
+  float: right;
+}
+
+div#member-list {
+  background-color: #4e4e4e;
+  padding: 1em;
+}
+
+p#subtitle {
+  font-size: larger;
+  margin: 0;
+}
+
+ul#member-list {
+  list-style: none;
+  padding-left: 0;
+  background-color: #2e2e2e;
+}
+
+p.member-item > a {
+  text-decoration: none;
+  color: white;
+}
+
+#member-list > li > p {
+  padding: 1em;
+  border-bottom: 1px solid;
+  margin: 0;
+}
