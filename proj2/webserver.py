@@ -225,7 +225,7 @@ def register(server, conn, addr, method, params, route, cookies):
         if 'username' not in params['POST'] or 'password' not in params['POST']:
             return server.get_route(conn, addr, "GET", "/400")
         elif not (t := server._db.add_user(
-                params['POST']['username'],
+                escape(params['POST']['username']),
                 params['POST']['password'],
                 properties={
                     "uid": len(server._db.database) + 1,
@@ -282,8 +282,9 @@ def login(server, conn, addr, method, params, route, cookies):
             return server.get_route(conn, addr, "GET", "/400")
         elif (u := params['POST']['username']) not in server._db.database:
             return server.get_route(conn, addr, "GET", "/403")
-        elif not server._db.get_user((t := hashlib.sha256(f"{u}:{params['POST']['password']}".encode()).hexdigest())):
+        elif not server._db.get_user((t := hashlib.sha256(f"{escape(u)}:{params['POST']['password']}".encode()).hexdigest())):
             return server.get_route(conn, addr, "GET", "/403")
+        print(u, params['POST']['password'])
         return conn.send(utils.construct_http_response(
             301, "Redirect", {
                 "Set-Cookie": f"token={t}",
@@ -501,7 +502,7 @@ def profile(server, conn, addr, method, params, route, cookies):
             ))
     elif action == "view_posts":
         posts = []
-        for reply in server._db.database[username][1]['posts_ref']:
+        for reply in server._db.database[name][1]['posts_ref']:
             with open(os.path.join(server._forum.root_dir, reply['section'], str(reply['tid']), f"{reply['pid']}.reply")) as content, \
                     open(os.path.join(server._forum.root_dir, reply['section'], str(reply['tid']), "info")) as info:
                 posts.append({
@@ -511,6 +512,7 @@ def profile(server, conn, addr, method, params, route, cookies):
                     'content': json.load(content)['content'],
                     'title': json.load(info)['title']
                     })
+        print(username)
         return conn.send(utils.construct_http_response(
             200, "OK", {}, utils.determine_template(
                 index, username,
@@ -544,7 +546,7 @@ def profile(server, conn, addr, method, params, route, cookies):
                             {thread['content'][:100] + "..." if len(thread['content']) >= 100 else thread['content']}
                         </p>
                     </li>
-                    """ for thread in server._db.database[username][1]['threads_ref'])
+                    """ for thread in server._db.database[name][1]['threads_ref'])
                 + "</ul></div>"
                 )
             ))

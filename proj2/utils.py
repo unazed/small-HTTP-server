@@ -1,6 +1,3 @@
-from html import escape
-
-
 def sign(num):
     if num > 0:
         return "#38ff38"
@@ -30,7 +27,7 @@ def determine_template(data, username, *args, **kwargs):
                 <a href="/about">About</a>
             </li>
             <li id="username">
-                <a href="/profile">{escape(username)}</a>
+                <a href="/profile">{username}</a>
             </li>""" if username != "Guest" else """
             <li>
                 <a href="/login">Login</a>
