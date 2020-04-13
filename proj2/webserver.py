@@ -162,6 +162,12 @@ def index(server, conn, addr, method, params, route, cookies):
                 return server.get_route(conn, addr, "GET", "/400")
             tid = server._forum.make_thread(addr[0], section[0], username, title, content)
             server._db.database[username][1]['threads'] += 1
+            server._db.database[username][1]['threads_ref'].append({
+                'sid': section[1]['sid'],
+                'tid': tid,
+                'title': title,
+                'content': content
+                })
             server._db.write_changes()
             return conn.send(utils.construct_http_response(
                 301, "Redirect", {"Location": f"/index?sid={sid}&tid={tid}"}, ""
@@ -225,6 +231,7 @@ def register(server, conn, addr, method, params, route, cookies):
                     "uid": len(server._db.database) + 1,
                     "ip": addr[0],
                     "threads": 0,
+                    "threads_ref": [],
                     "posts": 0,
                     "posts_ref": [],
                     "reputation": 0,
@@ -504,12 +511,11 @@ def profile(server, conn, addr, method, params, route, cookies):
                     'content': json.load(content)['content'],
                     'title': json.load(info)['title']
                     })
-        print
         return conn.send(utils.construct_http_response(
             200, "OK", {}, utils.determine_template(
                 index, username,
                 forum_title=FORUM_TITLE,
-                body="<div id='posts'> <ul>" +
+                body="<div id='posts'> <p style='font-size: larger'>Posts</p> <ul>" +
                 ''.join(f"""
                     <li>
                         <p id="partial">
@@ -520,6 +526,25 @@ def profile(server, conn, addr, method, params, route, cookies):
                         </p>
                     </li>
                     """ for reply in posts)
+                + "</ul></div>"
+                )
+            ))
+    elif action == "view_threads":
+        return conn.send(utils.construct_http_response(
+            200, "OK", {}, utils.determine_template(
+                index, username,
+                forum_title=FORUM_TITLE,
+                body="<div id='posts'> <p style='font-size: larger'>Threads</p> <ul>" +
+                ''.join(f"""
+                    <li>
+                        <p id="partial">
+                             <a id="link" href="/index?sid={thread['sid']}&tid={thread['tid']}">
+                                {thread['tid']} {thread['title']}:
+                            </a>
+                            {thread['content'][:100] + "..." if len(thread['content']) >= 100 else thread['content']}
+                        </p>
+                    </li>
+                    """ for thread in server._db.database[username][1]['threads_ref'])
                 + "</ul></div>"
                 )
             ))
@@ -659,6 +684,7 @@ server._db.add_user("Admin", "", properties={
     "uid": 1,
     "role": "admin",
     "threads": 0,
+    "threads_ref": [],
     "posts": 0,
     "posts_ref": [],
     "reputation": 0,
@@ -671,6 +697,7 @@ server._db.add_user("Guest", "", properties={
     "uid": 2,
     "role": "guest",
     "threads": 0,
+    "threads_ref": [],
     "posts": 0,
     "posts_ref": [],
     "reputation": 0,
