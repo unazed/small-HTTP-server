@@ -10,6 +10,11 @@ html {
   color: white;
 }
 
+#body > ul > li {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
 ul.bar-items {
   list-style: none;
   margin: 0;
@@ -137,7 +142,7 @@ div#footer {
   padding-bottom: 1px;
   margin-top: 2em;
   background-color: #4e4e4e;
-  border: 1px solid white;
+  border-top: 1px solid white;
 }
 
 div#thread {
@@ -513,4 +518,29 @@ div#column {
   flex-direction: column;
   min-width: fit-content;
   min-height: fit-content;
+}
+
+#posts > ul {
+  list-style: none;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-left: 0;
+}
+
+a#link {
+  color: white;
+  text-decoration: none;
+  margin-right: 1em;
+}
+
+p#partial {
+  padding: 1em;
+}
+
+#posts > ul > li {
+  border-left: 1px solid white;
+  background-color: #2e2e2e;
+  margin-left: 1em;
+  margin-right: 1em;
+  line-height: 15px;
 }

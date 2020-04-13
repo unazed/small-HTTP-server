@@ -90,7 +90,7 @@ class Forum:
                 "content": escape(content)
                 }, post
                 )
-        return True
+        return pid
 
     def delete_reply(self, section, tid, pid):
         if section not in self.sections:

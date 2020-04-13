@@ -42,6 +42,8 @@ def index(server, conn, addr, method, params, route, cookies):
         if sid and not tid:
             if not (section := server._forum.get_section(sid)):
                 return server.get_route(conn, addr, "GET", "/400")
+            elif server._db.database[username][1]['role'] not in section[1]['allowed_roles']:
+                return server.get_route(conn, addr, "GET", "/403")
             threads = []
             for thread in section[1]['threads']:
                 with open(os.path.join(server._forum.root_dir, section[0], str(thread), "info")) as info:
@@ -132,7 +134,7 @@ def index(server, conn, addr, method, params, route, cookies):
                     </ul>
                     <form id="post_form" method="post"
                      onsubmit="postbtn.disabled=true;postbtn.value='Posting...'">
-                        <textarea id="postbox" name="post"> </textarea>
+                        <textarea id="postbox" name="post"></textarea>
                         <input type="hidden" name="action" value="make_reply" />
                         <input name="postbtn" id="postbtn" type="submit" value="Post" />
                     </form>
@@ -173,8 +175,14 @@ def index(server, conn, addr, method, params, route, cookies):
         if action == "make_reply":
             if not (content := p.get("post", "")):
                 return server.get_route(conn, addr, "GET", "/400")
-            server._forum.make_reply(addr[0], section[0], tid, username, content)
+            pid = server._forum.make_reply(addr[0], section[0], tid, username, content)
             server._db.database[username][1]['posts'] += 1
+            server._db.database[username][1]['posts_ref'].append({
+                'tid': tid,
+                'pid': pid,
+                'sid': section[1]['sid'],
+                "section": section[0]
+                })
             server._db.write_changes()
             return conn.send(utils.construct_http_response(
                 301, "Redirect", {"Location": f"/index?tid={tid}&sid={sid}"}, ""
@@ -218,6 +226,7 @@ def register(server, conn, addr, method, params, route, cookies):
                     "ip": addr[0],
                     "threads": 0,
                     "posts": 0,
+                    "posts_ref": [],
                     "reputation": 0,
                     "reputation_content": {},
                     "role": "member",
@@ -483,6 +492,37 @@ def profile(server, conn, addr, method, params, route, cookies):
                 """
                 )
             ))
+    elif action == "view_posts":
+        posts = []
+        for reply in server._db.database[username][1]['posts_ref']:
+            with open(os.path.join(server._forum.root_dir, reply['section'], str(reply['tid']), f"{reply['pid']}.reply")) as content, \
+                    open(os.path.join(server._forum.root_dir, reply['section'], str(reply['tid']), "info")) as info:
+                posts.append({
+                    'tid': reply['tid'],
+                    'sid': reply['sid'],
+                    'pid': reply['pid'],
+                    'content': json.load(content)['content'],
+                    'title': json.load(info)['title']
+                    })
+        print
+        return conn.send(utils.construct_http_response(
+            200, "OK", {}, utils.determine_template(
+                index, username,
+                forum_title=FORUM_TITLE,
+                body="<div id='posts'> <ul>" +
+                ''.join(f"""
+                    <li>
+                        <p id="partial">
+                             <a id="link" href="/index?sid={reply['sid']}&tid={reply['tid']}">
+                                {reply['pid']} {reply['title']}:
+                            </a>
+                            {reply['content'][:100] + "..." if len(reply['content']) >= 100 else reply['content']}
+                        </p>
+                    </li>
+                    """ for reply in posts)
+                + "</ul></div>"
+                )
+            ))
     else:
         return server.get_route(conn, addr, "GET", "/400")
 
@@ -490,6 +530,7 @@ def profile(server, conn, addr, method, params, route, cookies):
 def profile_action(server, conn, addr, method, params, route, cookies):
     username = server._db.get_user(cookies.get("token", "")) or "Guest"
     properties = server._db.database[username][1]
+    print(params)
     if not (index := utils.read_file("index.html")):
         return server.get_route(conn, addr, "GET", "/404")
     elif not (action := params["POST"].get("action", "")):
@@ -531,7 +572,7 @@ def profile_action(server, conn, addr, method, params, route, cookies):
         server._db.write_changes()
         return conn.send(utils.construct_http_response(
             301, "Redirect", {"Location": f"/profile?uid={uid}"}, ""
-            ))
+            )) 
 
 
 def about(server, conn, addr, method, params, route, cookies):
@@ -619,6 +660,7 @@ server._db.add_user("Admin", "", properties={
     "role": "admin",
     "threads": 0,
     "posts": 0,
+    "posts_ref": [],
     "reputation": 0,
     "reputation_content": {},
     "ip": "127.0.0.1",
@@ -630,6 +672,7 @@ server._db.add_user("Guest", "", properties={
     "role": "guest",
     "threads": 0,
     "posts": 0,
+    "posts_ref": [],
     "reputation": 0,
     "reputation_content": {},
     "ip": "127.0.0.1",
@@ -639,6 +682,8 @@ server._db.add_user("Guest", "", properties={
 server._forum.add_section("Public", ["guest", "member", "admin"])
 server._forum.add_section("Lounge", ["member", "admin"])
 server._forum.add_section("Admin-Only", ["admin"])
+
+print(server._forum.sections)
 
 server.add_route(["GET", "POST"], "/", index)
 server.add_route(["GET", "POST"], "/index", index)
