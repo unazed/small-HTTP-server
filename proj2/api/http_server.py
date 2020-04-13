@@ -128,12 +128,16 @@ class HttpServer(SocketServer):
             conn.settimeout(None)
             headers, content = self.parse_http_request(data)
 
-            method = headers[':method']
-            uri = headers[':uri']
-            cookies = headers[':cookies']
+
+            try:
+                method = headers[':method']
+                uri = headers[':uri']
+                cookies = headers[':cookies']
+            except KeyError:
+                return conn.close()
             
             self.get_route(conn, addr, method, uri, content=content, cookies=cookies)
-            conn.close()
+            return conn.close()
 
         def delegate_handler(*args, **kwargs):
             self._threads[0] += 1
@@ -164,6 +168,6 @@ class HttpServer(SocketServer):
     def close_connections(self):
         print(f"[HttpServer] [{self.host}:{self.port}] closing all active connections")
         for idx, thd in enumerate(self._threads[1:]):
-            print(f"[HttpServer] [{self.host}:{self.port}] waiting for thread #{idx} to close")
+            print(f"[HttpServer] [{self.host}:{self.port}] cleaning stale thread #{idx}")
             thd.join()
         print(f"[HttpServer] [{self.host}:{self.port}] closed all active connections")

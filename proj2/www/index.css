@@ -335,14 +335,18 @@ p#profile_uid {
   padding-top: 16px;
 }
 
+div#profile_content {
+  display: flex;
+  overflow: hidden;
+}
+
 div#profile_info {
   padding: 1em;
   border-left: 1px solid white;
   padding-top: 0;
   margin-top: 0;
   background-color: #2e2e2e;
-  width: fit-content;
-  display: inline-block;
+  min-width: fit-content;
 }
 
 p#profile_reputation {
@@ -368,11 +372,11 @@ p#profile_ip {
 div#admin_prompt{
   padding: 1em;
   border-left: 1px solid white;
+  border-bottom: 1px solid white;
   padding-top: 16px;
   margin-top: 1em;
-  padding-bottom: 1;
+  padding-bottom: 0;
   background-color: #2e2e2e;
-  width: fit-content;
 }
 
 a#profile_delete {
@@ -404,11 +408,13 @@ a#profile_aedit {
 }
 
 div#reputation {
-  float: right;
   background-color: #2e2e2e;
   padding: 0.5em;
   padding-top: 0;
   border-right: 1px solid white;
+  min-width: fit-content;
+  height: fit-content;
+  border-bottom: 1px solid white;
 }
 
 ul#reputation_list {
@@ -475,4 +481,36 @@ p.member-item > a {
   padding: 1em;
   border-bottom: 1px solid;
   margin: 0;
+}
+
+#body > form > input {
+  margin-top: 10px;
+}
+
+#body > form > textarea {
+  width: -webkit-fill-available;
+  height: 10em;
+  margin-top: 10px;
+}
+
+div#biography {
+  padding: 1em;
+  background-color: #2e2e2e;
+  width: -webkit-fill-available;
+  height: fit-content;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-bottom: 1px solid white;
+  min-height: 5em;
+}
+
+p#biography {
+  margin: 0;
+}
+
+div#column {
+  display: flex;
+  flex-direction: column;
+  min-width: fit-content;
+  min-height: fit-content;
 }

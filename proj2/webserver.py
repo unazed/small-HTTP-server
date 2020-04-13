@@ -220,7 +220,8 @@ def register(server, conn, addr, method, params, route, cookies):
                     "posts": 0,
                     "reputation": 0,
                     "reputation_content": {},
-                    "role": "member"
+                    "role": "member",
+                    "biography": ""
                     }
                     )):
             return server.get_route(conn, addr, "GET", "/register?error=The username entered is either invalid or taken.")
@@ -364,12 +365,11 @@ def profile(server, conn, addr, method, params, route, cookies):
     elif not g.isdigit():
         return server.get_route(conn, addr, "GET", "/400")
     g = int(g)
-    found = None
     for name, prop in server._db.database.items():
         if prop[1]['uid'] == g:
             found = name
             break
-    if found is None:
+    else:
         return server.get_route(conn, addr, "GET", "/404")
     if not (action := params["GET"].get("action")):
         role_color = server._forum.roles[(role := prop[1]['role'])]['background-color']
@@ -378,20 +378,38 @@ def profile(server, conn, addr, method, params, route, cookies):
                     index, username,
                     forum_title=FORUM_TITLE,
                     body=f"""
+                    <p style="background-image: linear-gradient(to right, #2e2e2e, {role_color})" id="profile_username">{name}</p>
                     <div id="profile_content">
-                        <p style="background-image: linear-gradient(to right, #2e2e2e, {role_color})" id="profile_username">{name}</p>
-                        <div id="profile_info">
-                            <p id="profile_uid">UID {g}</p>
-                            <p id="profile_threads">Threads: {prop[1]['threads']} <a class="profile_link" href="/profile?uid={g}&action=view_threads">view threads</a></p>
-                            <p id="profile_posts">Posts: {prop[1]['posts']} <a class="profile_link" href="/profile?uid={g}&action=view_posts">view posts</a></p>
-                            <p id="profile_reputation">Reputation: {prop[1]['reputation']} <a class="profile_link" href="/profile?uid={g}&action=give_reputation">give reputation</a></p>
-                            <p id="profile_pm"><a id="profile_pm" href="/profile?uid={g}&action=make_pm">Send Message</a></p>
-                            """ +
-                            ["", f"""
-                            <p id="profile_edit"><a id="profile_edit" href="/profile?uid={g}&action=edit_profile">Edit Profile</a></p>
-                                """
-                                ][username == name]
-                            + """
+                        <div id="column">
+                            <div id="profile_info">
+                                <p id="profile_uid">UID {g}</p>
+                                <p id="profile_threads">Threads: {prop[1]['threads']} <a class="profile_link" href="/profile?uid={g}&action=view_threads">view threads</a></p>
+                                <p id="profile_posts">Posts: {prop[1]['posts']} <a class="profile_link" href="/profile?uid={g}&action=view_posts">view posts</a></p>
+                                <p id="profile_reputation">Reputation: {prop[1]['reputation']} <a class="profile_link" href="/profile?uid={g}&action=give_reputation">give reputation</a></p>
+                                <p id="profile_pm"><a id="profile_pm" href="/profile?uid={g}&action=make_pm">Send Message</a></p>
+                                """ +
+                                ["", f"""
+                                <p id="profile_edit"><a id="profile_edit" href="/profile?uid={g}&action=edit_profile">Edit Profile</a></p>
+                                    """
+                                    ][username == name]
+                                + """
+                            </div>
+                            """+ ["", f"""
+                            <div id="admin_prompt">
+                                <p id="profile_ip">IP: {prop[1]['ip']}</p>
+                                """ +
+                                ["",  f"""
+                                    <p id="profile_delete"><a id="profile_delete" href="/profile?uid={g}&action=delete">Delete {name}</a></p>
+                                    <p id="profile_aedit"><a id="profile_aedit" href="/profile?uid={g}&action=edit_profile">Edit {name}</a></p>
+                                    """
+                                    ][username != name]  # fuck ternary
+                                + """
+                            </div>
+                        """][server._db.database[username][1]['role'] == "admin"]
+                            + f"""
+                        </div>
+                        <div id="biography">
+                            <p id="biography">{prop[1].get("biography", "No biography") or "No biography"}</p>
                         </div>
                         <div id="reputation">
                             <p id="reputation_title">Reputation</p>
@@ -409,18 +427,7 @@ def profile(server, conn, addr, method, params, route, cookies):
                                 + """
                         </div>
                     </div>
-                    """ + ["", f"""
-                            <div id="admin_prompt">
-                                <p id="profile_ip">IP: {prop[1]['ip']}</p>
-                                """ +
-                                ["",  f"""
-                                    <p id="profile_delete"><a id="profile_delete" href="/profile?uid={g}&action=delete">Delete {name}</a></p>
-                                    <p id="profile_aedit"><a id="profile_aedit" href="/profile?uid={g}&action=edit_profile">Edit {name}</a></p>
-                                    """
-                                    ][username != name]  # fuck ternary
-                                + """
-                            </div>
-                        """][server._db.database[username][1]['role'] == "admin"]
+                    """
                 )
             ))
 
@@ -433,6 +440,7 @@ def profile(server, conn, addr, method, params, route, cookies):
                 <form id="reputation-form" action="/profile_action" method="post"
                  onsubmit="this.give_btn.disabled=true; this.give_btn.value='Giving...';">
                     <input type="hidden" name="uid" value="{g}" />
+                    <input type="hidden" name="action" value="give_reputation" />
                     <textarea name="content"></textarea>
                     <label>-1</label>
                     <input type="radio" name="num" value="-1" />
@@ -467,6 +475,7 @@ def profile(server, conn, addr, method, params, route, cookies):
                 <form method="post" action="/profile_action"
                  onsubmit="this.submit_btn.disabled=true;this.submit_btn.value='Updating...';">
                     <input type="hidden" name="uid" value="{g}" />
+                    <input type="hidden" name="action" value="edit_profile" />
                     <label>Biography:</label>
                     <textarea name="content"></textarea>
                     <input type="submit" name="submit_btn" value="Update" />
@@ -474,10 +483,55 @@ def profile(server, conn, addr, method, params, route, cookies):
                 """
                 )
             ))
+    else:
+        return server.get_route(conn, addr, "GET", "/400")
 
 
 def profile_action(server, conn, addr, method, params, route, cookies):
-    print(params)
+    username = server._db.get_user(cookies.get("token", "")) or "Guest"
+    properties = server._db.database[username][1]
+    if not (index := utils.read_file("index.html")):
+        return server.get_route(conn, addr, "GET", "/404")
+    elif not (action := params["POST"].get("action", "")):
+        return server.get_route(conn, addr, "GET", "/400")
+    
+    if not (uid := params['POST'].get("uid", "")):
+        return server.get_route(conn, addr, "GET", "/400")
+    elif not uid.isdigit():
+        return server.get_route(conn, addr, "GET", "/400")
+    uid = int(uid)
+    for recv_name, recv_properties in server._db.database.items():
+        if recv_properties[1]['uid'] == uid:
+            break
+    else:
+        return server.get_route(conn, addr, "GET", "/404")
+
+    if action == "give_reputation":
+        if not (rating := params['POST'].get("num", "")):
+            return server.get_route(conn, addr, "GET", "/400")
+        elif not rating in ("-1", "0", "1"):
+            return server.get_route(conn, addr, "GET", "/400")
+        elif not (content := params['POST'].get('content', '')):
+            return server.get_route(conn, addr, "GET", "/400")
+        elif recv_name == username:
+            return server.get_route(conn, addr, "GET", "/400")
+        rating = int(rating)
+        server._db.database[recv_name][1]['reputation_content'][username] = [rating, escape(content[:100]) if content.strip() else "<i>No comment</i>"]
+        server._db.database[recv_name][1]['reputation'] = sum(rep[0] for rep in server._db.database[recv_name][1]['reputation_content'].values())
+        server._db.write_changes()
+        return conn.send(utils.construct_http_response(
+            301, "Redirect", {"Location": f"/profile?uid={uid}"}, ""
+            ))
+    elif action == "edit_profile":
+        if not (content := params['POST'].get("content", "")):
+            return server.get_route(conn, addr, "GET", "/400")
+        elif username != recv_name and not server._db.database[username][1]['role'] == "admin":
+            return server.get_route(conn, addr, "GET", "/403")
+        server._db.database[recv_name][1]['biography'] = escape(content)
+        server._db.write_changes()
+        return conn.send(utils.construct_http_response(
+            301, "Redirect", {"Location": f"/profile?uid={uid}"}, ""
+            ))
 
 
 def about(server, conn, addr, method, params, route, cookies):
@@ -567,7 +621,8 @@ server._db.add_user("Admin", "", properties={
     "posts": 0,
     "reputation": 0,
     "reputation_content": {},
-    "ip": "127.0.0.1"
+    "ip": "127.0.0.1",
+    "biography": ""
     })
 
 server._db.add_user("Guest", "", properties={
@@ -577,7 +632,8 @@ server._db.add_user("Guest", "", properties={
     "posts": 0,
     "reputation": 0,
     "reputation_content": {},
-    "ip": "127.0.0.1"
+    "ip": "127.0.0.1",
+    "biography": ""
     })
 
 server._forum.add_section("Public", ["guest", "member", "admin"])
