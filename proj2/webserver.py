@@ -416,8 +416,10 @@ def profile(server, conn, addr, method, params, route, cookies):
                             <div id="admin_prompt">
                                 <p id="profile_ip">IP: {prop[1]['ip']}</p>
                                 """ +
-                                ["",  f"""
+                                ["",  (f"""
                                     <p id="profile_delete"><a id="profile_delete" href="/profile?uid={g}&action=delete">Delete {name}</a></p>
+                                    """ if server._db.database[name][1]['role'] not in ("guest", "admin") else "") +     
+                                    f"""
                                     <p id="profile_aedit"><a id="profile_aedit" href="/profile?uid={g}&action=edit_profile">Edit {name}</a></p>
                                     """
                                     ][username != name]  # fuck ternary
@@ -474,7 +476,10 @@ def profile(server, conn, addr, method, params, route, cookies):
                 )
             ))
     elif action == "delete":
-        if server._db.database[username][1]['role'] != "admin":
+        role = server._db.database[name][1]['role']
+        if role in ("admin", "guest"):
+            return server.get_route(conn, addr, "GET", "/403")
+        elif server._db.database[username][1]['role'] != "admin":
             return server.get_route(conn, addr, "GET", "/400")
         elif not server._db.remove_user(name):
             return server.get_route(conn, addr, "GET", "/404")
