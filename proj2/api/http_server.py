@@ -127,17 +127,20 @@ class HttpServer(SocketServer):
                 pass
             conn.settimeout(None)
             headers, content = self.parse_http_request(data)
-
-
             try:
-                method = headers[':method']
+                if headers.get("Connection") == "Upgrade":
+                    method = "websocket"
+                    cookies = headers
+                else:
+                    method = headers[':method']
+                    cookies = headers[':cookies']
                 uri = headers[':uri']
-                cookies = headers[':cookies']
             except KeyError:
                 return conn.close()
             
             self.get_route(conn, addr, method, uri, content=content, cookies=cookies)
-            return conn.close()
+            if method != "websocket":
+                return conn.close()
 
         def delegate_handler(*args, **kwargs):
             self._threads[0] += 1

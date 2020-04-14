@@ -624,3 +624,17 @@ label#pm-title {
   float: right;
 }
 
+ul#messages {
+  background-color: #2e2e2e;
+  padding: 1em;
+  list-style: none;
+}
+
+#messages > li {
+  max-width: 100%;
+  max-height: 4em;
+  overflow: overlay;
+  border: 1px solid white;
+  margin-bottom: 0.5em;
+  padding: 5px;
+}

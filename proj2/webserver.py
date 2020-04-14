@@ -4,9 +4,13 @@ from database import LoginDatabase
 from functools import partial
 from forum import Forum
 from html import escape
+import base64
 import hashlib
 import json
 import os
+import socket
+import threading
+import time
 import utils
 
 
@@ -753,7 +757,87 @@ def inbox(server, conn, addr, method, params, route, cookies):
 
 
 def chat(server, conn, addr, method, params, route, cookies):
-    pass
+    username = server._db.get_user(cookies.get("token", "")) or "Guest"
+    if not (index := utils.read_file("index.html")):
+        return server.get_route(conn, addr, "GET", "/404")
+    elif server._db.database[username][1]['role'] == "guest":
+        return server.get_route(conn, addr, "GET", "/403")
+    return conn.send(utils.construct_http_response(
+        200, "OK", {}, utils.determine_template(
+            index, username,
+            forum_title=FORUM_TITLE,
+            body="""
+            <div id="chat">
+                <ul id="messages">
+                    
+                </ul>
+                <input type="text" id="message" />
+                <button onclick="send_message()">Send</button>
+                <script type="text/javascript">
+                    var messages = document.getElementById("messages");
+                    var websocket = new WebSocket("ws://" + location.host + "/chat_feed");
+                    function send_message()
+                    {
+                        var text = document.getElementById("message");
+                        websocket.send("%s" + ": " + text.value);
+                    }
+                   
+                    function _create_new_ws()
+                    {
+                        websocket = new WebSocket("ws://" + location.host + "/chat_feed");
+                    }
+
+                    websocket.onmessage = function(event)
+                    {
+                        var li = document.createElement("LI");
+                        li.appendChild(document.createTextNode(event.data));
+                        messages.appendChild(li);
+                    }
+
+                    websocket.onclose = function()
+                    {
+                        websocket = null;
+                        console.log("creating new ws...")
+                        setTimeout(_create_new_ws, 5000);
+                    }
+                </script>
+           </div>
+            """ % (username,)
+            )
+        ))
+
+
+def chat_feed(server, conn, addr, method, params, route, headers):
+    def ws_handler(conn, addr):
+        while not server._halted:
+            message = utils.decode_websocket(conn, timeout=1)
+            if message is True:
+                continue
+            elif not message:
+                del server._ws_threads[addr]
+                return conn.close()
+            for addr_, other in server._ws_threads.items():
+                try:
+                    other[1].send(utils.encode_websocket(message)[1:])
+                except OSError as exc:
+                    del server._ws_threads[addr_]
+                    return False
+        conn.close()
+
+    if not (key := headers.get("Sec-WebSocket-Key")):
+        return server.get_route(conn, addr, "GET", "/400")
+#    elif addr[0] in server._ws_threads:
+#        return server.get_route(conn, addr, "GET", "/403")
+    hshake_key = base64.b64encode(hashlib.sha1((key + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11").encode()).digest())
+    conn.send(utils.construct_http_response(
+        101, "Switching Protocols", {
+            "Upgrade": "websocket",
+            "Connection": "upgrade",
+            "Sec-WebSocket-Accept": hshake_key.decode()
+            }, ""
+        ))
+    server._ws_threads[addr] = (threading.Thread(target=ws_handler, args=(conn, addr)), conn)
+    server._ws_threads[addr][0].start()  # socket isn't closed at return
 
 
 def member_list(server, conn, addr, method, params, route, cookies):
@@ -872,9 +956,13 @@ server.add_route(["GET"], "/make-thread", make_thread)
 server.add_route(["GET"], "/member-list", member_list)
 server.add_route(["GET"], "/profile", profile)
 server.add_route(["GET"], "/about", about)
-server.add_route(["GET"], "/chat", chat)
 server.add_route(["POST"], "/profile_action", profile_action)
 server.add_route(["GET"], "/inbox", inbox)
+server.add_route(["GET"], "/chat", chat)
+
+server._ws_threads = {}
+server._halted = False
+server.add_route(["websocket"], "/chat_feed", chat_feed)  # ;(
 
 server.add_route(["GET"], "/404", error_handler)
 server.add_route(["GET"], "/403", error_handler)
@@ -883,3 +971,4 @@ server.add_route(["GET"], "/405", error_handler)
 
 server.add_route(["GET"], "/*", global_handler)
 server.handle_http_connections()
+server._halted = True
