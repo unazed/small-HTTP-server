@@ -237,7 +237,8 @@ def register(server, conn, addr, method, params, route, cookies):
                     "reputation": 0,
                     "reputation_content": {},
                     "role": "member",
-                    "biography": ""
+                    "biography": "",
+                    "inbox": []
                     }
                     )):
             return server.get_route(conn, addr, "GET", "/register?error=The username entered is either invalid or taken.")
@@ -512,7 +513,6 @@ def profile(server, conn, addr, method, params, route, cookies):
                     'content': json.load(content)['content'],
                     'title': json.load(info)['title']
                     })
-        print(username)
         return conn.send(utils.construct_http_response(
             200, "OK", {}, utils.determine_template(
                 index, username,
@@ -548,6 +548,25 @@ def profile(server, conn, addr, method, params, route, cookies):
                     </li>
                     """ for thread in server._db.database[name][1]['threads_ref'])
                 + "</ul></div>"
+                )
+            ))
+    elif action == "make_pm":
+        return conn.send(utils.construct_http_response(
+            200, "OK", {}, utils.determine_template(
+                index, username,
+                forum_title=FORUM_TITLE,
+                body=f"""
+                <form method="post" action="/profile_action"
+                 onsubmit="this.btn.disabled=true;this.btn.value='Sending...';">
+                    <input type="hidden" name="action" value="make_pm" />
+                    <input type="hidden" name="uid" value="{g}" />
+                    <label>Title:</label>
+                    <input type="text" name="title" />
+                    <label>Content:</label>
+                    <textarea name="content"></textarea>
+                    <input id="btn" type="submit" value="Send PM" />
+                </form>
+                """
                 )
             ))
     else:
@@ -600,9 +619,130 @@ def profile_action(server, conn, addr, method, params, route, cookies):
         return conn.send(utils.construct_http_response(
             301, "Redirect", {"Location": f"/profile?uid={uid}"}, ""
             )) 
+    elif action == "make_pm":
+        if not (content := params['POST'].get("content", "")):
+            return server.get_route(conn, addr, "GET", "/400")
+        elif not (title := params["POST"].get("title", "")):
+            return server.get_route(conn, addr, "GET", "/400")
+        server._db.database[recv_name][1]['inbox'].append({
+            "id": len(server._db.database[recv_name][1]['inbox']) + 1,
+            "from": username,
+            "title": title,
+            "content": content,
+            "type": "received"
+            })
+        server._db.database[username][1]['inbox'].append({
+            "id": len(server._db.database[username][1]['inbox']) + 1,
+            "to": recv_name,
+            "title": title,
+            "content": content,
+            "type": "sent"
+            })
+        server._db.write_changes()
+        return conn.send(utils.construct_http_response(
+            301, "Redirect", {"Location": f"/profile?uid={uid}"}, ""
+            ))
 
 
 def about(server, conn, addr, method, params, route, cookies):
+    username = server._db.get_user(cookies.get("token", "")) or "Guest"
+    if not (index := utils.read_file("index.html")):
+        return server.get_route(conn, addr, "GET", "/400")
+    return conn.send(utils.construct_http_response(
+        200, "OK", {}, utils.determine_template(
+            index, username,
+            forum_title=FORUM_TITLE,
+            body="""
+            <p>As written below, this is a HTTP server written solely in Python from the socket level,
+               and one may find the source <a href="https://github.com/unazed/small-http-server" style="color: white; text-decoration: none;">here</a>.
+               It is not designed for efficiency, speed nor security, it is simply just a side-project. The web
+               design is entirely custom. <br>
+               The start date is Apr, 7, 2020; and the completion date is unset.</p>
+            """
+            )
+        ))
+
+
+def inbox(server, conn, addr, method, params, route, cookies):
+    username = server._db.get_user(cookies.get('token', '')) or "Guest"
+    if not (index := utils.read_file("index.html")):
+        return server.get_route(conn, addr, "GET", "/400")
+    sent, received = [], []
+    for pm in server._db.database[username][1]['inbox']:
+        if pm['type'] == "received":
+            received.append(pm)
+        elif pm["type"] == "sent":
+            sent.append(pm)
+    return conn.send(utils.construct_http_response(
+        200, "OK", {}, utils.determine_template(
+            index, username,
+            forum_title=FORUM_TITLE,
+            body=f"""
+            <div id="received">
+                <p id="title">Received PMs</p>
+                <div id="pm-list">
+                    <ul>
+                    """ +
+                        ''.join(
+                            f"""
+                            <li onclick="show_pm('from-pm-view', 'from-pm', {pm['id']});">
+                                <p id="from">{pm['from']} <label id="pm-title">{pm['title']}</label></p>
+                            </li>
+                            """
+                            for pm in received
+                            )
+                    + """
+                    </ul>
+                    <div id="from-pm-view">
+                    """ +
+                        ''.join(
+                            f"""
+                            <div style="display: none;" id="from-pm-{pm['id']}">
+                                <p id="content">{pm['content']}</p>
+                            </div>
+                            """
+                            for pm in received
+                        )
+                    + """
+                    </div>
+                </div>
+
+           </div>
+
+            <div id="sent">
+                <p id="title">Sent PMs</p>
+                <div id="pm-list">
+                    <ul>
+                    """ +
+                    ''.join(
+                        f"""
+                        <li onclick="show_pm('to-pm-view', 'to-pm', {pm['id']});">
+                            <p id="to">{pm['to']} <label id="pm-title">{pm['title']}</label></p> 
+                        </li>
+                        """ for pm in sent
+                        )
+                    + """
+                    </ul>
+                    <div id="to-pm-view">
+                    """ +
+                        ''.join(
+                            f"""
+                            <div style="display: none;" id="to-pm-{pm['id']}">
+                                <p type="hidden" id="content">{pm['content']}</p>
+                            </div>
+                            """
+                            for pm in sent
+                        )
+                    + """
+                    </div>
+                </div>
+            </div>
+            """
+            )
+        ))
+
+
+def chat(server, conn, addr, method, params, route, cookies):
     pass
 
 
@@ -632,10 +772,6 @@ def member_list(server, conn, addr, method, params, route, cookies):
             """
             )
         ))
-
-
-def chat(server, conn, addr, method, params, route, cookies):
-    pass
 
 
 def global_handler(server, conn, addr, method, params, route, cookies):
@@ -692,7 +828,8 @@ server._db.add_user("Admin", "", properties={
     "reputation": 0,
     "reputation_content": {},
     "ip": "127.0.0.1",
-    "biography": ""
+    "biography": "",
+    "inbox": []
     })
 
 server._db.add_user("Guest", "", properties={
@@ -705,7 +842,8 @@ server._db.add_user("Guest", "", properties={
     "reputation": 0,
     "reputation_content": {},
     "ip": "127.0.0.1",
-    "biography": ""
+    "biography": "",
+    "inbox": []
     })
 
 server._forum.add_section("Public", ["guest", "member", "admin"])
@@ -726,6 +864,7 @@ server.add_route(["GET"], "/profile", profile)
 server.add_route(["GET"], "/about", about)
 server.add_route(["GET"], "/chat", chat)
 server.add_route(["POST"], "/profile_action", profile_action)
+server.add_route(["GET"], "/inbox", inbox)
 
 server.add_route(["GET"], "/404", error_handler)
 server.add_route(["GET"], "/403", error_handler)

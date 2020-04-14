@@ -90,6 +90,10 @@ ul.bar-items li#username {
   float: right;
 }
 
+ul.bar-items li#inbox {
+  float: right;
+}
+
 h3#subtitle {
   border-bottom: 1px solid white;
   background-color: #333;
@@ -544,3 +548,57 @@ p#partial {
   margin-right: 1em;
   line-height: 15px;
 }
+
+div#received {
+  background-color: #2e2e2e;
+  padding: 1em;
+  margin-bottom: 0.5em;
+}
+
+div#sent {
+  background-color: #2e2e2e;
+  padding: 1em;
+}
+
+p#title {
+  margin: 0;
+  width: -webkit-fill-available;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+
+div#pm-list {
+  display: flex;
+}
+
+#pm-list > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 1em;
+}
+
+div#to-pm-view {
+  margin-left: 2em;
+  padding-top: 3px;
+}
+
+div#from-pm-view {
+  margin-left: 2em;
+  padding-top: 3px;
+}
+
+p#to {
+  border-left: 0.25px solid;
+  padding: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+p#from {
+  border-left: 0.25px solid;
+  padding: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+

@@ -28,7 +28,11 @@ def determine_template(data, username, *args, **kwargs):
             </li>
             <li id="username">
                 <a href="/profile">{username}</a>
-            </li>""" if username != "Guest" else """
+            </li>
+            <li id="inbox">
+                <a href="/inbox">Inbox</a>
+            </li>
+            """ if username != "Guest" else """
             <li>
                 <a href="/login">Login</a>
             </li>
