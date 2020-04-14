@@ -15,12 +15,23 @@ def encode_websocket(data):
         payload_len = deconcat(len(data), 1)
         payload_len_extra = ""
     elif 126 <= len(data) <= 2**16:
-        payload_len = 126
+        payload_len = chr(126)
         payload_len_extra = deconcat(len(data), 2)
     elif 2**16 < len(data) <= 2**64:
-        payload_len = 127
+        payload_len = chr(127)
         payload_len_extra = deconcat(len(data), 8)
-    return f"\x81{payload_len}{payload_len_extra}{data}".encode()
+    a = f"\x81{payload_len}{payload_len_extra}{data}".encode()
+    print(a)
+    return a
+
+
+def concat(seq):
+    num = seq[0] << 0x08
+    for n in seq:
+        num |= n
+        num <<= 0x08
+    num >>= 0x08
+    return num
 
 
 def decode_websocket(conn, timeout=None):
@@ -38,9 +49,9 @@ def decode_websocket(conn, timeout=None):
     mask = initial[1] & 0b10000000
     payload_len = initial[1] & 0b01111111
     if payload_len == 126:
-        payload_len = utils.concat(conn.recv(2))
+        payload_len = concat(conn.recv(2))
     elif payload_len == 127:
-        payload_len = utils.concat(conn.recv(8))
+        payload_len = concat(conn.recv(8))
     if mask:
         masking_key = conn.recv(4)
     payload = conn.recv(payload_len)
@@ -48,14 +59,6 @@ def decode_websocket(conn, timeout=None):
     for idx, char in enumerate(payload):
         decrypted += chr(char ^ masking_key[idx % 4])
     return decrypted
-
-def concat(seq):
-    num = seq[0] << 0x08
-    for n in seq:
-        num |= n
-        num <<= 0x08
-    num >>= 0x08
-    return num
 
 
 def sign(num):
