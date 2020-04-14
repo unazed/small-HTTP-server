@@ -668,7 +668,7 @@ def about(server, conn, addr, method, params, route, cookies):
                and one may find the source <a href="https://github.com/unazed/small-http-server" style="color: white; text-decoration: none;">here</a>.
                It is not designed for efficiency, speed nor security, it is simply just a side-project. The web
                design is entirely custom. <br>
-               The start date is Apr, 7, 2020; and the completion date is unset.</p>
+               The start date is Apr, 7, 2020; and the completion date is Apr, 14, 2020.</p>
             """
             )
         ))
@@ -772,12 +772,17 @@ def chat(server, conn, addr, method, params, route, cookies):
                     
                 </ul>
                 <input type="text" id="message" />
-                <button onclick="send_message()">Send</button>
+                <button onclick="send_message()" id="send_btn">Send</button>
                 <script type="text/javascript">
                     var messages = document.getElementById("messages");
                     var websocket = new WebSocket("ws://" + location.host + "/chat_feed");
+                    var btn = document.getElementById("send_btn");
                     function send_message()
                     {
+                        btn.disabled = true;
+                        setTimeout(function() {
+                            btn.disabled = false;
+                        }, 1000)
                         var text = document.getElementById("message");
                         websocket.send("%s" + ": " + text.value);
                     }

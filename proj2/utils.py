@@ -13,7 +13,6 @@ def deconcat(num, pad):
 def encode_websocket(data):
     if len(data) <= 125:
         payload_len = deconcat(len(data), 1)
-        print("payload_len", payload_len)
         payload_len_extra = ""
     elif 126 <= len(data) <= 2**16:
         payload_len = 126
