@@ -576,29 +576,53 @@ div#pm-list {
   padding: 0;
   margin: 0;
   margin-left: 1em;
+  max-width: 15em;
+  border-right: 1px solid white;
+  padding-right: 1em;
+}
+
+#from > a {
+  text-decoration: none;
+  color: white;
+}
+
+#to > a {
+  text-decoration: none;
+  color: white;
 }
 
 div#to-pm-view {
   margin-left: 2em;
   padding-top: 3px;
+  font-size: smaller;
 }
 
 div#from-pm-view {
   margin-left: 2em;
   padding-top: 3px;
+  font-size: smaller;
 }
 
 p#to {
-  border-left: 0.25px solid;
+  border-left: 1px solid;
   padding: 3px;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 0.5em;
+  font-size: 15px;
+  max-height: 3em;
+  overflow: auto;
 }
 
 p#from {
-  border-left: 0.25px solid;
+  border-left: 1px solid;
   padding: 3px;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 0.5em;
+  font-size: 15px;
+  max-height: 3em;
+  overflow: auto;
+}
+
+label#pm-title {
+  margin-left: 1em;
+  float: right;
 }
 

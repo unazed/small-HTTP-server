@@ -168,6 +168,5 @@ class HttpServer(SocketServer):
     def close_connections(self):
         print(f"[HttpServer] [{self.host}:{self.port}] closing all active connections")
         for idx, thd in enumerate(self._threads[1:]):
-            print(f"[HttpServer] [{self.host}:{self.port}] cleaning stale thread #{idx}")
             thd.join()
         print(f"[HttpServer] [{self.host}:{self.port}] closed all active connections")

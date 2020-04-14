@@ -16,7 +16,7 @@ class LoginDatabase:
 
     def write_changes(self):
         with open(self.filename, "w") as db:
-            json.dump(self.database, db)
+            json.dump(self.database, db, indent=2)
 
     def add_user(self, username, password, *, properties={}, replace=False):
         if username in self.database and not replace:

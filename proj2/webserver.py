@@ -629,6 +629,8 @@ def profile_action(server, conn, addr, method, params, route, cookies):
             return server.get_route(conn, addr, "GET", "/400")
         elif not (title := params["POST"].get("title", "")):
             return server.get_route(conn, addr, "GET", "/400")
+        title = escape(title)
+        content = escape(content)
         server._db.database[recv_name][1]['inbox'].append({
             "id": len(server._db.database[recv_name][1]['inbox']) + 1,
             "from": username,
@@ -691,7 +693,9 @@ def inbox(server, conn, addr, method, params, route, cookies):
                         ''.join(
                             f"""
                             <li onclick="show_pm('from-pm-view', 'from-pm', {pm['id']});">
-                                <p id="from">{pm['from']} <label id="pm-title">{pm['title']}</label></p>
+                                <p id="from">
+                                   <a href="/profile?uid={server._db.database[pm['from']][1]['uid']}">{pm['from']}</a> <label id="pm-title">{pm['title']}</label>
+                                </p>
                             </li>
                             """
                             for pm in received
@@ -711,8 +715,7 @@ def inbox(server, conn, addr, method, params, route, cookies):
                     + """
                     </div>
                 </div>
-
-           </div>
+            </div>
 
             <div id="sent">
                 <p id="title">Sent PMs</p>
@@ -722,7 +725,9 @@ def inbox(server, conn, addr, method, params, route, cookies):
                     ''.join(
                         f"""
                         <li onclick="show_pm('to-pm-view', 'to-pm', {pm['id']});">
-                            <p id="to">{pm['to']} <label id="pm-title">{pm['title']}</label></p> 
+                            <p id="to">
+                                <a href="/profile?uid={server._db.database[pm['to']][1]['uid']}">{pm['to']}</a> <label id="pm-title">{pm['title']}</label>
+                            </p>
                         </li>
                         """ for pm in sent
                         )
