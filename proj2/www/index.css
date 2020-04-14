@@ -604,7 +604,6 @@ div#from-pm-view {
 }
 
 p#to {
-  border-left: 1px solid;
   padding: 3px;
   padding-left: 0.5em;
   font-size: 15px;
@@ -613,7 +612,6 @@ p#to {
 }
 
 p#from {
-  border-left: 1px solid;
   padding: 3px;
   padding-left: 0.5em;
   font-size: 15px;
